@@ -8,7 +8,7 @@ const Footer = () => {
   const policyLinks = ['Privacy', 'Site Use Policies', 'Admin Login'];
 
   return (
-    <footer className="flex flex-col items-center self-stretch bg-neutral-700">
+    <footer className="flex flex-col items-center self-stretch bg-secondaryDark">
       <div className="flex flex-col self-stretch w-full text-center whitespace-nowrap max-md:max-w-full">
         <div className="flex flex-wrap gap-1.5 justify-center items-start w-full max-md:px-5 max-md:max-w-full">
           {[1, 2, 3, 4].map((index) => (
@@ -33,13 +33,12 @@ const Footer = () => {
             </h1>
             <p className="pt-4 pr-5 pl-5 w-full text-base tracking-normal leading-6 text-center text-white max-md:pl-5 max-md:max-w-full">
               Georgia CORE is a public-private partnership that creates collaboration among the state's cancer organizations and institutions to connect more Georgians to quality,
-              <br />
               personalized cancer care. We welcome you to this one-of-a-kind online information center for all things related to cancer and survivorship care in Georgia.
             </p>
           </div>
         </div>
       </div>
-      <div className="flex overflow-hidden flex-col pt-2 w-full bg-neutral-700 max-w-[1240px] max-md:max-w-full">
+      <div className="flex overflow-hidden flex-col pt-2 w-full max-w-[1240px] max-md:max-w-full">
         <div className="flex flex-wrap justify-center items-center w-full max-md:max-w-full">
           <div className="flex flex-col flex-1 shrink self-stretch px-4 pb-4 my-auto w-full basis-0 max-w-[1240px] min-w-[240px] max-md:max-w-full">
             <nav className="flex flex-wrap gap-9 items-start py-4 px-60 w-full text-xl tracking-normal leading-8 text-center text-white max-md:px-5 max-md:max-w-full">

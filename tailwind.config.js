@@ -15,12 +15,12 @@ module.exports = {
     extend: {
       colors: {
         primaryLight: '#FFF',
-        secondaryLight: '#ededed',
-        primaryDark: '#393839',
-        secondaryDark: '#dfdfdf',
+        secondaryLight: '#F8F9FA',
+        primaryDark: '#000',
+        secondaryDark: '#343A40',
         primaryAccent: '#CF4B08',
-        secondaryAccent: '#eee47b',
-        tertiaryAccent: '#A01534',
+        secondaryAccent: '#037E88',
+        tertiaryAccent: '#343A40',
       },
       fontFamily: {
         sans: ['Lufga', 'sans-serif'],

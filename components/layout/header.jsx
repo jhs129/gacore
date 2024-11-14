@@ -7,7 +7,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="flex overflow-hidden flex-col self-stretch bg-white">
+    <header className="flex overflow-hidden flex-col self-stretch bg-primaryLight">
       <div className="flex flex-col items-start self-center w-full max-w-[1256px] max-md:max-w-full">
         <div className="flex flex-col justify-center py-3 w-full max-w-[1240px] max-md:max-w-full">
           <div className="flex flex-wrap justify-center items-center w-full max-w-[1262px] min-h-[120px] max-md:max-w-full">

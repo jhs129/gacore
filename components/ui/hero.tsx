@@ -3,13 +3,19 @@
  */
 import React from "react";
 
-function Hero(props) {
+interface HeroProps {
+  image?: string;
+  title: string;
+  subtitle: string;
+}
+
+const Hero: React.FC<HeroProps> = (props) => {
   const defaultImage = "https://cdn.builder.io/api/v1/image/assets/TEMP/79d8c1827770f3a7d9e1acf40dbea9bcbc6968f1a04e0d8acfe725b2a0608dd7?placeholderIfAbsent=true&apiKey=7bf199de15724d268c1417f75ca31ce1";
   const imageSrc = props.image || defaultImage;
 
   return (
     <section id="hero" className="flex flex-row justify-between text-white max-sm:flex max-sm:flex-col">
-      <div className="flex flex-col justify-center items-start px-4 lg:px-8 bg-cyan-700 min-w-[240px] w-[683px] max-md:max-w-full">
+      <div className="flex flex-col justify-center items-start px-4 lg:px-8 bg-secondaryAccent min-w-[240px] w-[683px] max-md:max-w-full">
         <div className="flex flex-col max-w-full w-[540px]">
           <h1 className="text-5xl font-bold leading-[60px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px] max-sm:px-5 text-primaryLight">
             {props.title}

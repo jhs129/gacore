@@ -3,18 +3,20 @@ import { useRouter } from "next/router";
 import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
 import DefaultErrorPage from "next/error";
 import Head from "next/head";
+import { BuilderContent } from "@builder.io/sdk";
+import { GetStaticProps } from "next";
 import "../builder-registry";
 
-builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
+builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 // Define a function that fetches the Builder
 // content for a given page
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   // Fetch the builder content for the given page
   const page = await builder
     .get("figma-imports", {
       userAttributes: {
-        urlPath: "/" + (params?.page?.join("/") || ""),
+        urlPath: "/" + ((params?.page as string[])?.join("/") || ""),
       },
     })
     .toPromise();
@@ -30,7 +32,7 @@ export const getStaticProps = async ({ params }) => {
 };
 
 // Define the Page component
-export default function Page({ page }) {
+export default function Page({ page }: { page: BuilderContent | null }) {
   const router = useRouter();
   const isPreviewing = useIsPreviewing();
 
