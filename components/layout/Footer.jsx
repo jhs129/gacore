@@ -8,9 +8,9 @@ const Footer = () => {
   const policyLinks = ['Privacy', 'Site Use Policies', 'Admin Login'];
 
   return (
-    <footer className="flex flex-col items-center self-stretch py-12 bg-neutral-700">
+    <footer className="flex flex-col items-center self-stretch bg-neutral-700">
       <div className="flex flex-col self-stretch w-full text-center whitespace-nowrap max-md:max-w-full">
-        <div className="flex flex-wrap gap-1.5 justify-center items-start w-full max-w-[1366px] px-[596px] max-md:px-5 max-md:max-w-full">
+        <div className="flex flex-wrap gap-1.5 justify-center items-start w-full max-md:px-5 max-md:max-w-full">
           {[1, 2, 3, 4].map((index) => (
             <div key={index} className="flex grow shrink justify-center items-center w-8">
               <div className="flex flex-col self-stretch my-auto w-10">
@@ -42,7 +42,7 @@ const Footer = () => {
       <div className="flex overflow-hidden flex-col pt-2 w-full bg-neutral-700 max-w-[1240px] max-md:max-w-full">
         <div className="flex flex-wrap justify-center items-center w-full max-md:max-w-full">
           <div className="flex flex-col flex-1 shrink self-stretch px-4 pb-4 my-auto w-full basis-0 max-w-[1240px] min-w-[240px] max-md:max-w-full">
-            <nav className="flex flex-wrap gap-9 items-start py-4 pr-72 pl-72 w-full text-xl tracking-normal leading-8 text-center text-white max-md:px-5 max-md:max-w-full">
+            <nav className="flex flex-wrap gap-9 items-start py-4 px-60 w-full text-xl tracking-normal leading-8 text-center text-white max-md:px-5 max-md:max-w-full">
               {footerLinks.map((link, index) => (
                 <a key={index} href="#" className="self-stretch px-4 py-2.5 border border-solid bg-stone-600 border-stone-600">
                   {link}
@@ -52,16 +52,13 @@ const Footer = () => {
             <p className="px-56 w-full text-base text-center text-white max-md:px-5 max-md:max-w-full">
               Copyright © 2005 - @ 2024 Georgia Center for Oncology Research and Education, Inc. All Rights Reserved.
             </p>
-            <div className="flex flex-wrap justify-center items-start px-96 pt-4 w-full text-base text-center text-white max-md:px-5 max-md:max-w-full">
+            <div className="flex flex-row mx-auto gap-2">
               {policyLinks.map((link, index) => (
                 <React.Fragment key={index}>
                   {index > 0 && <span className="text-base text-white"> | </span>}
                   <a href="#" className="tracking-normal leading-6">{link}</a>
                 </React.Fragment>
               ))}
-            </div>
-            <div className="flex flex-col items-center px-96 pt-4 w-full max-md:px-5 max-md:max-w-full">
-              <div className="flex min-h-[24px]"></div>
             </div>
           </div>
         </div>
