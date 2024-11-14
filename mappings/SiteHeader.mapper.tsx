@@ -1,5 +1,5 @@
 import { figmaMapping, type BaseFigmaProps } from '@builder.io/dev-tools/figma';;
-import Header "@/components/layout/header";
+import Header from "@/components/layout/header";
 
 // ❖ site-header
 interface FigmaSiteHeaderProps extends BaseFigmaProps {
