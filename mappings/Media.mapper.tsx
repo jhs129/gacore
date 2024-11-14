@@ -1,4 +1,4 @@
-import { figmaMapping, type BaseFigmaProps } from '@builder.io/dev-tools/figma';;
+import { figmaMapping, type BaseFigmaProps } from '@builder.io/dev-tools/figma';
 import Hero from '@/components/ui/hero';
 
 // ❖ media
