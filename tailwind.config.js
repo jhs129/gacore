@@ -11,6 +11,7 @@ module.exports = {
       md: '640px',
       lg: '992px',
     },
+    
     extend: {
       colors: {
         primaryLight: '#FFF',

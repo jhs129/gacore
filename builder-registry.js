@@ -26,6 +26,19 @@ Builder.registerComponent(
   }
 );
 
+Builder.registerComponent(
+  dynamic(() => import("./components/layout/header")),
+  {
+    name: "Header"
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/layout/footer")),
+  {
+    name: "Footer"
+  }
+);
 
 Builder.register("editor.settings", {
   styleStrictMode: true, // optional
