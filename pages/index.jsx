@@ -4,9 +4,9 @@ import { BuilderComponent, builder, useIsPreviewing } from "@builder.io/react";
 import DefaultErrorPage from "next/error";
 import Head from "next/head";
 import "../builder-registry";
-import TopNavBar from "../components/layout/top-nav-bar";
-import HeaderBar from "@/components/layout/header-bar";
-import Footer from "@/components/layout/Footer";
+
+import Footer from "@/components/layout/footer";
+import Header from "@/components/layout/header";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
 builder.apiVersion = "v3";
@@ -29,46 +29,34 @@ export default function Page({ page }) {
       <Head>
         <title>{page?.data?.title}</title>
       </Head>
+      <Header />
       {/* Render the Builder page */}
-      <TopNavBar content={page?.topnavbar || undefined}/>
-      <HeaderBar logoImage="/images/orh-logo.png" mobileLogoImage="/images/orh-logo-mobile.png" logoAlt="Orlando Health Logo" content={page?.headerbar || undefined}/>
       <BuilderComponent model="page" content={page || undefined} />
-      <Footer/>
+      <Footer />
     </>
   );
 }
 
 export const getStaticProps = async ({ params }) => {
+  // Fetch the builder content for the given page
 
-   // Fetch the builder content for the given page
+  const page = await builder
+    .get("page", {
+      userAttributes: {
+        urlPath: "/" + (params?.page?.join("/") || ""),
+      },
+      options: {
+        vercelPreview: true,
+      },
+    })
+    .toPromise();
 
-   const topNavContent = await builder
-   .get("navigation", { query: { name: "top-nav-bar" }, enrich: true })
-   .promise();
- 
-   const headerBarContent = await builder
-   .get("navigation", { query: { name: "headerbar" }, enrich: true })
-   .promise();
- 
-   const page = await builder
-     .get("page", {
-       userAttributes: {
-         urlPath: "/" + (params?.page?.join("/") || ""),
-       },
-       options: {
-         vercelPreview: true,
-       },
-     })
-     .toPromise();
- 
-   // Return the page content as props
-   return {
-     props: {
-       page: page || null,
-       topnavbar: topNavContent?.data || null,
-       headerbar: headerBarContent?.data || null,
-     },
-     // Revalidate the content every 5 seconds
-     revalidate: 5,
-   };
+  // Return the page content as props
+  return {
+    props: {
+      page: page || null,
+    },
+    // Revalidate the content every 5 seconds
+    revalidate: 5,
+  };
 };
