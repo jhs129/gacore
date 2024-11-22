@@ -4,14 +4,14 @@ import dynamic from "next/dynamic";
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
 Builder.registerComponent(
-  dynamic(() => import("./components/layout/header")),
+  dynamic(() => import("@/components/layout/header")),
   {
     name: "Header"
   }
 );
 
 Builder.registerComponent(
-  dynamic(() => import("./components/layout/footer")),
+  dynamic(() => import("@/components/layout/footer")),
   {
     name: "Footer"
   }
