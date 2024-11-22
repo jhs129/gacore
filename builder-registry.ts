@@ -63,11 +63,11 @@ Builder.registerComponent(
 Builder.register("editor.settings", {
   designTokens: {
     colors: [
-      { name: "White", value: "var(--color-primary-light, #FFF)" },
-      { name: "Dark", value: "var(--color-primary-dark, #FFFFFF)" },
-      { name: "Red", value: "var(--color-accent-red, #FFFFFF)" },
-      { name: "Green", value: "var(--color-accent-green, #FFFFFF)" },
-      { name: "Teal", value: "var(--color-accent-teal, #FFFFFF)" },
+      { name: "White", value: "var(--color-primary-light)" },
+      { name: "Dark", value: "var(--color-primary-dark)" },
+      { name: "Red", value: "var(--color-accent-red)" },
+      { name: "Green", value: "var(--color-accent-green)" },
+      { name: "Teal", value: "var(--color-accent-teal)" },
     ],
     spacing: [
       { name: "Lg", value: "var(--spacing-lg, 16px)" },
