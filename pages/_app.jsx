@@ -11,9 +11,6 @@ const lora = Lora({
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/wmh5yzy.css" />
-      </Head>
       <main className={lora.className}>
         <Component {...pageProps} />
       </main>
