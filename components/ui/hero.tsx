@@ -15,7 +15,7 @@ const Hero: React.FC<HeroProps> = (props) => {
 
   return (
     <section id="hero" className="flex flex-row justify-between text-primaryLight max-sm:flex max-sm:flex-col">
-      <div className="flex flex-col justify-center items-start px-4 lg:pl-32 bg-accentTeal min-w-[240px] w-[683px] max-md:max-w-full">
+      <div className="flex flex-col justify-center items-start px-4 lg:pl-32 bg-accentTeal max-md:max-w-full">
         <div className="flex flex-col max-w-full w-[540px]">
           <h1 className="text-5xl font-bold leading-[60px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px] max-sm:px-5 text-primaryLight">
             {props.title}

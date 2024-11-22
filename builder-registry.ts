@@ -1,5 +1,6 @@
 import { builder, Builder } from "@builder.io/react";
 import dynamic from "next/dynamic";
+import { fileURLToPath } from "url";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
@@ -41,8 +42,9 @@ Builder.registerComponent(
     name: "Hero",
     inputs: [
       {
-        name: "image",
+        name: "title",
         type: "string",
+        required: true,
       },
       {
         name: "subtitle",
@@ -50,9 +52,8 @@ Builder.registerComponent(
         required: true,
       },
       {
-        name: "title",
-        type: "string",
-        required: true,
+        name: "image",
+        type: "file",
       },
     ],
   }
