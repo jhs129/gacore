@@ -4,9 +4,11 @@
 import React from "react";
 
 interface HeroProps {
+
+  body: string;
   image?: string;
-  title: string;
-  subtitle: string;
+  alt?: string;
+  color?: string;
 }
 
 const Hero: React.FC<HeroProps> = (props) => {
@@ -14,26 +16,35 @@ const Hero: React.FC<HeroProps> = (props) => {
     "https://cdn.builder.io/api/v1/image/assets/TEMP/79d8c1827770f3a7d9e1acf40dbea9bcbc6968f1a04e0d8acfe725b2a0608dd7?placeholderIfAbsent=true&apiKey=7bf199de15724d268c1417f75ca31ce1";
   const imageSrc = props.image || defaultImage;
 
+  let bgColor = "bg-accentTeal";
+
+  switch (props.color) {
+    case "red":
+      bgColor = "bg-accentRed";
+      break;
+    case "teal":
+      bgColor = "bg-accentTeal";
+      break;
+    case "green":
+      bgColor = "bg-accentGreen";
+      break;
+
+    default:
+      bgColor = "bg-accentTeal";
+      break;
+  }
+
   return (
-    <section
-      id="hero"
-      className="flex flex-col md:flex-row w-full gap-0"
-    >
-      <div className="flex flex-col justify-center w-full md:w-1/2 px-4 lg:pl-32 bg-accentTeal text-primaryLight max-md:max-w-full">
-        <div className="flex flex-col pl-5 lg:pl-28">
-          <h1 className="lg:text-5xl font-bold leading-20 lg:leading-[60px] text-primaryLight">
-            {props.title}
-          </h1>
-          <p className="mt-12 lg:text-2xl font-bold">
-            {props.subtitle}
-          </p>
+    <section id="hero" className="flex flex-col md:flex-row w-full gap-0">
+      <div className={`flex flex-col justify-center w-full md:w-1/2 p-4 pl-12 lg:pl-28 ${bgColor} text-primaryLight max-md:max-w-full`}>
+        <div className="flex flex-col leading-3" dangerouslySetInnerHTML={{ __html: props.body }}>
         </div>
       </div>
       <div className="w-full md:w-1/2">
         <img
           loading="lazy"
           src={imageSrc}
-          alt="Georgia Family Cancer History Screening Program visual representation"
+          alt={props.alt || "Hero Image" }
           className="object-cover self-start min-w-[240px] max-md:max-w-full"
         />
       </div>

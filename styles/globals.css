@@ -27,7 +27,7 @@
   }
 
   h1 {
-    @apply text-[2.5rem] my-4 leading-none text-accentTeal;
+    @apply text-[2.5rem] my-4 leading-none;
   }
 
   h2 {

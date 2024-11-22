@@ -14,16 +14,16 @@ module.exports = {
     
     extend: {
       colors: {
-        primaryLight: 'var(--color-primary-light, #FFFFFF)',
+        primaryLight: 'var(--color-primary-light)',
         secondaryLight: 'var(--color-secondary-light)',
-        primaryDark: 'var(--color-primary-dark, #000000)',
+        primaryDark: 'var(--color-primary-dark)',
         secondaryDark: 'var(--color-secondary-dark)',
-        primaryAccent: 'var(--color-primary-accent, #FFD166)',
-        secondaryAccent: 'var(--color-secondary-accent, #06D6A0)',
-        tertiaryAccent: 'var(--color-tertiary-accent, #118AB2)',
-        accentTeal: 'var(--color-accent-teal, #06D6A0)',
-        accentRed: 'var(--color-accent-red, #EF476F)',
-        accentGreen: 'var(--color-accent-green, #06D6A0)',
+        primaryAccent: 'var(--color-primary-accent)',
+        secondaryAccent: 'var(--color-secondary-accent)',
+        tertiaryAccent: 'var(--color-tertiary-accent)',
+        accentTeal: 'var(--color-accent-teal)',
+        accentRed: 'var(--color-accent-red)',
+        accentGreen: 'var(--color-accent-green)',
       },
       fontFamily: {
         primary: ['var(--font-primary)'],

@@ -12,11 +12,10 @@ figmaMapping({
   componentKey: "acf0265923cf7e3ecaa56cbc896a51f0c1b93856",
   mapper(figma: FigmaHeroProps) {
 
-  let title = figma.$findOneByName("title")?.$textContent || "Default Title";
-  let subtitle = figma.$findOneByName("description")?.$textContent || "Default Description";
+
 
   return ( 
-    <Hero title={title} subtitle={subtitle}/>
+    <Hero body="Enter body here"/>
   );
 }
 

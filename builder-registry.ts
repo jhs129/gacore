@@ -42,19 +42,22 @@ Builder.registerComponent(
     name: "Hero",
     inputs: [
       {
-        name: "title",
-        type: "string",
+        name: "body",
+        type: "html",
         required: true,
-      },
-      {
-        name: "subtitle",
-        type: "string",
-        required: true,
+        defaultValue: "Default Body",
       },
       {
         name: "image",
         type: "file",
       },
+      {
+        name: "color",
+        friendlyName: "Background color",
+        type: "string",
+        enum: ["red", "green", "teal"],
+        defaultValue: "teal",
+      }
     ],
   }
 );
