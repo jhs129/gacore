@@ -30,3 +30,21 @@ module.exports = {
   },
   plugins: [],
 }
+
+// :root {
+//   --color-primary-light: #FFFFFF;
+//   --color-primary-dark: #343A40;
+//   --color-accent-red: #F1696D;
+//   --color-accent-green: #5B794E;
+//   --color-accent-teal: #037E88;
+//   --text-color-body-text-primary: #037E88;
+//   --color-tertiary: #D4EBF0;
+//   --color-quaternary: #8F3536;
+//   --font-primary: 'Lora', sans-serif;
+//   --font-secondary: 'Inter', sans-serif;
+//   --spacing-xl: 32px;
+//   --spacing-lg: 16px;
+//   --spacing-md: 8px;
+//   --spacing-sm: 4px;
+//   --spacing-xs: 2px;
+// }

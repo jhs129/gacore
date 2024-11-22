@@ -60,28 +60,27 @@ Builder.registerComponent(
 );
 
 
-
 Builder.register("editor.settings", {
-  styleStrictMode: true, // optional
   designTokens: {
     colors: [
-      { name: "surface/secondary/cyan", value: "var(--surface-secondary-cyan, #037E88)" },
-      { name: "surface/secondary/azure", value: "var(--surface-secondary-azure-dark, #343A40)" },
-      { name: "surface/neutral/light-gray", value: "var(--surface-neutral-light-gray, #F8F9FA)" },
-      { name: "surface/primary/green", value: "var(--surface-primary-green, #5B794E)" },
-      { name: "text/body-dark", value: "var(--text-body-dark, #000)" },
-      { name: "text/body-text-invert", value: "var(--text-body-dark, #FFFFF)" },
-      { name: "hyperlink/invert", value: "var(--text-body-dark, #FFFFF)" },
+      { name: "White", value: "var(--color-primary-light, #FFFFFF)" },
+      { name: "Dark", value: "var(--color-primary-dark, #FFFFFF)" },
+      { name: "Red", value: "var(--color-accent-red, #FFFFFF)" },
+      { name: "Green", value: "var(--color-accent-green, #FFFFFF)" },
+      { name: "Teal", value: "var(--color-accent-teal, #FFFFFF)" },
     ],
     spacing: [
-      { name: "Large", value: "var(--space-large, 20px)" },
-      { name: "Small", value: "var(--space-small, 10px)" },
-      { name: "Tiny", value: "5px" },
+      { name: "Lg", value: "var(--spacing-lg, 16px)" },
+      { name: "Md", value: "var(--spacing-md, 8px)" },
+      { name: "Sm", value: "var(--spacing-sm, 4px)" },
     ],
     fontFamily: [
-      { name: 'Serif Font', value: 'var(--serif-font, Times, serif)' },
-      { name: 'Primary Font', value: 'Roboto, sans-serif' },
-      { name: 'Secondary Font', value: 'var(--font-font-family-secondary, "Liberation-Sans")' },
+      { name: 'Primary', value: "var(--font-primary, 'Arial', sans-serif)" },
+      { name: 'Secondary', value: "var(--font-secondary, 'Gilroy', sans-serif)" },
     ]
+    // other design tokens
   },
 });
+
+
+

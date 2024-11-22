@@ -3,91 +3,96 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply bg-white;
+  }
 
-/* html,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
- 
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline
-} */
+  h1 {
+    @apply text-[2.5rem] my-4 font-sans leading-none text-primaryDark;
+  }
 
-body {
-  @apply bg-white;
-}
+  h2 {
+    @apply text-[2rem] my-4 font-medium font-sans text-inherit;
+  }
+  h3 {
+    @apply text-xl my-4 font-sans leading-5;
+  }
+  h4 {
+    @apply text-lg my-4 font-sans;
+  }
+  h5 {
+    @apply text-base my-4 font-bold font-sans;
+  }
+  h6 {
+    @apply my-4 font-sans leading-5;
+  }
+  p {
+    @apply mb-4  font-serif font-thin leading-[1.125rem];
+  }
 
-h1 {
-  @apply text-[2.5rem] my-4 font-sans leading-none text-primaryDark;
-}
+  a {
+    /* transition: color .25s ease-in-out; */
+    @apply text-primaryAccent  hover:text-secondaryDark transition-colors duration-300 ease-in-out;
+  }
 
-h2 {
-  @apply text-[2rem] my-4 font-medium font-sans text-inherit;
-}
-h3 {
-  @apply text-xl my-4 font-sans leading-5;
-}
-h4 {
-  @apply text-lg my-4 font-sans;
-}
-h5 {
-  @apply text-base my-4 font-bold font-sans;
-}
-h6 {
-  @apply my-4 font-sans leading-5;
-}
-p {
-  @apply mb-4  font-serif font-thin leading-[1.125rem];
-}
+  nav a {
+    @apply text-white hover:text-secondaryDark transition-colors duration-300 ease-in-out;
+  }
 
-a {
-/* transition: color .25s ease-in-out; */
- @apply text-primaryAccent  hover:text-secondaryDark transition-colors duration-300 ease-in-out;
-}
+  li a {
+    @apply text-inherit hover:text-secondaryDark transition-colors duration-300 ease-in-out;
+  }
 
-nav a {
-  @apply text-white hover:text-secondaryDark transition-colors duration-300 ease-in-out;
-}
+  button {
+    @apply mx-auto px-6 py-2 bg-primaryAccent hover:bg-secondaryAccent text-white hover:text-primaryDark rounded-full transition-colors duration-300 ease-in-out;
+  }
 
-li a {
-  @apply text-inherit hover:text-secondaryDark transition-colors duration-300 ease-in-out;
-}
+  ul {
+    @apply list-disc px-4;
+  }
 
-button {
-  @apply mx-auto px-6 py-2 bg-primaryAccent hover:bg-secondaryAccent text-white hover:text-primaryDark rounded-full transition-colors duration-300 ease-in-out;
-}
-
-ul {
-  @apply list-disc px-4;
+  li {
+    @apply mb-2 pr-4;
+  }
 }
 
-li {
-  @apply mb-2 pr-4;  
-}
-
+:root {
+  --color-primary-light: #FFFFFF;
+  --color-primary-dark: #343A40;
+  --color-accent-red: #F1696D;
+  --color-accent-green: #5B794E;
+  --color-accent-teal: #037E88;
+  --text-color-body-text-primary: #037E88;
+  --color-tertiary: #D4EBF0;
+  --color-quaternary: #8F3536;
+  --font-primary: 'Lora', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+  --spacing-xl: 32px;
+  --spacing-lg: 16px;
+  --spacing-md: 8px;
+  --spacing-sm: 4px;
+  --spacing-xs: 2px;
 }
 
 .btn-carousel {
-  @apply bg-tertiaryAccent hover:bg-secondaryDark text-white border border-tertiaryAccent rounded-lg px-2 py-4 capitalize
+  @apply bg-tertiaryAccent hover:bg-secondaryDark text-white border border-tertiaryAccent rounded-lg px-2 py-4 capitalize;
 }
 
 .site-container {
-@apply container mx-auto px-4;
-
+  @apply container mx-auto px-4;
 }
 
 .theme-dark {
-@apply bg-primaryDark text-white;
+  @apply bg-primaryDark text-white;
 }
 
 .theme-dark-2 {
-@apply bg-secondaryDark text-white;
+  @apply bg-secondaryDark text-white;
 }
 
 .theme-light {
-@apply bg-primaryLight text-black;
+  @apply bg-primaryLight text-black;
 }
-
 
 /* HAMBURGER MENU */
 
@@ -103,7 +108,7 @@ li {
 .hamburger-middle,
 .hamburger-bottom {
   @apply bg-orange-600;
-  content: '';
+  content: "";
   position: absolute;
   width: 24px;
   height: 3px;
@@ -137,4 +142,3 @@ li {
 .open .hamburger-bottom {
   transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }
-
