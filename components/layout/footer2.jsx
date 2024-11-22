@@ -8,7 +8,7 @@ const Footer = () => {
   const policyLinks = ['Privacy', 'Site Use Policies', 'Admin Login'];
 
   return (
-    <footer className="flex flex-col items-center self-stretch bg-secondaryDark">
+    <footer className="flex flex-col w-full items-center self-stretch bg-secondaryDark">
       <div className="flex flex-col self-stretch w-full text-center whitespace-nowrap max-md:max-w-full">
         <div className="flex flex-wrap gap-1.5 justify-center items-start w-full max-md:px-5 max-md:max-w-full">
           {[1, 2, 3, 4].map((index) => (
