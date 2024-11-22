@@ -19,6 +19,7 @@
   --spacing-md: 8px;
   --spacing-sm: 4px;
   --spacing-xs: 2px;
+  --spacing-none: 0px;
 }
 
 @layer base {
@@ -27,7 +28,7 @@
   }
 
   h1 {
-    @apply text-[2.5rem] my-4 leading-none;
+    @apply text-xl leading-loose md:text-[2.5rem] md:leading-none;
   }
 
   h2 {

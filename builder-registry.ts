@@ -75,6 +75,7 @@ Builder.register("editor.settings", {
       { name: "Lg", value: "var(--spacing-lg, 16px)" },
       { name: "Md", value: "var(--spacing-md, 8px)" },
       { name: "Sm", value: "var(--spacing-sm, 4px)" },
+      { name: "None", value: "var(--spacing-none, 0px)" },
     ],
     fontFamily: [
       { name: "Primary", value: "var(--font-primary, 'Arial', sans-serif)" },

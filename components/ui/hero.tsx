@@ -36,8 +36,8 @@ const Hero: React.FC<HeroProps> = (props) => {
 
   return (
     <section id="hero" className="flex flex-col md:flex-row w-full gap-0">
-      <div className={`flex flex-col justify-center w-full md:w-1/2 p-4 pl-12 lg:pl-28 ${bgColor} text-primaryLight max-md:max-w-full`}>
-        <div className="flex flex-col leading-3" dangerouslySetInnerHTML={{ __html: props.body }}>
+      <div className={`flex flex-col justify-center w-full md:w-1/2 pl-12 lg:pl-28 ${bgColor} text-primaryLight max-md:max-w-full`}>
+        <div className="flex flex-col leading-none" dangerouslySetInnerHTML={{ __html: props.body }}>
         </div>
       </div>
       <div className="w-full md:w-1/2">
