@@ -63,7 +63,7 @@ Builder.registerComponent(
 Builder.register("editor.settings", {
   designTokens: {
     colors: [
-      { name: "White", value: "var(--color-primary-light, #FFFFFF)" },
+      { name: "White", value: "var(--color-primary-light, #FFF)" },
       { name: "Dark", value: "var(--color-primary-dark, #FFFFFF)" },
       { name: "Red", value: "var(--color-accent-red, #FFFFFF)" },
       { name: "Green", value: "var(--color-accent-green, #FFFFFF)" },

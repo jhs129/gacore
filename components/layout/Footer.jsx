@@ -14,7 +14,7 @@ const Footer = () => {
           {[1, 2, 3, 4].map((index) => (
             <div key={index} className="flex grow shrink justify-center items-center w-8">
               <div className="flex flex-col self-stretch my-auto w-10">
-                <div className="px-1 text-3xl font-black leading-none text-gray-50"></div>
+                <div className="px-1 text-3xl leading-none text-gray-50"></div>
                 <div className={`z-10 px-${index === 4 ? '3.5' : index === 1 ? '4' : '3'} -mt-8 text-base leading-8 text-blue-950`}></div>
               </div>
             </div>

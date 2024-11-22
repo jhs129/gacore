@@ -13,7 +13,7 @@
   --color-tertiary: #D4EBF0;
   --color-quaternary: #8F3536;
   --font-primary: 'Lora', sans-serif;
-  --font-secondary: 'Inter', sans-serif;
+  --font-secondary: 'Liberation Sans', sans-serif;
   --spacing-xl: 32px;
   --spacing-lg: 16px;
   --spacing-md: 8px;
@@ -23,30 +23,30 @@
 
 @layer base {
   body {
-    @apply bg-white;
+    @apply bg-white font-primary;
   }
 
   h1 {
-    @apply text-[2.5rem] my-4 font-sans leading-none text-accentTeal;
+    @apply text-[2.5rem] my-4 leading-none text-accentTeal;
   }
 
   h2 {
     @apply text-[2rem] my-4 font-medium font-sans text-inherit;
   }
   h3 {
-    @apply text-xl my-4 font-sans leading-5;
+    @apply text-xl my-4 leading-5;
   }
   h4 {
-    @apply text-lg my-4 font-sans;
+    @apply text-lg my-4;
   }
   h5 {
-    @apply text-base my-4 font-bold font-sans;
+    @apply text-base my-4 font-bold;
   }
   h6 {
-    @apply my-4 font-sans leading-5;
+    @apply my-4 leading-5;
   }
   p {
-    @apply mb-4  font-serif font-thin text-primaryDark leading-[1.125rem];
+    @apply mb-4  font-primary font-thin leading-[1.125rem];
   }
 
   a {

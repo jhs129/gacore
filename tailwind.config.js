@@ -26,6 +26,8 @@ module.exports = {
         accentGreen: 'var(--color-accent-green, #06D6A0)',
       },
       fontFamily: {
+        primary: ['var(--font-primary)'],
+        secondary: ['var(--font-secondary)'],
         sans: ['Lufga', 'sans-serif'],
         serif: ['Aspira', 'serif'],
       },
