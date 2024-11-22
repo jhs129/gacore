@@ -10,29 +10,35 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = (props) => {
-  const defaultImage = "https://cdn.builder.io/api/v1/image/assets/TEMP/79d8c1827770f3a7d9e1acf40dbea9bcbc6968f1a04e0d8acfe725b2a0608dd7?placeholderIfAbsent=true&apiKey=7bf199de15724d268c1417f75ca31ce1";
+  const defaultImage =
+    "https://cdn.builder.io/api/v1/image/assets/TEMP/79d8c1827770f3a7d9e1acf40dbea9bcbc6968f1a04e0d8acfe725b2a0608dd7?placeholderIfAbsent=true&apiKey=7bf199de15724d268c1417f75ca31ce1";
   const imageSrc = props.image || defaultImage;
 
   return (
-    <section id="hero" className="flex flex-row justify-between text-primaryLight max-sm:flex max-sm:flex-col">
-      <div className="flex flex-col justify-center items-start px-4 lg:pl-32 bg-accentTeal max-md:max-w-full">
-        <div className="flex flex-col max-w-full w-[540px]">
-          <h1 className="text-5xl font-bold leading-[60px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px] max-sm:px-5 text-primaryLight">
+    <section
+      id="hero"
+      className="flex flex-col md:flex-row w-full gap-0"
+    >
+      <div className="flex flex-col justify-center w-full md:w-1/2 px-4 lg:pl-32 bg-accentTeal text-primaryLight max-md:max-w-full">
+        <div className="flex flex-col pl-5 lg:pl-28">
+          <h1 className="lg:text-5xl font-bold leading-20 lg:leading-[60px] text-primaryLight">
             {props.title}
           </h1>
-          <p className="mt-12 text-2xl font-bold max-md:mt-10 max-md:max-w-full max-sm:px-5">
+          <p className="mt-12 lg:text-2xl font-bold">
             {props.subtitle}
           </p>
         </div>
       </div>
-      <img 
-        loading="lazy" 
-        src={imageSrc} 
-        alt="Georgia Family Cancer History Screening Program visual representation"
-        className="object-contain self-start aspect-[1.78] min-w-[240px] w-[683px] max-md:max-w-full" 
-      />
+      <div className="w-full md:w-1/2">
+        <img
+          loading="lazy"
+          src={imageSrc}
+          alt="Georgia Family Cancer History Screening Program visual representation"
+          className="object-cover self-start min-w-[240px] max-md:max-w-full"
+        />
+      </div>
     </section>
   );
-}
+};
 
 export default Hero;
