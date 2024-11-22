@@ -5,7 +5,7 @@ import DefaultErrorPage from "next/error";
 import Head from "next/head";
 import "../builder-registry";
 
-import Footer from "@/components/layout/footer";
+import Footer from "@/components/layout/footer2";
 import Header from "@/components/layout/header";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY);

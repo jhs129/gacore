@@ -6,14 +6,14 @@ builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 Builder.registerComponent(
   dynamic(() => import("@/components/layout/header")),
   {
-    name: "Header"
+    name: "Header",
   }
 );
 
 Builder.registerComponent(
-  dynamic(() => import("@/components/layout/footer")),
+  dynamic(() => import("@/components/layout/footer2")),
   {
-    name: "Footer"
+    name: "Footer",
   }
 );
 
@@ -34,7 +34,6 @@ Builder.registerComponent(
     ],
   }
 );
-
 
 Builder.registerComponent(
   dynamic(() => import("./components/ui/hero")),
@@ -59,7 +58,6 @@ Builder.registerComponent(
   }
 );
 
-
 Builder.register("editor.settings", {
   designTokens: {
     colors: [
@@ -75,12 +73,12 @@ Builder.register("editor.settings", {
       { name: "Sm", value: "var(--spacing-sm, 4px)" },
     ],
     fontFamily: [
-      { name: 'Primary', value: "var(--font-primary, 'Arial', sans-serif)" },
-      { name: 'Secondary', value: "var(--font-secondary, 'Gilroy', sans-serif)" },
-    ]
+      { name: "Primary", value: "var(--font-primary, 'Arial', sans-serif)" },
+      {
+        name: "Secondary",
+        value: "var(--font-secondary, 'Gilroy', sans-serif)",
+      },
+    ],
     // other design tokens
   },
 });
-
-
-
