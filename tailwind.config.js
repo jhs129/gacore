@@ -14,13 +14,16 @@ module.exports = {
     
     extend: {
       colors: {
-        primaryLight: '#FFF',
-        secondaryLight: '#F8F9FA',
-        primaryDark: '#000',
-        secondaryDark: '#343A40',
-        primaryAccent: '#CF4B08',
-        secondaryAccent: '#037E88',
-        tertiaryAccent: '#343A40',
+        primaryLight: '--var(--color-primary-light, #FFFFFF)',
+        secondaryLight: '--var(--color-secondary-light, #F8F9FA)',
+        primaryDark: '--var(--color-primary-dark, #000000)',
+        secondaryDark: '--var(--color-secondary-dark, #343A40)',
+        primaryAccent: '--var(--color-primary-accent, #FFD166)',
+        secondaryAccent: '--var(--color-secondary-accent, #06D6A0)',
+        tertiaryAccent: '--var(--color-tertiary-accent, #118AB2)',
+        accentTeal: '--var(--color-accent-teal, #06D6A0)',
+        accentRed: '--var(--color-accent-red, #EF476F)',
+        accentGreen: '--var(--color-accent-green, #06D6A0)',
       },
       fontFamily: {
         sans: ['Lufga', 'sans-serif'],
