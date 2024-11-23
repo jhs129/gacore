@@ -51,10 +51,10 @@ const Footer = () => {
             <p className="px-56 w-full text-base text-center text-primaryLight max-md:px-5 max-md:max-w-full">
               Copyright © 2005 - @ 2024 Georgia Center for Oncology Research and Education, Inc. All Rights Reserved.
             </p>
-            <div className="flex flex-row mx-auto gap-2">
+            <div className="flex flex-row mx-auto gap-2 text-primaryLight">
               {policyLinks.map((link, index) => (
                 <React.Fragment key={index}>
-                  {index > 0 && <span className="text-base text-primaryLight"> | </span>}
+                  {index > 0 && <span className="text-base"> | </span>}
                   <a href="#" className="tracking-normal leading-6">{link}</a>
                 </React.Fragment>
               ))}
