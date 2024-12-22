@@ -1,0 +1,137 @@
+<style>
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+  
+    .resources-hero {
+      display: flex;
+      overflow: hidden;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  
+    .resources-content {
+      background-color: var(--color-accent-red);
+      display: flex;
+      min-width: 240px;
+      padding: 0 0 0 128px;
+      flex-direction: column;
+      align-items: start;
+      color: var(--color-primary-light);
+      justify-content: center;
+      width: 683px;
+    }
+  
+    .resources-container {
+      display: flex;
+      width: 515px;
+      max-width: 100%;
+      padding: 0 24px 0 0;
+      flex-direction: column;
+      justify-content: start;
+    }
+  
+    .resources-subtitle {
+      letter-spacing: -0.8px;
+      font: 700 24px/24px var(--font-secondary);
+    }
+  
+    .resources-heading {
+      margin: 16px 0 0;
+      font: 700 50px/60px var(--font-primary);
+    }
+  
+    .resources-media {
+      align-self: start;
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      justify-content: start;
+      width: 683px;
+    }
+  
+    .media-wrapper {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: start;
+    }
+  
+    .media-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: start;
+    }
+  
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      min-height: 384px;
+      width: 100%;
+      justify-content: start;
+    }
+  
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  
+    .image-aspect-ratio {
+      position: relative;
+      transform: rotate(-0.5974070155326525rad);
+      display: flex;
+      min-height: 384px;
+      width: 100%;
+    }
+  
+    @media (max-width: 991px) {
+      .resources-content,
+      .resources-container,
+      .resources-subtitle,
+      .resources-heading,
+      .resources-media,
+      .media-wrapper,
+      .media-container,
+      .image-container,
+      .image-aspect-ratio {
+        max-width: 100%;
+      }
+  
+      .resources-heading {
+        font-size: 40px;
+        line-height: 53px;
+      }
+    }
+  </style>
+  
+  <section class="resources-hero" aria-labelledby="resources-title">
+    <div class="resources-content">
+      <div class="resources-container">
+        <p class="resources-subtitle">Resources</p>
+        <h1 id="resources-title" class="resources-heading">Positive family cancer history screening results</h1>
+      </div>
+    </div>
+    <div class="resources-media">
+      <div class="media-wrapper">
+        <div class="media-container">
+          <div class="image-container">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/f620ae609c780e22f3e8b8127532e55ff208d810925e811856a3f54f3f7acd5e?apiKey=a5186b5cd9b64253b08921edb4a9fded&" class="hero-image" alt="Family cancer history screening visual representation" />
+            <div class="image-aspect-ratio"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

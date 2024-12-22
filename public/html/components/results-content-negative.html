@@ -1,0 +1,173 @@
+<style>
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 56px 0 80px;
+    }
+    
+    .main-container {
+      display: flex;
+      width: 920px;
+      max-width: 920px;
+      flex-direction: column;
+    }
+    
+    .consent-section {
+      background-color: var(--color-primary-light);
+      padding: 24px;
+      width: 100%;
+    }
+    
+    .section-title {
+      color: var(--text-color-body-text-primary);
+      font: 700 36px/36px var(--font-secondary);
+      letter-spacing: -0.8px;
+    }
+    
+    .consent-text {
+      color: var(--color-primary-dark);
+      font: 400 16px/24px var(--font-secondary);
+      margin-top: 32px;
+    }
+    
+    .checkbox-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    
+    .checkbox-input {
+      width: 13px;
+      height: 13px;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 3px;
+    }
+    
+    .checkbox-label {
+      color: var(--color-primary-dark);
+      font: 400 16px/24px var(--font-secondary);
+    }
+    
+    .consent-button {
+      background-color: var(--color-accent-teal);
+      color: var(--color-primary-light);
+      text-transform: uppercase;
+      font: 400 24px/32px var(--font-secondary);
+      letter-spacing: -0.8px;
+      padding: 11px 17px;
+      border: 1px solid var(--color-accent-teal);
+      margin-top: 32px;
+      width: 248px;
+      text-align: center;
+    }
+    
+    .info-section {
+      margin-top: 56px;
+      padding-right: 112px;
+      font-family: var(--font-secondary);
+    }
+    
+    .info-title {
+      color: var(--text-color-body-text-primary);
+      font: 700 36px/36px var(--font-secondary);
+      letter-spacing: -0.8px;
+    }
+    
+    .info-text {
+      color: var(--color-primary-dark);
+      font: 400 20px/28px var(--font-secondary);
+      margin-top: 32px;
+    }
+    
+    .recommendations {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .recommendation-item {
+      margin-top: 16px;
+    }
+    
+    .recommendation-title {
+      color: var(--color-accent-teal);
+      font: 700 20px/28px var(--font-secondary);
+    }
+    
+    .recommendation-text {
+      color: var(--color-primary-dark);
+      font: 400 20px/28px var(--font-secondary);
+      margin-top: 8px;
+    }
+    
+    @media (max-width: 991px) {
+      .main-container {
+        max-width: 100%;
+      }
+      
+      .consent-section {
+        padding: 0 20px;
+      }
+      
+      .info-section {
+        padding-right: 20px;
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <section class="content" aria-label="Health Results and Recommendations">
+      <div class="main-container">
+        <form class="consent-section" aria-labelledby="consent-title">
+          <h2 id="consent-title" class="section-title">Consent for follow-up communication</h2>
+          <p class="consent-text">By agreeing below, you give GA Core permission to send updates on your results, health recommendations, and research highlights to support your well-being.</p>
+          <div class="checkbox-wrapper">
+            <input type="checkbox" id="consent-checkbox" class="checkbox-input" aria-label="Consent to receive communications">
+            <label for="consent-checkbox" class="checkbox-label">I agree to receive email or SMS</label>
+          </div>
+          <button type="submit" class="consent-button">consent</button>
+        </form>
+    
+        <section class="info-section" aria-labelledby="result-meaning">
+          <h2 id="result-meaning" class="info-title">What does this result mean?</h2>
+          <div class="info-text">
+            Your family history shows:
+            <ol>
+              <li>You are unlikely to have a harmful genetic change in the <em>BRCA1</em> or <em>BRCA2</em> genes that would greatly increase your risk of breast or ovarian cancer.</li>
+              <li>You are still at an average risk for cancer, similar to the general population, because some risk factors, like aging, cannot be changed.</li>
+            </ol>
+          </div>
+        </section>
+    
+        <section class="info-section" aria-labelledby="next-steps">
+          <h2 id="next-steps" class="info-title">What should you do next?</h2>
+          <p class="info-text">
+            National guidelines recommend the following for women at average risk for breast cancer:<br>
+            Start mammograms at age 40<br>
+            Get mammograms at least every two years<br>
+            Be sure to update your family cancer history with your healthcare provider annually. If there are any changes, contact your public health clinic, as updates may affect your cancer risk.
+          </p>
+        </section>
+    
+        <section class="info-section" aria-labelledby="risk-reduction">
+          <h2 id="risk-reduction" class="info-title">How can I lower my cancer risk?</h2>
+          <div class="recommendations">
+            <div class="recommendation-item">
+              <h3 class="recommendation-title">Limit alcohol use</h3>
+              <p class="recommendation-text">Drinking alcohol, whether beer, wine, or liquor, increases your risk of breast cancer. It's recommended to limit alcohol to one drink per day.</p>
+            </div>
+            <div class="recommendation-item">
+              <h3 class="recommendation-title">Maintain a healthy weight</h3>
+              <p class="recommendation-text">Being overweight raises your breast cancer risk. Aim for a BMI between 18.5 and 25 to maintain a healthy weight.</p>
+            </div>
+            <div class="recommendation-item">
+              <h3 class="recommendation-title">Stay physically active</h3>
+              <p class="recommendation-text">Physical activity helps control your weight. You don't need to spend hours at the gym—find simple ways, like walking, dancing, or gardening to stay active for at least 30 minutes five days a week.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>

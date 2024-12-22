@@ -1,0 +1,286 @@
+<style>
+    :root {
+      --color-primary-light: #FFFFFF;
+      --color-primary-dark: #343A40;
+      --color-secondary-dark: #343A40;
+      --color-accent-red: #F1696D;
+      --color-accent-green: #5B794E;
+      --color-accent-teal: #037E88;
+      --text-color-body-text-primary: #037E88;
+      --color-tertiary: #D4EBF0;
+      --color-quaternary: #8F3536;
+      --font-primary: 'Lora', sans-serif;
+      --font-secondary: 'Liberation Sans', sans-serif;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+    
+    .overview-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      font-family: var(--font-secondary);
+    }
+    
+    .section-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      padding: 40px 0;
+    }
+    
+    .rich-text {
+      background-color: var(--color-primary-light);
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+    }
+    
+    .content-wrapper {
+      display: flex;
+      width: 100%;
+      max-width: 1110px;
+      padding-right: 112px;
+      flex-direction: column;
+    }
+    
+    .section-title {
+      color: var(--text-color-body-text-primary);
+      font-size: 44px;
+      font-weight: 700;
+      line-height: 44px;
+      letter-spacing: -0.8px;
+    }
+    
+    .section-description {
+      color: var(--color-primary-dark);
+      font-size: 20px;
+      line-height: 28px;
+      margin-top: 40px;
+    }
+    
+    .media-listing {
+      background-color: var(--color-primary-light);
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 0;
+    }
+    
+    .media-grid {
+      display: flex;
+      margin-top: 40px;
+      width: 100%;
+      align-items: start;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .media-item {
+      background-color: #FBF6F3;
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      flex: 1;
+      flex-basis: 0%;
+    }
+    
+    .media-image {
+      aspect-ratio: 1.78;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .media-content {
+      display: flex;
+      margin-top: 32px;
+      width: 100%;
+      flex-direction: column;
+      padding: 0 32px 32px;
+    }
+    
+    .media-title {
+      color: var(--text-color-body-text-primary);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 33.6px;
+    }
+    
+    .media-links {
+      display: flex;
+      margin-top: 32px;
+      width: 100%;
+      flex-direction: column;
+      font-size: 20px;
+      gap: 8px;
+    }
+    
+    .action-link {
+      color: var(--color-accent-red);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    
+    .callout {
+      background-color: #F8F9FA;
+      width: 100%;
+      max-width: 1110px;
+      padding: 32px;
+    }
+    
+    .resource-listing {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+    }
+    
+    .resource-title {
+      color: var(--color-accent-red);
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 33.6px;
+    }
+    
+    .resource-list {
+      margin-top: 24px;
+    }
+    
+    .resource-link {
+      color: var(--text-color-body-text-primary);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+    
+    .sponsors {
+      display: flex;
+      margin-top: 56px;
+      width: 100%;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .sponsor-logo {
+      width: 160px;
+      aspect-ratio: 1.82;
+      object-fit: contain;
+    }
+    
+    @media (max-width: 991px) {
+      .content-wrapper {
+        max-width: 100%;
+        padding-right: 20px;
+      }
+      
+      .media-content {
+        padding: 0 20px;
+      }
+      
+      .sponsors {
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <section class="overview-section">
+      <div class="section-container">
+        <div class="rich-text">
+          <div class="content-wrapper">
+            <h1 class="section-title">Overview</h1>
+            <p class="section-description">
+              Getting a positive family history screening result suggests you may be at a higher risk for having a harmful genetic change in the BRCA1 or <em>BRCA2</em> genes. Some genetic changes are linked to Hereditary Breast and Ovarian Cancer (HBOC). This means your chances of developing these cancers may be higher than the general population.
+              <br><br>
+              This may be a lot to take in, but there are guidance and support available to help you make informed choices for your health.
+            </p>
+          </div>
+        </div>
+    
+        <div class="media-listing">
+          <div class="content-wrapper">
+            <h2 class="section-title">Understanding hereditary breast and ovarian cancer (HBOC)</h2>
+            
+            <div class="media-grid">
+              <article class="media-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/f3c86ccfab7ee68f4875fe0f177840a041d5cacc3cdb352c407cd3da6a444c0a?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Video thumbnail about HBOC" class="media-image">
+                <div class="media-content">
+                  <h3 class="media-title">What is Hereditary Breast and Ovarian Cancer (HBOC)?</h3>
+                  <div class="media-links">
+                    <a href="#" class="action-link">Play Video</a>
+                    <a href="#" class="action-link">Download PDF</a>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="media-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/a16233ca5d371d29ca36731d147fc31b4648d334c6ba04d0cb29eba6306d8eb4?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Video thumbnail about BRCA gene importance" class="media-image">
+                <div class="media-content">
+                  <h3 class="media-title">Why is it important to know if you have a harmful <em>BRCA</em> gene?</h3>
+                  <div class="media-links">
+                    <a href="#" class="action-link">Play Video</a>
+                    <a href="#" class="action-link">Download PDF</a>
+                  </div>
+                </div>
+              </article>
+    
+              <article class="media-item">
+                <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/0beb88832f78e0edaa385ba36c189fd63c99238c951041cb7ea35b552e8a4b19?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Video thumbnail about determining BRCA gene status" class="media-image">
+                <div class="media-content">
+                  <h3 class="media-title">How to determine if you have a harmful <em>BRCA</em> gene?</h3>
+                  <div class="media-links">
+                    <a href="#" class="action-link">Play Video</a>
+                    <a href="#" class="action-link">Download PDF</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+    
+        <div class="rich-text">
+          <div class="content-wrapper">
+            <h2 class="section-title">What should you do next?</h2>
+            <p class="section-description">
+              National cancer organizations recommend that women with a positive family history screening meet with a genetic counselor. Genetic counselor will:
+              <br><br>
+              Gather more detailed information about your family's cancer history
+              <br>
+              Assess the likelihood of an inherited cause for cancer in your family
+              <br>
+              Explain the benefits and limitations of genetic testing
+              <br>
+              Discuss your personal cancer risk and explore ways to lower it
+              <br>
+              Review insurance coverage and financial assistance programs
+            </p>
+          </div>
+        </div>
+    
+        <div class="rich-text">
+          <div class="content-wrapper">
+            <div class="callout">
+              <strong class="resource-title">Genetic counseling</strong> helps you make an informed decision about whether to pursue genetic testing. Genetic testing looks at your saliva or blood to check for gene changes that may increase your risk for inherited cancers.
+              <br><br>
+              <strong class="action-link">Take action today!</strong> Schedule a free virtual genetic counseling session with a board-certified genetic counselor at Myriad. Scheduling is easy! Call this secure line: <a href="tel:888-706-0755" class="resource-link">888-706-0755</a>. Genetic counselors are available Monday through Friday, 7:30 AM to 8:00 PM.
+            </div>
+          </div>
+        </div>
+    
+        <div class="sponsors">
+          <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/c2954a16ace62646d983471e5e7b590b8f23d2a514d9e6cf967bdd6d231d4567?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Sponsor logo" class="sponsor-logo">
+          <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/aa4c2cfaaa246877c2e6e55a5d6e7c696e050a571fe14f84f359b36221b6419d?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Sponsor logo" class="sponsor-logo">
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,326 @@
+<style>
+    :root {
+      --color-primary-light: #FFFFFF;
+      --color-primary-dark: #343A40;
+      --color-secondary-dark: #343A40;
+      --color-accent-red: #F1696D;
+      --color-accent-green: #5B794E;
+      --color-accent-teal: #037E88;
+      --text-color-body-text-primary: #037E88;
+      --color-tertiary: #D4EBF0;
+      --color-quaternary: #8F3536;
+      --font-primary: 'Lora', sans-serif;
+      --font-secondary: 'Liberation Sans', sans-serif;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    
+    .health-recommendations {
+      background: var(--color-primary-light);
+      padding: 40px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .recommendations-container {
+      width: 1110px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      min-width: 240px;
+    }
+    
+    .main-title {
+      color: var(--text-color-body-text-primary);
+      font: 700 44px/44px var(--font-secondary);
+      letter-spacing: -0.8px;
+    }
+    
+    .content-wrapper {
+      margin-top: 48px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .recommendation-item {
+      display: flex;
+      width: 100%;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    
+    .text-content {
+      flex: 1;
+      min-width: 240px;
+      padding-right: 24px;
+    }
+    
+    .section-title {
+      color: var(--color-accent-red);
+      font: 700 28px/33.6px var(--font-secondary);
+    }
+    
+    .section-description {
+      color: var(--color-primary-dark);
+      font: 400 20px/28px var(--font-secondary);
+      margin-top: 24px;
+    }
+    
+    .image-wrapper {
+      flex: 1;
+      min-width: 240px;
+      min-height: 304px;
+      background: var(--color-tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .lifestyle-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-top: 32px;
+    }
+    
+    .lifestyle-card {
+      background: var(--color-tertiary);
+      width: calc(50% - 16px);
+      min-width: 240px;
+      min-height: 518px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .card-content {
+      padding: 32px;
+    }
+    
+    .card-title {
+      color: var(--text-color-body-text-primary);
+      font: 700 28px/33.6px var(--font-secondary);
+    }
+    
+    .card-description {
+      color: var(--color-primary-dark);
+      font: 400 20px/28px var(--font-secondary);
+      margin-top: 32px;
+    }
+    
+    .link {
+      color: var(--text-color-body-text-primary);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+
+    
+    @media (max-width: 991px) {
+      .recommendations-container {
+        padding: 0 20px;
+      }
+      
+      .lifestyle-card {
+        width: 100%;
+      }
+      
+      .card-content {
+        padding: 20px;
+      }
+    }
+    </style>
+    <style>
+.sponsors-section {
+  background-color: var(--color-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.sponsors-container {
+  align-self: stretch;
+  display: flex;
+  min-width: 240px;
+  width: 1110px;
+  max-width: 1110px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.sponsors-content {
+  display: flex;
+  width: 100%;
+  padding-right: 112px;
+  flex-direction: column;
+  font-family: var(--font-secondary);
+}
+
+.sponsors-heading {
+  color: var(--text-color-body-text-primary);
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.8px;
+}
+
+.sponsors-description {
+  color: var(--color-primary-dark);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-top: 32px;
+}
+
+.sponsors-phone {
+  text-decoration: underline;
+}
+
+.sponsors-logos {
+  display: flex;
+  margin-top: 56px;
+  width: 100%;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sponsor-logo {
+  aspect-ratio: 1.8;
+  object-fit: contain;
+  object-position: center;
+  width: 160px;
+  align-self: stretch;
+  margin: auto 0;
+}
+
+@media (max-width: 991px) {
+  .sponsors-content {
+    max-width: 100%;
+    padding-right: 20px;
+  }
+  
+  .sponsors-heading {
+    max-width: 100%;
+  }
+  
+  .sponsors-description {
+    max-width: 100%;
+  }
+  
+  .sponsors-logos {
+    max-width: 100%;
+    margin-top: 40px;
+  }
+}
+</style>
+    
+    <section class="health-recommendations" aria-labelledby="health-title">
+      <div class="recommendations-container">
+        <h1 id="health-title" class="main-title">Take action for your health</h1>
+        
+        <div class="content-wrapper">
+          <article class="recommendation-item">
+            <div class="text-content">
+              <h2 class="section-title">Mammogram screening</h2>
+              <p class="section-description">Regular check-ups can help find breast cancer early, when it's easier to treat. If you're 40 or older, healthcare providers suggest getting a mammogram every two years.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/13c96e19e4bec1fd200865b107b392ae993cdae592a065d3ec3409c3de236e2d?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Woman getting a mammogram screening" loading="lazy">
+            </div>
+          </article>    
+
+          <article class="recommendation-item">
+            <div class="text-content">
+              <h2 class="section-title">Keep your family history updated</h2>
+              <p class="section-description">Your family's health history can change as your family members learn new things about their health. Review your family's cancer history every year and share any updates with your provider. These changes could affect your risk.</p>
+            </div>
+            <div class="image-wrapper">
+              <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/462d2ed873b84ccfab2ddec0accfb33380250313f3f59bc37a344b7a07035b9a?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Family tree illustration showing health history" loading="lazy">
+            </div>
+          </article>
+    
+          <article class="recommendation-item">
+            <div class="text-content">
+              <h2 class="section-title">Maintain a healthy lifestyle</h2>
+              <p class="section-description">A healthy lifestyle can support your well-being and may reduce certain cancer risks. Here are some key habits and helpful resources to support your journey.</p>
+            </div>
+            
+            <div class="lifestyle-grid">
+              <div class="lifestyle-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/289b31b107c4036a0091ae63556b37dacf4834edabd246003b15b645c03b1372?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Illustration showing alcohol moderation" loading="lazy">
+                <div class="card-content">
+                  <h3 class="card-title">Limit alcohol use</h3>
+                  <p class="card-description">Drinking beer, wine, or liquor, increases your risk of breast cancer. Providers suggest women limit alcohol to one drink per day.</p>
+                </div>
+              </div>
+    
+              <div class="lifestyle-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/00f40e308d192af7c6d6629102762e76c314fca9f867acb4a29ae36f84d9a0ef?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Healthy weight maintenance illustration" loading="lazy">
+                <div class="card-content">
+                  <h3 class="card-title">Maintain a healthy weight</h3>
+                  <p class="card-description">Maintain a healthy weight. Ask your provider what's a healthy weight for you.</p>
+                </div>
+              </div>
+    
+              <div class="lifestyle-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/242706b8f62589a016e7f3127e33b2712bd09b4f16622b80a05715416306f3ae?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="People being physically active" loading="lazy">
+                <div class="card-content">
+                  <h3 class="card-title">Stay physically active</h3>
+                  <p class="card-description">Physical activity helps control your weight. You don't need to spend hours at the gym—find simple ways, like walking, dancing, or gardening. Georgia Department of Public Health Guidelines recommends to stay active for at least 30 minutes five days a week.</p>
+                </div>
+              </div>
+    
+              <div class="lifestyle-card">
+                <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/923b2fc2b589c44669bbecc2b9fad60e5b72fbddeed80242e5833871359f7d63?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Healthy balanced meal illustration" loading="lazy">
+                <div class="card-content">
+                  <h3 class="card-title">Eat a balanced diet</h3>
+                  <p class="card-description">A diet rich in fruits, vegetables, whole grains, and lean proteins can help support your immune system and reduce cancer risk.</p>
+                  <ul>
+                    <li><a href="https://www.myplate.gov/resources/tools" class="link" target="_blank">MyPlate by the USDA</a>: Use this tool to build a balanced diet tailored to your needs, with meal plans, recipes, and nutritional guidance.</li>
+                    <li><a href="https://www.cancer.org/cancer/risk-prevention/diet-physical-activity/acs-guidelines-nutrition-physical-activity-cancer-prevention/guidelines.html" class="link" target="_blank">American Cancer Society Healthy Eating Guidelines</a>: The ACS provides easy-to-follow dietary recommendations to help reduce cancer risk.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="sponsors-section" aria-label="Our Sponsors">
+        <div class="sponsors-container">
+          <div class="sponsors-content">
+            <h2 class="sponsors-heading">Our Sponsors</h2>
+            <p class="sponsors-description">
+              Funded by a Cooperative Agreement with the Georgia Department of Public
+              Health and administered by the Georgia Center for Oncology Research and
+              Education. For more information, contact Georgia CORE at
+              <a href="tel:4045841178" class="sponsors-phone">404-584-1178</a>.
+            </p>
+          </div>
+          <div class="sponsors-logos">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/4a6d699b427620eb37a3f1f6171374e804837a09d93b29cbd4e1803f8135c362?apiKey=a5186b5cd9b64253b08921edb4a9fded&"
+              alt="Georgia Department of Public Health logo"
+              class="sponsor-logo"
+            />
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/c5b221b66c194032e0bde69cb90e914f47e9f8d5c77e4505a4ea12737e13d38f?apiKey=a5186b5cd9b64253b08921edb4a9fded&"
+              alt="Georgia Center for Oncology Research and Education logo"
+              class="sponsor-logo"
+            />
+          </div>
+        </div>
+      </section>

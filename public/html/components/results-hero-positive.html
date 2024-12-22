@@ -1,0 +1,239 @@
+<style>
+    .result-section {
+      background-color: var(--color-primary-light);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 48px 128px;
+    }
+    
+    .result-container {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+      display: flex;
+      width: 100%;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .result-content {
+      background-color: var(--color-primary-light);
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: 1;
+      padding: 40px 32px;
+    }
+    
+    .result-header {
+      display: flex;
+      width: 100%;
+      gap: 8px;
+      color: var(--color-primary-dark);
+      letter-spacing: 0;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      font: 400 28px/33.6px var(--font-secondary);
+    }
+    
+    .result-icon {
+      aspect-ratio: 1.21;
+      object-fit: contain;
+      object-position: center;
+      width: 41px;
+    }
+    
+    .result-title {
+      min-width: 240px;
+      flex: 1;
+      margin: auto 0;
+    }
+    
+    .result-details {
+      display: flex;
+      margin-top: 24px;
+      width: 100%;
+      align-items: center;
+      gap: 24px;
+      justify-content: flex-start;
+    }
+    
+    .result-info {
+      align-self: stretch;
+      display: flex;
+      min-width: 240px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+      flex: 1;
+      margin: auto 0;
+    }
+    
+    .result-status {
+      color: var(--text-color-body-text-primary);
+      font: 700 50px/60px var(--font-primary);
+    }
+    
+    .result-date {
+      color: var(--color-primary-dark);
+      letter-spacing: 0;
+      margin-top: 16px;
+      font: 400 20px/28px var(--font-secondary);
+    }
+    
+    .action-sidebar {
+      background-color: var(--color-primary-light);
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      color: var(--color-primary-light);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: -0.8px;
+      justify-content: center;
+      width: 290px;
+      padding: 1px;
+      font: 400 24px/32px var(--font-secondary);
+      border: 1px solid rgba(0, 0, 0, 0.125);
+    }
+    
+    .action-container {
+      display: flex;
+      min-height: 1px;
+      max-width: 100%;
+      width: 288px;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .action-list {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    
+    .action-item {
+      background-color: var(--color-primary-light);
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4px 0;
+    }
+    
+    .print-button {
+      background-color: var(--color-accent-red);
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      padding: 11px 17px;
+      border: 1px solid var(--color-accent-red);
+      cursor: pointer;
+    }
+    
+    .print-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 24px;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    .print-text {
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    @media (max-width: 991px) {
+      .result-section {
+        padding: 0 20px;
+      }
+      
+      .result-container {
+        max-width: 100%;
+      }
+      
+      .result-content {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      
+      .result-header {
+        max-width: 100%;
+      }
+      
+      .result-title {
+        max-width: 100%;
+      }
+      
+      .result-details {
+        max-width: 100%;
+      }
+      
+      .result-info {
+        max-width: 100%;
+      }
+      
+      .result-status {
+        font-size: 40px;
+      }
+      
+      .result-date {
+        max-width: 100%;
+      }
+      
+      .action-sidebar,
+      .action-container,
+      .action-list,
+      .action-item,
+      .print-button {
+        white-space: initial;
+      }
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    </style>
+    
+    <section class="result-section" aria-label="Test Result">
+      <div class="result-container">
+        <div class="result-content">
+          <div class="result-header">
+            <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/241c8f5bf6cd34f6e5ef63bfbe3cbc7a89082f4107e2fe80d333e962035103ce?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="Result status indicator" class="result-icon" />
+            <h1 class="result-title">Your Result</h1>
+          </div>
+          <div class="result-details">
+            <div class="result-info">
+              <div class="result-status" role="status" aria-live="polite">Positive Screen</div>
+              <div class="result-date">10/2/2024</div>
+            </div>
+          </div>
+        </div>
+        <aside class="action-sidebar">
+          <div class="action-container">
+            <div class="action-list">
+              <div class="action-item">
+                <button class="print-button" onclick="window.print()" aria-label="Print results">
+                  <img src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/2691a9f403ab501fffb99837e06a6b0747ee94acf25b26b5fdb77470971ce827?apiKey=a5186b5cd9b64253b08921edb4a9fded&" alt="" class="print-icon" />
+                  <span class="print-text">print</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>

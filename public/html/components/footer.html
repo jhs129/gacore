@@ -1,0 +1,297 @@
+<style>
+  :root {
+    --color-primary-light: #ffffff;
+    --color-primary-dark: #343a40;
+    --color-secondary-dark: #343a40;
+    --color-accent-red: #f1696d;
+    --color-accent-green: #5b794e;
+    --color-accent-teal: #037e88;
+    --text-color-body-text-primary: #037e88;
+    --color-tertiary: #d4ebf0;
+    --color-quaternary: #8f3536;
+    --font-primary: "Lora", sans-serif;
+    --font-secondary: "Liberation Sans", sans-serif;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .site-footer {
+    background-color: var(--color-primary-dark);
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 51px 0;
+  }
+
+  .social-icons-container {
+    display: flex;
+    width: 100%;
+    max-width: 1366px;
+    align-items: flex-start;
+    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 596px;
+  }
+
+  .social-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 32px;
+  }
+
+  .social-icon {
+    align-self: stretch;
+    display: flex;
+    width: 40px;
+    flex-direction: column;
+    margin: auto 0;
+  }
+
+  .social-icon-background {
+    color: var(--color-primary-light);
+    padding: 0 4px;
+    font: 900 32px/1 "Font Awesome 5 Free";
+  }
+
+  .social-icon-foreground {
+    z-index: 10;
+    margin-top: -32px;
+    color: var(--color-secondary-dark);
+    padding: 0 15px;
+    font: 400 16px/32px "Font Awesome 5 Brands";
+  }
+
+  .content-wrapper {
+    display: flex;
+    margin-top: 53px;
+    width: 100%;
+    max-width: 1240px;
+    flex-direction: column;
+  }
+
+  .logo-section {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .logo-content {
+    align-self: stretch;
+    display: flex;
+    min-width: 240px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 0 15px 16px;
+  }
+
+  .logo-link {
+    align-self: center;
+    display: flex;
+    width: 306px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-image {
+    aspect-ratio: 5.78;
+    object-fit: contain;
+    width: 306px;
+    align-self: stretch;
+    min-width: 240px;
+  }
+
+  .spacer {
+    display: flex;
+    min-height: 24px;
+    width: 100%;
+  }
+
+  .heading {
+    width: 100%;
+    color: var(--color-primary-light);
+    text-align: center;
+    padding: 16px 335px 0;
+    font: 400 20px/28px var(--font-secondary);
+  }
+
+  .description {
+    width: 100%;
+    color: var(--color-primary-light);
+    text-align: center;
+    padding: 16px 20px 0;
+    font: 400 16px/24px var(--font-secondary);
+  }
+
+  .footer-nav {
+    background-color: var(--color-primary-dark);
+    display: flex;
+    width: 100%;
+    max-width: 1240px;
+    padding-top: 8px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .nav-buttons {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    gap: 36px;
+    color: var(--color-primary-light);
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 16px 276px;
+    font: 400 20px/30px var(--font-secondary);
+  }
+
+  .nav-button {
+    background-color: var(--color-accent-green);
+    padding: 9px 17px;
+    border: 1px solid var(--color-accent-green);
+    color: var(--color-primary-light);
+    text-decoration: none;
+  }
+
+  .copyright {
+    width: 100%;
+    color: var(--color-primary-light);
+    text-align: center;
+    padding: 0 221px;
+    font: 400 16px var(--font-secondary);
+  }
+
+  .footer-links {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    color: var(--color-primary-light);
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 16px 459px 0;
+    font: 400 16px var(--font-secondary);
+    gap: 8px;
+  }
+
+  .footer-link {
+    color: var(--color-primary-light);
+    text-decoration: none;
+  }
+
+  @media (max-width: 991px) {
+    .site-footer,
+    .social-icons-container,
+    .content-wrapper,
+    .logo-section,
+    .logo-content,
+    .heading,
+    .description,
+    .footer-nav,
+    .nav-buttons,
+    .copyright,
+    .footer-links {
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .heading {
+      padding-top: 40px;
+    }
+
+    .nav-buttons {
+      padding: 16px 20px;
+    }
+  }
+</style>
+
+<footer class="footer" role="contentinfo">
+  <div class="site-footer">
+    <div class="social-icons-container">
+      <div class="social-icon-wrapper">
+        <div class="social-icon">
+          <div class="social-icon-background"></div>
+          <div class="social-icon-foreground"></div>
+        </div>
+      </div>
+      <div class="social-icon-wrapper">
+        <div class="social-icon">
+          <div class="social-icon-background"></div>
+          <div class="social-icon-foreground"></div>
+        </div>
+      </div>
+      <div class="social-icon-wrapper">
+        <div class="social-icon">
+          <div class="social-icon-background"></div>
+          <div class="social-icon-foreground"></div>
+        </div>
+      </div>
+      <div class="social-icon-wrapper">
+        <div class="social-icon">
+          <div class="social-icon-background"></div>
+          <div class="social-icon-foreground"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="logo-section">
+        <div class="logo-content">
+          <a href="#" class="logo-link">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/5c235430b40fccdb506018849aa5de57318f5d3902e1491577178ae87bbb2e4b?apiKey=a5186b5cd9b64253b08921edb4a9fded&"
+              alt="Georgia CORE Logo"
+              class="logo-image"
+            />
+          </a>
+          <div class="spacer"></div>
+          <h2 class="heading">
+            Advancing Cancer Care through Partnerships and Innovation
+          </h2>
+          <p class="description">
+            Georgia CORE is a public-private partnership that creates
+            collaboration among the state's cancer organizations and
+            institutions to connect more Georgians to quality, personalized
+            cancer care. We welcome you to this one-of-a-kind online information
+            center for all things related to cancer and survivorship care in
+            Georgia.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <nav class="footer-nav" role="navigation" aria-label="Footer Navigation">
+      <div class="nav-buttons">
+        <a href="#" class="nav-button">Contact Us</a>
+        <a href="#" class="nav-button">Donate</a>
+        <a href="#" class="nav-button">Take Our Survey</a>
+        <a href="#" class="nav-button">Link To Us</a>
+      </div>
+      <p class="copyright">
+        Copyright © 2005 - 2024 Georgia Center for Oncology Research and
+        Education, Inc. All Rights Reserved.
+      </p>
+      <div class="footer-links">
+        <a href="#" class="footer-link">Privacy</a>
+        <span>|</span>
+        <a href="#" class="footer-link">Site Use Policies</a>
+        <span>|</span>
+        <a href="#" class="footer-link">Admin Login</a>
+      </div>
+    </nav>
+  </div>
+</footer>

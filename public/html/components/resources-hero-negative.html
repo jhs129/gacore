@@ -1,0 +1,146 @@
+<style>
+    .resources-hero {
+      display: flex;
+      overflow: hidden;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    
+    .resources-content {
+      background-color: var(--color-accent-green);
+      display: flex;
+      min-width: 240px;
+      padding: 0 0 0 128px;
+      flex-direction: column;
+      align-items: start;
+      color: var(--color-primary-light);
+      justify-content: center;
+      width: 683px;
+    }
+    
+    .resources-container {
+      display: flex;
+      width: 515px;
+      max-width: 100%;
+      padding: 0 24px 0 0;
+      flex-direction: column;
+      justify-content: start;
+    }
+    
+    .resources-subheading {
+      letter-spacing: -0.8px;
+      font: 700 24px/24px var(--font-secondary);
+    }
+    
+    .resources-title {
+      margin: 16px 0 0;
+      font: 700 50px/60px var(--font-primary);
+    }
+    
+    .resources-image-section {
+      align-self: start;
+      display: flex;
+      min-width: 240px;
+      flex-direction: column;
+      justify-content: start;
+      width: 683px;
+    }
+    
+    .resources-media {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: start;
+    }
+    
+    .media-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: start;
+    }
+    
+    .image-wrapper {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      min-height: 384px;
+      width: 100%;
+      justify-content: start;
+    }
+    
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    
+    .image-aspect-ratio {
+      position: relative;
+      transform: rotate(-0.5974070155326525rad);
+      display: flex;
+      min-height: 384px;
+      width: 100%;
+    }
+    
+    @media (max-width: 991px) {
+      .resources-content,
+      .resources-container,
+      .resources-subheading,
+      .resources-title,
+      .resources-image-section,
+      .resources-media,
+      .media-container,
+      .image-wrapper,
+      .image-aspect-ratio {
+        max-width: 100%;
+      }
+    
+      .resources-title {
+        font-size: 40px;
+        line-height: 53px;
+      }
+    
+      .resources-container {
+        padding-right: 20px;
+      }
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+    </style>
+    
+    <section class="resources-hero" role="region" aria-label="Resources Section">
+      <div class="resources-content">
+        <div class="resources-container">
+          <p class="resources-subheading">Resources</p>
+          <h1 class="resources-title">Negative family cancer history screening results</h1>
+        </div>
+      </div>
+      <div class="resources-image-section">
+        <div class="resources-media">
+          <div class="media-container">
+            <div class="image-wrapper">
+              <img 
+                loading="lazy"
+                src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/f620ae609c780e22f3e8b8127532e55ff208d810925e811856a3f54f3f7acd5e?apiKey=a5186b5cd9b64253b08921edb4a9fded&"
+                class="hero-image"
+                alt="Cancer screening results visualization"
+              />
+              <div class="image-aspect-ratio"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

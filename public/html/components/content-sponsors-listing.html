@@ -1,0 +1,116 @@
+<style>
+    .sponsors-section {
+      background-color: var(--color-primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+    }
+    
+    .sponsors-container {
+      align-self: stretch;
+      display: flex;
+      min-width: 240px;
+      width: 1110px;
+      max-width: 1110px;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin: 0 auto;
+    }
+    
+    .sponsors-content {
+      display: flex;
+      width: 100%;
+      padding-right: 112px;
+      flex-direction: column;
+      font-family: var(--font-secondary);
+      justify-content: flex-start;
+    }
+    
+    .sponsors-heading {
+      color: var(--text-color-body-text-primary);
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 40px;
+      letter-spacing: -0.8px;
+    }
+    
+    .sponsors-description {
+      color: var(--color-primary-dark);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 28px;
+      margin-top: 32px;
+    }
+    
+    .sponsors-phone {
+      text-decoration: underline;
+    }
+    
+    .sponsors-logos {
+      display: flex;
+      margin-top: 56px;
+      width: 100%;
+      align-items: center;
+      gap: 30px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    
+    .sponsor-logo {
+      aspect-ratio: 1.8;
+      object-fit: contain;
+      object-position: center;
+      width: 160px;
+      align-self: stretch;
+      margin: auto 0;
+    }
+    
+    @media (max-width: 991px) {
+      .sponsors-content {
+        max-width: 100%;
+        padding-right: 20px;
+      }
+    
+      .sponsors-heading {
+        max-width: 100%;
+      }
+    
+      .sponsors-description {
+        max-width: 100%;
+      }
+    
+      .sponsors-logos {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    }
+    </style>
+    
+    <section class="sponsors-section" aria-label="Our Sponsors">
+      <div class="sponsors-container">
+        <div class="sponsors-content">
+          <h2 class="sponsors-heading">Our Sponsors</h2>
+          <p class="sponsors-description">
+            Funded by a Cooperative Agreement with the Georgia Department of Public
+            Health and administered by the Georgia Center for Oncology Research and
+            Education. For more information, contact Georgia CORE at
+            <a href="tel:404-584-1178" class="sponsors-phone" aria-label="Call Georgia CORE at 404-584-1178">404-584-1178</a>.
+          </p>
+        </div>
+        <div class="sponsors-logos">
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/4a6d699b427620eb37a3f1f6171374e804837a09d93b29cbd4e1803f8135c362?apiKey=a5186b5cd9b64253b08921edb4a9fded&"
+            class="sponsor-logo"
+            alt="Georgia Department of Public Health logo"
+            loading="lazy"
+          />
+          <img
+            src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/c5b221b66c194032e0bde69cb90e914f47e9f8d5c77e4505a4ea12737e13d38f?apiKey=a5186b5cd9b64253b08921edb4a9fded&"
+            class="sponsor-logo"
+            alt="Georgia Center for Oncology Research and Education logo" 
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,129 @@
+<style>
+    .faq-section {
+      background-color: var(--color-primary-light);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: var(--font-secondary);
+      padding: 80px 0;
+    }
+  
+    .faq-container {
+      width: 920px;
+      max-width: 920px;
+    }
+  
+    .faq-content {
+      width: 100%;
+      padding-right: 112px;
+    }
+  
+    .faq-title {
+      color: var(--text-color-body-text-primary);
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: -0.8px;
+    }
+  
+    .faq-list {
+      color: var(--color-primary-dark);
+      font-size: 20px;
+      line-height: 28px;
+      margin-top: 32px;
+    }
+  
+    .faq-question {
+      font-weight: 700;
+      color: var(--color-accent-teal);
+    }
+  
+    .help-section {
+      margin-top: 56px;
+      width: 100%;
+      padding-right: 112px;
+    }
+  
+    .help-title {
+      color: var(--color-accent-red);
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 36px;
+      letter-spacing: -0.8px;
+    }
+  
+    .help-content {
+      color: var(--color-primary-dark);
+      font-size: 20px;
+      line-height: 28px;
+      margin-top: 32px;
+    }
+  
+    .help-contact {
+      font-weight: 700;
+      color: var(--color-accent-teal);
+    }
+  
+    .help-email {
+      text-decoration: underline;
+    }
+  
+    @media (max-width: 991px) {
+      .faq-container {
+        max-width: 100%;
+      }
+  
+      .faq-content {
+        padding-right: 20px;
+      }
+  
+      .help-section {
+        padding-right: 20px;
+        margin-top: 40px;
+      }
+    }
+  </style>
+  
+  <section class="faq-section" aria-labelledby="faq-title">
+    <div class="faq-container">
+      <div class="faq-content">
+        <h2 id="faq-title" class="faq-title">Frequently asked questions</h2>
+        <ol class="faq-list">
+          <li>
+            <span class="faq-question">Do I need to see a genetic counselor in person?</span>
+            No, sessions are done via phone or secure video conferencing.
+          </li>
+          <li>
+            <span class="faq-question">Is there a charge for the genetic counseling session?</span>
+            No, it's completely free.
+          </li>
+          <li>
+            <span class="faq-question">How long does the session take?</span>
+            Sessions typically last 30 minutes.
+          </li>
+          <li>
+            <span class="faq-question">Who provides the counseling?</span>
+            Board-certified genetic counselors from Myriad, with expertise in cancer genetics, will work closely with a cancer genetics nurse practitioner from GA Center of Oncology Research and Education (CORE) to ensure quality care.
+          </li>
+          <li>
+            <span class="faq-question">How is my health information protected?</span>
+            Your privacy is a top priority. By law, we are required to protect your personal health information, which will only be accessed by GA CORE and your public health clinic. We will never share your information without your consent.
+          </li>
+        </ol>
+      </div>
+  
+      <div class="help-section">
+        <h2 class="help-title">Questions? We're here to help!</h2>
+        <div class="help-content">
+          <p>
+            <strong>If you have any questions or need help scheduling your session, please contact us.</strong>
+          </p>
+          <p>
+            <span class="help-contact">Provider Contact Information:</span>
+            404-523-8735 (ext 6)
+            <a href="mailto:genetics@georgiacore.org" class="help-email">genetics@georgiacore.org</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
