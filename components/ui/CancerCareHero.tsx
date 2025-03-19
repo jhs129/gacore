@@ -5,7 +5,7 @@ import Image from "next/image";
 const QuickActionButton = ({ children }: { children: React.ReactNode }) => {
   return (
     <button
-      className="text-green-900 text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-green-900"
+      className="text-green-900 bg-green-100 text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-green-900"
       aria-label={children?.toString()}
     >
       {children}
@@ -78,14 +78,14 @@ function CancerCareHero({
               />
             </div>
 
-            <div className="mt-8 lg:mt-12 bg-white rounded-3xl p-6 lg:p-8 shadow-lg w-full lg:w-[120%] relative z-10">
+            <div className="mt-8 lg:mt-12 bg-white rounded-3xl p-6 lg:p-8 shadow-lg w-full lg:w-[150%] relative z-10">
               <h2 className="text-xl text-[#302F2E]">{searchTitle}</h2>
 
               <form onSubmit={handleSearch} className="mt-4">
-                <div className="space-y-4">
+                <div className="flex flex-col lg:flex-row gap-4">
                   <select
                     aria-label="How can we help you today?"
-                    className="w-full p-4 border border-zinc-300 rounded text-[#302F2E] focus:outline-none focus:ring-2 focus:ring-green-900"
+                    className="w-80 p-4 border border-zinc-300 rounded text-[#302F2E] focus:outline-none focus:ring-2 focus:ring-green-900"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                   >
@@ -106,7 +106,7 @@ function CancerCareHero({
                     <input
                       type="text"
                       id="location"
-                      className="w-full p-4 border border-zinc-300 rounded text-[#302F2E] focus:outline-none focus:ring-2 focus:ring-green-900"
+                      className="w-80 p-4 border border-zinc-300 rounded text-[#302F2E] focus:outline-none focus:ring-2 focus:ring-green-900"
                       value={location}
                       onChange={(e) => setLocation(e.target.value)}
                       aria-labelledby="location-label"
@@ -121,7 +121,7 @@ function CancerCareHero({
                   </button>
                 </div>
 
-                <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2">
+                <div className="mt-6 flex flex-wrap">
                   <QuickActionButton>Find a doctor</QuickActionButton>
                   <QuickActionButton>Search clinical trials</QuickActionButton>
                   <QuickActionButton>Get financial assistance</QuickActionButton>
