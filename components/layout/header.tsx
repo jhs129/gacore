@@ -73,62 +73,64 @@ const Header: React.FC = () => {
         </div>
         
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex gap-8 xl:gap-16 items-center px-8 xl:px-16 py-2 bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)]" aria-label="Main Navigation">
-          {menuItems.map((item) => (
-            <div
-              key={item.name}
-              className="flex relative gap-1 items-center cursor-pointer whitespace-nowrap"
-              role="button"
-              aria-haspopup={item.items ? "true" : undefined}
-              tabIndex={0}
-              aria-expanded={openDropdown === item.name}
-              onClick={() => toggleDropdown(item.name)}
-              onKeyDown={(event) => handleKeyDown(event, item.name)}
-            >
-              <span className="text-sm font-semibold leading-6 text-zinc-800 whitespace-nowrap">
-                {item.label}
-              </span>
-              {item.items && (
-                <div>
-                  <svg
-                    width="13"
-                    height="12"
-                    viewBox="0 0 13 12"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="dropdown-icon"
-                    style={{
-                      width: "12px",
-                      height: "12px",
-                      transform: `rotate(${openDropdown === item.name ? "180" : "0"}deg)`,
-                      transition: "transform 0.2s"
-                    }}
-                    aria-hidden="true"
-                  >
-                    <path d="M6.66458 8.9292C6.83532 8.9283 6.98982 8.86273 7.11677 8.72931L10.9408 4.81171C11.0506 4.70192 11.1098 4.56612 11.1098 4.40711C11.1098 4.07906 10.8552 3.82031 10.5299 3.82031C10.3709 3.82031 10.2228 3.88409 10.1094 3.99609L6.41867 7.78123H6.90998L3.21563 3.99609C3.10545 3.8859 2.95829 3.82031 2.79427 3.82031C2.46802 3.82031 2.21429 4.07906 2.21429 4.40711C2.21429 4.56522 2.27446 4.70102 2.38244 4.81583L6.20825 8.72931C6.34345 8.86453 6.4906 8.9292 6.66458 8.9292Z" fill="currentColor" />
-                  </svg>
-                </div>
-              )}
-              {openDropdown === item.name && item.items && (
-                <div
-                  className="absolute left-0 top-full px-0 py-2 mt-2 bg-white rounded-lg min-w-[200px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[100]"
-                  role="menu"
-                  aria-orientation="vertical"
-                >
-                  {item.items.map((subItem) => (
-                    <a
-                      key={subItem}
-                      className="block px-4 py-2 no-underline text-zinc-800 hover:bg-gray-100"
-                      href="#"
-                      role="menuitem"
+        <nav className="hidden lg:flex mx-auto items-center bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] lg:w-[720px]" aria-label="Main Navigation">
+          <div className="flex items-center justify-between w-full px-8 py-2">
+            {menuItems.map((item) => (
+              <div
+                key={item.name}
+                className="flex relative gap-1 items-center cursor-pointer whitespace-nowrap"
+                role="button"
+                aria-haspopup={item.items ? "true" : undefined}
+                tabIndex={0}
+                aria-expanded={openDropdown === item.name}
+                onClick={() => toggleDropdown(item.name)}
+                onKeyDown={(event) => handleKeyDown(event, item.name)}
+              >
+                <span className="text-sm font-semibold leading-6 text-zinc-800 whitespace-nowrap">
+                  {item.label}
+                </span>
+                {item.items && (
+                  <div>
+                    <svg
+                      width="13"
+                      height="12"
+                      viewBox="0 0 13 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="dropdown-icon"
+                      style={{
+                        width: "12px",
+                        height: "12px",
+                        transform: `rotate(${openDropdown === item.name ? "180" : "0"}deg)`,
+                        transition: "transform 0.2s"
+                      }}
+                      aria-hidden="true"
                     >
-                      {subItem}
-                    </a>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
+                      <path d="M6.66458 8.9292C6.83532 8.9283 6.98982 8.86273 7.11677 8.72931L10.9408 4.81171C11.0506 4.70192 11.1098 4.56612 11.1098 4.40711C11.1098 4.07906 10.8552 3.82031 10.5299 3.82031C10.3709 3.82031 10.2228 3.88409 10.1094 3.99609L6.41867 7.78123H6.90998L3.21563 3.99609C3.10545 3.8859 2.95829 3.82031 2.79427 3.82031C2.46802 3.82031 2.21429 4.07906 2.21429 4.40711C2.21429 4.56522 2.27446 4.70102 2.38244 4.81583L6.20825 8.72931C6.34345 8.86453 6.4906 8.9292 6.66458 8.9292Z" fill="currentColor" />
+                    </svg>
+                  </div>
+                )}
+                {openDropdown === item.name && item.items && (
+                  <div
+                    className="absolute left-0 top-full px-0 py-2 mt-2 bg-white rounded-lg min-w-[200px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[100]"
+                    role="menu"
+                    aria-orientation="vertical"
+                  >
+                    {item.items.map((subItem) => (
+                      <a
+                        key={subItem}
+                        className="block px-4 py-2 no-underline text-zinc-800 hover:bg-gray-100"
+                        href="#"
+                        role="menuitem"
+                      >
+                        {subItem}
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
