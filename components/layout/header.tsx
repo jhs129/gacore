@@ -73,7 +73,7 @@ const Header: React.FC = () => {
         </div>
         
         {/* Desktop Navigation */}
-        <nav className="flex gap-8 items-center px-4 py-2 bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] max-md:gap-6 max-sm:hidden" aria-label="Main Navigation">
+        <nav className="flex gap-16 ml-28 items-center px-16 py-2 bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] max-md:gap-6 max-sm:hidden" aria-label="Main Navigation">
           {menuItems.map((item) => (
             <div
               key={item.name}

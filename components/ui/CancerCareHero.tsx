@@ -1,6 +1,7 @@
 "use client";
 import * as React from "react";
 import { useState } from "react";
+import Image from "next/image";
 
 const QuickActionButton = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -56,7 +57,7 @@ function CancerCareHero({
 
   return (
     <section
-      className="min-h-screen bg-secondaryLight"
+      className="min-h-screen bg-secondaryLight max-h-[384px]"
       aria-labelledby="hero-title"
     >
       <div className="max-w-[1440px] mx-auto px-12 pt-24">
@@ -72,7 +73,7 @@ function CancerCareHero({
               </h1>
             </div>
 
-            <div className="mt-16 bg-white rounded-3xl p-8 shadow-lg w-[120%]">
+            <div className="mt-16 bg-white rounded-3xl p-8 shadow-lg w-[150%]">
               <h2 className="text-xl text-[#302F2E]">
                 {searchTitle}
               </h2>
@@ -133,10 +134,13 @@ function CancerCareHero({
           </div>
 
           <div className="flex-1">
-            <img
+            
+            <Image
               src={heroImage}
-              className="w-full h-full object-cover rounded-lg"
+              className="object-cover rounded-lg"
               alt={heroImageAlt}
+              width={768}
+              height={384}
             />
           </div>
         </div>
