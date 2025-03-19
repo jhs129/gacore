@@ -73,10 +73,13 @@ export default function Page({ page }) {
       <Head>
         <title>{page?.data?.title}</title>
       </Head>
-      {/* Render the Builder page */}
-      <Header />
-      <BuilderComponent model="page" content={page || undefined} />
-      <Footer />
+      <div className="min-h-screen flex flex-col overflow-x-hidden">
+        <Header />
+        <main className="flex-1 w-full">
+          <BuilderComponent model="page" content={page || undefined} />
+        </main>
+        <Footer />
+      </div>
     </>
   );
 }

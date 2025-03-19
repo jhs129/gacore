@@ -50,32 +50,36 @@ function CancerCareHero({
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle search functionality here
     console.log("Searching for:", searchQuery, "in", location);
   };
 
   return (
-    <section
-      className="min-h-screen bg-secondaryLight max-h-[384px]"
-      aria-labelledby="hero-title"
-    >
-      <div className="max-w-[1440px] mx-auto px-12 pt-24">
-        <div className="flex relative">
-          <div className="w-[45%] z-10">
-            <div className="pr-8">
+    <section className="bg-secondaryLight relative w-full overflow-hidden" aria-labelledby="hero-title">
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-12 lg:py-16 min-h-[500px] lg:min-h-[600px] relative">
+        <div className="flex flex-col lg:flex-row relative h-full">
+          <div className="w-full lg:w-[45%] z-10">
+            <div className="pr-4 lg:pr-8">
               <p className="text-xl text-[#302F2E]">{tagline}</p>
-              <h1
-                id="hero-title"
-                className="mt-6 text-[44px] leading-[1.2] text-[#302F2E] font-serif"
-              >
+              <h1 id="hero-title" className="mt-4 text-[32px] lg:text-[44px] leading-[1.2] text-[#302F2E] font-serif">
                 {title}
               </h1>
             </div>
 
-            <div className="mt-16 bg-white rounded-3xl p-8 shadow-lg w-[150%]">
-              <h2 className="text-xl text-[#302F2E]">
-                {searchTitle}
-              </h2>
+            {/* Mobile Image */}
+            <div className="lg:hidden relative w-full h-[300px] mt-8 rounded-lg overflow-hidden">
+              <Image
+                src={heroImage}
+                className="object-cover"
+                alt={heroImageAlt}
+                fill
+                sizes="100vw"
+                priority
+                style={{ objectPosition: 'center center' }}
+              />
+            </div>
+
+            <div className="mt-8 lg:mt-12 bg-white rounded-3xl p-6 lg:p-8 shadow-lg w-full lg:w-[120%] relative z-10">
+              <h2 className="text-xl text-[#302F2E]">{searchTitle}</h2>
 
               <form onSubmit={handleSearch} className="mt-4">
                 <div className="space-y-4">
@@ -126,21 +130,25 @@ function CancerCareHero({
               </form>
             </div>
 
-            <div className="mt-12 flex gap-12">
+            <div className="mt-8 flex gap-12">
               <LinkWithArrow>For caregivers</LinkWithArrow>
               <LinkWithArrow>For providers</LinkWithArrow>
             </div>
           </div>
 
-          <div className="flex-1">
-            
-            <Image
-              src={heroImage}
-              className="object-cover rounded-lg"
-              alt={heroImageAlt}
-              width={768}
-              height={384}
-            />
+          {/* Desktop Image */}
+          <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[55%]">
+            <div className="relative h-full">
+              <Image
+                src={heroImage}
+                className="object-cover rounded-lg"
+                alt={heroImageAlt}
+                fill
+                sizes="(min-width: 1024px) 55vw, 100vw"
+                priority
+                style={{ objectPosition: 'center center' }}
+              />
+            </div>
           </div>
         </div>
       </div>

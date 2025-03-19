@@ -63,8 +63,8 @@ const Header: React.FC = () => {
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
         rel="stylesheet"
       />
-      <div className="box-border flex items-center px-12 py-3 w-full bg-secondaryLight h-[72px] max-md:px-6 max-md:py-3 max-sm:px-4 max-sm:py-3">
-        <div className="mr-28">
+      <div className="box-border flex items-center justify-between px-6 lg:px-12 py-3 w-full bg-secondaryLight h-[72px]">
+        <div>
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
             className="h-12 w-[87.6px]"
@@ -73,7 +73,7 @@ const Header: React.FC = () => {
         </div>
         
         {/* Desktop Navigation */}
-        <nav className="flex gap-16 ml-28 items-center px-16 py-2 bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] max-md:gap-6 max-sm:hidden" aria-label="Main Navigation">
+        <nav className="hidden lg:flex gap-8 xl:gap-16 items-center px-8 xl:px-16 py-2 bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)]" aria-label="Main Navigation">
           {menuItems.map((item) => (
             <div
               key={item.name}
@@ -132,7 +132,7 @@ const Header: React.FC = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <div className="hidden max-sm:flex items-center ml-auto">
+        <div className="lg:hidden flex items-center">
           <button
             className="p-2"
             aria-label="Toggle mobile menu"
@@ -152,7 +152,7 @@ const Header: React.FC = () => {
       <div
         className={`fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out transform ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } max-sm:block hidden`}
+        } lg:hidden`}
       >
         <div className="px-4 py-6">
           <nav className="space-y-4">
