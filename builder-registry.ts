@@ -1,6 +1,8 @@
+"use client";
 import { builder, Builder } from "@builder.io/react";
 import dynamic from "next/dynamic";
-import { fileURLToPath } from "url";
+
+
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
 
@@ -12,7 +14,7 @@ Builder.registerComponent(
 );
 
 Builder.registerComponent(
-  dynamic(() => import("@/components/layout/footer2")),
+  dynamic(() => import("@/components/layout/footer")),
   {
     name: "Footer",
   }
@@ -102,6 +104,55 @@ Builder.registerComponent(
         required: true,
         defaultValue: "Banner image",
       },
+    ],
+  }
+);
+
+Builder.registerComponent(
+  dynamic(() => import("./components/ui/GeorgiaCancerCardComponent")),
+  {
+    name: "GeorgiaCancerCard",
+    inputs: [
+      {
+        name: "headerTitle",
+        type: "string",
+        defaultValue: "Research Initiatives",
+      },
+      {
+        name: "headerSubtitle",
+        type: "string",
+        defaultValue: "Georgia CORE",
+      },
+      {
+        name: "imageSrc",
+        type: "file",
+        allowedFileTypes: ["jpeg", "jpg", "png", "webp"],
+      },
+      {
+        name: "imageAlt",
+        type: "string",
+        defaultValue: "Cancer research image",
+      },
+      {
+        name: "contentTitle",
+        type: "string",
+        defaultValue: "Cancer Research",
+      },
+      {
+        name: "contentSubtitle",
+        type: "string",
+        defaultValue: "Innovative Approaches",
+      },
+      {
+        name: "contentDescription",
+        type: "text",
+        defaultValue: "Supporting groundbreaking cancer research initiatives across Georgia to improve patient outcomes.",
+      },
+      {
+        name: "buttonText",
+        type: "string",
+        defaultValue: "Learn More",
+      }
     ],
   }
 );
