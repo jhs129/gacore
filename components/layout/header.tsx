@@ -115,20 +115,22 @@ const Header: React.FC = () => {
                       )}
                       {openDropdown === item.name && item.items && (
                         <div
-                          className="absolute left-0 top-full px-0 py-2 mt-2 bg-white rounded-lg min-w-[200px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[100]"
+                          className="absolute left-0 top-full px-4 py-3 mt-2 bg-[#1B4332] rounded-lg min-w-[600px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[100]"
                           role="menu"
-                          aria-orientation="vertical"
+                          aria-orientation="horizontal"
                         >
-                          {item.items.map((subItem) => (
-                            <a
-                              key={subItem}
-                              className="block px-4 py-2 no-underline text-zinc-800 hover:bg-gray-100"
-                              href="#"
-                              role="menuitem"
-                            >
-                              {subItem}
-                            </a>
-                          ))}
+                          <div className="flex gap-4">
+                            {item.items.map((subItem) => (
+                              <a
+                                key={subItem}
+                                className="text-white text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-white rounded-sm"
+                                href="#"
+                                role="menuitem"
+                              >
+                                {subItem}
+                              </a>
+                            ))}
+                          </div>
                         </div>
                       )}
                     </div>
@@ -224,6 +226,32 @@ const Header: React.FC = () => {
               </div>
             ))}
           </nav>
+          <div className="mt-6 flex flex-wrap gap-2">
+            <a
+              href="#"
+              className="px-4 py-1.5 bg-[#E5F0EC] text-[#1B4332] text-sm rounded-full hover:bg-[#d0e5dd] transition-colors"
+            >
+              Find a doctor
+            </a>
+            <a
+              href="#"
+              className="px-4 py-1.5 bg-[#E5F0EC] text-[#1B4332] text-sm rounded-full hover:bg-[#d0e5dd] transition-colors"
+            >
+              Search clinical trials
+            </a>
+            <a
+              href="#"
+              className="px-4 py-1.5 bg-[#E5F0EC] text-[#1B4332] text-sm rounded-full hover:bg-[#d0e5dd] transition-colors"
+            >
+              Get financial assistance
+            </a>
+            <a
+              href="#"
+              className="px-4 py-1.5 bg-[#E5F0EC] text-[#1B4332] text-sm rounded-full hover:bg-[#d0e5dd] transition-colors"
+            >
+              Find a support group
+            </a>
+          </div>
         </div>
       </div>
     </header>
