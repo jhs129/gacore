@@ -63,90 +63,118 @@ const Header: React.FC = () => {
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
         rel="stylesheet"
       />
-      <div className="box-border flex items-center justify-between px-6 lg:px-12 py-3 w-full bg-secondaryLight h-[72px]">
-        <div>
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
-            className="h-12 w-[87.6px]"
-            alt="GA Core Logo"
-          />
-        </div>
-        
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex mx-auto items-center bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] lg:w-[720px]" aria-label="Main Navigation">
-          <div className="flex items-center justify-between w-full px-8 py-2">
-            {menuItems.map((item) => (
-              <div
-                key={item.name}
-                className="flex relative gap-1 items-center cursor-pointer whitespace-nowrap"
-                role="button"
-                aria-haspopup={item.items ? "true" : undefined}
-                tabIndex={0}
-                aria-expanded={openDropdown === item.name}
-                onClick={() => toggleDropdown(item.name)}
-                onKeyDown={(event) => handleKeyDown(event, item.name)}
-              >
-                <span className="text-sm font-semibold leading-6 text-zinc-800 whitespace-nowrap">
-                  {item.label}
-                </span>
-                {item.items && (
-                  <div>
-                    <svg
-                      width="13"
-                      height="12"
-                      viewBox="0 0 13 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="dropdown-icon"
-                      style={{
-                        width: "12px",
-                        height: "12px",
-                        transform: `rotate(${openDropdown === item.name ? "180" : "0"}deg)`,
-                        transition: "transform 0.2s"
-                      }}
-                      aria-hidden="true"
-                    >
-                      <path d="M6.66458 8.9292C6.83532 8.9283 6.98982 8.86273 7.11677 8.72931L10.9408 4.81171C11.0506 4.70192 11.1098 4.56612 11.1098 4.40711C11.1098 4.07906 10.8552 3.82031 10.5299 3.82031C10.3709 3.82031 10.2228 3.88409 10.1094 3.99609L6.41867 7.78123H6.90998L3.21563 3.99609C3.10545 3.8859 2.95829 3.82031 2.79427 3.82031C2.46802 3.82031 2.21429 4.07906 2.21429 4.40711C2.21429 4.56522 2.27446 4.70102 2.38244 4.81583L6.20825 8.72931C6.34345 8.86453 6.4906 8.9292 6.66458 8.9292Z" fill="currentColor" />
-                    </svg>
-                  </div>
-                )}
-                {openDropdown === item.name && item.items && (
-                  <div
-                    className="absolute left-0 top-full px-0 py-2 mt-2 bg-white rounded-lg min-w-[200px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[100]"
-                    role="menu"
-                    aria-orientation="vertical"
-                  >
-                    {item.items.map((subItem) => (
-                      <a
-                        key={subItem}
-                        className="block px-4 py-2 no-underline text-zinc-800 hover:bg-gray-100"
-                        href="#"
-                        role="menuitem"
-                      >
-                        {subItem}
-                      </a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+      <div className="w-full bg-secondaryLight">
+        <div className="max-w-[1440px] mx-auto flex items-center justify-between px-6 lg:px-12 py-3 h-[72px]">
+          <div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
+              className="h-12 w-[87.6px]"
+              alt="GA Core Logo"
+            />
           </div>
-        </nav>
+          
+          <div className="flex items-center gap-4 mx-auto">
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] lg:w-[800px]" aria-label="Main Navigation">
+              <div className="flex items-center w-full px-8 py-2">
+                <div className="flex items-center justify-between flex-1 gap-8">
+                  {menuItems.map((item) => (
+                    <div
+                      key={item.name}
+                      className="flex relative gap-1 items-center cursor-pointer whitespace-nowrap"
+                      role="button"
+                      aria-haspopup={item.items ? "true" : undefined}
+                      tabIndex={0}
+                      aria-expanded={openDropdown === item.name}
+                      onClick={() => toggleDropdown(item.name)}
+                      onKeyDown={(event) => handleKeyDown(event, item.name)}
+                    >
+                      <span className="text-sm font-semibold leading-6 text-zinc-800 whitespace-nowrap">
+                        {item.label}
+                      </span>
+                      {item.items && (
+                        <div>
+                          <svg
+                            width="13"
+                            height="12"
+                            viewBox="0 0 13 12"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="dropdown-icon"
+                            style={{
+                              width: "12px",
+                              height: "12px",
+                              transform: `rotate(${openDropdown === item.name ? "180" : "0"}deg)`,
+                              transition: "transform 0.2s"
+                            }}
+                            aria-hidden="true"
+                          >
+                            <path d="M6.66458 8.9292C6.83532 8.9283 6.98982 8.86273 7.11677 8.72931L10.9408 4.81171C11.0506 4.70192 11.1098 4.56612 11.1098 4.40711C11.1098 4.07906 10.8552 3.82031 10.5299 3.82031C10.3709 3.82031 10.2228 3.88409 10.1094 3.99609L6.41867 7.78123H6.90998L3.21563 3.99609C3.10545 3.8859 2.95829 3.82031 2.79427 3.82031C2.46802 3.82031 2.21429 4.07906 2.21429 4.40711C2.21429 4.56522 2.27446 4.70102 2.38244 4.81583L6.20825 8.72931C6.34345 8.86453 6.4906 8.9292 6.66458 8.9292Z" fill="currentColor" />
+                          </svg>
+                        </div>
+                      )}
+                      {openDropdown === item.name && item.items && (
+                        <div
+                          className="absolute left-0 top-full px-0 py-2 mt-2 bg-white rounded-lg min-w-[200px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[100]"
+                          role="menu"
+                          aria-orientation="vertical"
+                        >
+                          {item.items.map((subItem) => (
+                            <a
+                              key={subItem}
+                              className="block px-4 py-2 no-underline text-zinc-800 hover:bg-gray-100"
+                              href="#"
+                              role="menuitem"
+                            >
+                              {subItem}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className="ml-4 p-1.5 hover:bg-gray-50 rounded-lg transition-colors"
+                  aria-label="Search"
+                >
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z"
+                      stroke="#52525B"
+                      strokeWidth="1.66667"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </nav>
 
-        {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center">
-          <button
-            className="p-2"
-            aria-label="Toggle mobile menu"
-            aria-expanded={isMobileMenuOpen}
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            <div className="space-y-2">
-              <div className={`w-8 h-0.5 bg-zinc-600 transition-transform duration-300 ${isMobileMenuOpen ? 'transform rotate-45 translate-y-2.5' : ''}`}></div>
-              <div className={`w-8 h-0.5 bg-zinc-600 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
-              <div className={`w-8 h-0.5 bg-zinc-600 transition-transform duration-300 ${isMobileMenuOpen ? 'transform -rotate-45 -translate-y-2.5' : ''}`}></div>
+            {/* Search Button */}
+
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden flex items-center">
+              <button
+                className="p-2"
+                aria-label="Toggle mobile menu"
+                aria-expanded={isMobileMenuOpen}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                <div className="space-y-2">
+                  <div className={`w-8 h-0.5 bg-zinc-600 transition-transform duration-300 ${isMobileMenuOpen ? 'transform rotate-45 translate-y-2.5' : ''}`}></div>
+                  <div className={`w-8 h-0.5 bg-zinc-600 transition-opacity duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+                  <div className={`w-8 h-0.5 bg-zinc-600 transition-transform duration-300 ${isMobileMenuOpen ? 'transform -rotate-45 -translate-y-2.5' : ''}`}></div>
+                </div>
+              </button>
             </div>
-          </button>
+          </div>
         </div>
       </div>
 
