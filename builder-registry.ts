@@ -219,3 +219,137 @@ Builder.register("editor.settings", {
     // other design tokens
   },
 });
+
+Builder.registerComponent(
+  dynamic(() => import("./components/ui/SupportResources")), 
+  {
+  name: "SupportResources",
+  inputs: [
+    {
+      name: "heading",
+      type: "string",
+      defaultValue:
+        "Cancer affects more than your health—we're here to connect you to resources that make life easier.",
+    },
+    {
+      name: "buttonText",
+      type: "string",
+      defaultValue: "View all support resources",
+    },
+    {
+      name: "buttonUrl",
+      type: "string",
+      defaultValue: "#",
+    },
+    {
+      name: "cards",
+      type: "list",
+      subFields: [
+        {
+          name: "title",
+          type: "string",
+        },
+        {
+          name: "description",
+          type: "string",
+        },
+        {
+          name: "linkText",
+          type: "string",
+        },
+        {
+          name: "linkUrl",
+          type: "string",
+          defaultValue: "#",
+        },
+        {
+          name: "iconType",
+          type: "enum",
+          enum: ["financial", "emotional", "practical"],
+          defaultValue: "financial",
+        },
+        {
+          name: "backgroundColor",
+          type: "string",
+          defaultValue: "bg-white",
+        },
+        {
+          name: "iconBackgroundColor",
+          type: "string",
+          defaultValue: "bg-orange-300",
+        },
+      ],
+      defaultValue: [
+        {
+          title: "Financial Relief",
+          description:
+            "Cost shouldn't be a barrier to care. Financial assistance programs can help.",
+          linkText: "Explore financial assistance",
+          linkUrl: "#",
+          iconType: "financial",
+        },
+        {
+          title: "Emotional Support",
+          description:
+            "You don't have to go through this alone. Connect with others who understand.",
+          linkText: "Find a support group",
+          linkUrl: "#",
+          iconType: "emotional",
+        },
+        {
+          title: "Practical help",
+          description:
+            "From transportation to housing, we make it easier to focus on healing.",
+          linkText: "Get practical assistance",
+          linkUrl: "#",
+          iconType: "practical",
+        },
+      ],
+    },
+  ],
+});
+
+Builder.registerComponent(
+  dynamic(() => import("./components/ui/SupportCard")),
+  {
+    name: "SupportCard",
+    inputs: [
+      {
+        name: "title",
+        type: "string",
+        defaultValue: "Support Card Title",
+      },
+      {
+        name: "description",
+        type: "string",
+        defaultValue: "Support card description goes here.",
+      },
+      {
+        name: "linkText",
+        type: "string",
+        defaultValue: "Learn more",
+      },
+      {
+        name: "linkUrl",
+        type: "string",
+        defaultValue: "#",
+      },
+      {
+        name: "iconType",
+        type: "enum",
+        enum: ["financial", "emotional", "practical"],
+        defaultValue: "financial",
+      },
+      {
+        name: "backgroundColor",
+        type: "string",
+        defaultValue: "bg-white",
+      },
+      {
+        name: "iconBackgroundColor",
+        type: "string",
+        defaultValue: "bg-orange-300",
+      },
+    ],
+  }
+);
