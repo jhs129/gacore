@@ -7,7 +7,6 @@ import {
 } from "./SupportIcons";
 
 export interface SupportCardProps {
-  iconSvg: React.ReactNode;
   title: string;
   description: string;
   linkText: string;

@@ -23,7 +23,7 @@ const SupportResources: React.FC<SupportResourcesProps> = ({
   // Default cards if none provided
   const defaultCards: SupportCardProps[] = [
     {
-      iconSvg: <FinancialIcon />,
+      iconType: "financial",
       title: "Financial Relief",
       description:
         "Cost shouldn't be a barrier to care. Financial assistance programs can help.",
@@ -31,7 +31,7 @@ const SupportResources: React.FC<SupportResourcesProps> = ({
       linkUrl: "#",
     },
     {
-      iconSvg: <EmotionalSupportIcon />,
+      iconType: "emotional",
       title: "Emotional Support",
       description:
         "You don't have to go through this alone. Connect with others who understand.",
@@ -39,7 +39,7 @@ const SupportResources: React.FC<SupportResourcesProps> = ({
       linkUrl: "#",
     },
     {
-      iconSvg: <PracticalHelpIcon />,
+      iconType: "practical",
       title: "Practical help",
       description:
         "From transportation to housing, we make it easier to focus on healing.",
@@ -75,7 +75,7 @@ const SupportResources: React.FC<SupportResourcesProps> = ({
         {supportCards.map((card, index) => (
           <SupportCard
             key={`support-card-${index}`}
-            iconSvg={card.iconSvg}
+            iconType={card.iconType}
             title={card.title}
             description={card.description}
             linkText={card.linkText}
