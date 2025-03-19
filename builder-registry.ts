@@ -157,11 +157,48 @@ Builder.registerComponent(
   }
 );
 
+Builder.registerComponent(
+  dynamic(() => import("./components/ui/CancerCareHero")),
+  {
+    name: "CancerCareHero",
+    inputs: [
+      {
+        name: "tagline",
+        type: "string",
+        defaultValue: "Stronger together:",
+      },
+      {
+        name: "title",
+        type: "string",
+        required: true,
+        defaultValue: "Your trusted path to cancer care in Georgia.",
+      },
+      {
+        name: "searchTitle",
+        type: "string",
+        defaultValue: "Find the care & support you need",
+      },
+      {
+        name: "heroImage",
+        type: "file",
+        allowedFileTypes: ["jpeg", "jpg", "png", "webp"],
+        required: true,
+      },
+      {
+        name: "heroImageAlt",
+        type: "string",
+        defaultValue: "Healthcare professionals providing cancer care",
+      },
+    ],
+  }
+);
+
 Builder.register("editor.settings", {
   designTokens: {
     colors: [
       { name: "White", value: "var(--color-primary-light)" },
       { name: "Dark", value: "var(--color-primary-dark)" },
+      { name: "Light", value: "var(--color-secondary-light)" },
       { name: "Red", value: "var(--color-accent-red)" },
       { name: "Green", value: "var(--color-accent-green)" },
       { name: "Teal", value: "var(--color-accent-teal)" },
