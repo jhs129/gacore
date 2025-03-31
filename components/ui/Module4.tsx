@@ -106,19 +106,23 @@ const Module4: React.FC<Module4Props> = ({
 
       {/* Cards Section */}
       <div className="bg-white">
-        <div className="max-w-[1200px] mx-auto px-6">
+        <div className="max-w-[1000px] mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
             {supportCards.map((card, index) => (
-              <div key={`card-${index}`} className="flex flex-col">
+              <div
+                key={`card-${index}`}
+                className="flex flex-col p-6 border border-gray-200 rounded-lg"
+              >
+                <div className="mb-4">{renderIcon(card.iconType)}</div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">
                   {card.title}
                 </h3>
-                <p className="text-gray-600 mb-4 flex-grow">
+                <p className="text-gray-600 mb-4 flex-grow text-sm">
                   {card.description}
                 </p>
                 <a
                   href={card.linkUrl || "#"}
-                  className="inline-flex items-center text-gray-700 font-medium group"
+                  className="inline-flex items-center text-gray-700 font-medium group text-sm"
                 >
                   {card.linkText}
                   <svg
