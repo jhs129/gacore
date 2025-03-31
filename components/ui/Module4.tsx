@@ -77,13 +77,13 @@ const Module4: React.FC<Module4Props> = ({
       <div className="relative w-full">
         <img
           src={backgroundImage}
-          alt=""
-          className="w-full h-[500px] md:h-[400px] object-cover object-[center_25%]"
+          alt="Hero image"
+          className="w-full h-[280px] md:h-[480px] object-cover"
         />
 
         {/* Heading Container */}
-        <div className="absolute bottom-0 left-0 right-0 md:left-1/2 md:-translate-x-1/2 w-full max-w-[1200px] md:px-6">
-          <div className="bg-white md:rounded-t-2xl py-6 md:py-5 w-full md:w-auto">
+        <div className="absolute -bottom-40 md:-bottom-20 left-4 right-4 md:left-1/2 md:-translate-x-1/2 w-auto md:w-full max-w-[1200px] md:px-6">
+          <div className="bg-white rounded-t-2xl py-6 md:py-5 w-full md:w-auto">
             <div className="max-w-[1000px] mx-auto px-4 md:px-0">
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                 <h2
