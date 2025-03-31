@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@algolia/client-search": "^5.23.0",
     "@builder.io/dev-tools": "^1.1.36",
     "@builder.io/react": "^4.0.4",
     "@builder.io/sdk": "^2.2.2",
@@ -18,20 +19,24 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@heroicons/react": "^2.2.0",
     "@mui/icons-material": "^5.15.11",
     "@mui/material": "^5.15.11",
     "@vercel/analytics": "^1.5.0",
     "@vercel/toolbar": "^0.1.15",
+    "algoliasearch": "^5.23.0",
     "cloudinary": "^2.4.0",
     "next": "^14.2.18",
     "next-cloudinary": "^6.12.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-instantsearch": "^7.15.5",
     "react-router-dom": "^6.22.2"
   },
   "devDependencies": {
     "@types/node": "^22.9.0",
     "@types/react": "^18.3.12",
+    "@types/react-instantsearch-dom": "^6.12.8",
     "autoprefixer": "^10.0.1",
     "font-awesome": "^4.7.0",
     "postcss": "^8",
