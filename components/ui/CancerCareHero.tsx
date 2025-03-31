@@ -60,7 +60,7 @@ function CancerCareHero({
     >
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-12 lg:py-16 min-h-[500px] lg:min-h-[600px] relative">
         <div className="flex flex-col lg:flex-row relative h-full">
-          <div className="w-full lg:w-[45%] z-10">
+          <div className="w-full lg:w-[45%] z-20">
             <div className="pr-4 lg:pr-8">
               <p className="text-xl text-[#302F2E]">{tagline}</p>
               <h1
@@ -84,7 +84,7 @@ function CancerCareHero({
               />
             </div>
 
-            <div className="mt-8 lg:mt-12 bg-white rounded-3xl p-6 lg:p-8 shadow-lg w-full relative z-10">
+            <div className="mt-8 lg:mt-12 bg-white rounded-3xl p-6 lg:p-8 shadow-lg w-full lg:w-[140%] relative">
               <h2 className="text-xl text-[#302F2E]">{searchTitle}</h2>
 
               <form onSubmit={handleSearch} className="mt-4">
@@ -149,7 +149,7 @@ function CancerCareHero({
           </div>
 
           {/* Desktop Image */}
-          <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[55%]">
+          <div className="hidden lg:block absolute right-0 top-0 bottom-0 w-[55%] z-10">
             <div className="relative h-full">
               <Image
                 src={heroImage}
