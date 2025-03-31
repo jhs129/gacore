@@ -58,109 +58,104 @@ const Mod2: React.FC<Mod2Props> = ({
   imageAlt = "Cancer support image",
 }) => {
   const [activeTabId, setActiveTabId] = React.useState<string>(
-    tabs.find((tab) => tab.isActive)?.id || tabs[0].id,
+    tabs.find((tab) => tab.isActive)?.id || tabs[0].id
   );
 
   const handleTabClick = (tabId: string) => {
     setActiveTabId(tabId);
   };
 
-  // Split cards into rows of 2 for responsive layout
-  const cardRows = React.useMemo(() => {
-    const rows = [];
-    for (let i = 0; i < cards.length; i += 2) {
-      rows.push(cards.slice(i, i + 2));
-    }
-    return rows;
-  }, [cards]);
-
   return (
-    <section
-      className="flex flex-wrap gap-6 items-end px-40 pt-8 pb-20 max-md:px-5"
-      aria-labelledby="mod2-heading"
-    >
-      <div className="grow shrink min-w-60 w-[437px] max-md:max-w-full">
-        <h2
-          id="mod2-heading"
-          className="w-full text-3xl text-zinc-800 max-md:max-w-full"
-        >
-          {heading.includes("yours") ? (
-            <>
-              {heading.split("yours")[0]}
-              <span style={{ fontStyle: "italic" }}>yours.</span>
-            </>
-          ) : (
-            heading
-          )}
-        </h2>
-        <div className="flex flex-col mt-20 w-full font-semibold max-md:mt-10 max-md:max-w-full">
-          <div className="flex relative gap-10 items-center self-start pb-2 text-base border-b border-zinc-300 text-zinc-800 max-md:max-w-full">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                className={`z-0 self-stretch my-auto ${
-                  activeTabId === tab.id ? "text-zinc-800" : ""
-                }`}
-                onClick={() => handleTabClick(tab.id)}
-                aria-selected={activeTabId === tab.id}
-                role="tab"
-              >
-                {tab.label}
-              </button>
-            ))}
-            <div
-              className="flex absolute left-0 -bottom-px z-0 shrink-0 self-start bg-zinc-800 h-[3px] w-[131px]"
-              style={{
-                transform: `translateX(${
-                  tabs.findIndex((tab) => tab.id === activeTabId) * 100
-                }%)`,
-                transition: "transform 0.3s ease",
-              }}
-              aria-hidden="true"
-            />
-          </div>
-          <div className="mt-12 w-full text-base leading-6 text-slate-600 max-md:mt-10 max-md:max-w-full">
-            {cardRows.map((row, rowIndex) => (
-              <div
-                key={`row-${rowIndex}`}
-                className={`flex flex-wrap gap-6 items-center ${
-                  rowIndex > 0 ? "mt-6" : ""
-                } w-full max-md:max-w-full`}
-              >
-                {row.map((card, cardIndex) => (
-                  <a
-                    key={`card-${rowIndex}-${cardIndex}`}
-                    href={card.linkUrl || "#"}
-                    className="flex-1 shrink self-stretch p-6 my-auto bg-white rounded-lg basis-0 min-w-60 shadow-[0px_0px_8px_rgba(0,0,0,0.1)] max-md:px-5 hover:shadow-md transition-shadow"
-                    aria-label={card.text}
+    <section className="flex flex-col px-4 md:px-6 lg:px-16 py-6 md:py-12">
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="flex flex-col lg:flex-row lg:gap-8">
+          <div className="flex-1 min-w-0">
+            <h2 className="text-[32px] leading-[40px] text-zinc-800 font-normal mb-6 md:mb-8">
+              {heading.includes("yours") ? (
+                <>
+                  {heading.split("yours")[0]}
+                  <span style={{ fontStyle: "italic" }}>yours</span>
+                  <span>.</span>
+                </>
+              ) : (
+                heading
+              )}
+            </h2>
+
+            {/* Tabs - No bottom border on mobile */}
+            <div className="mb-6 md:mb-8">
+              <div className="flex gap-6 md:gap-8 relative overflow-x-auto">
+                {tabs.map((tab) => (
+                  <button
+                    key={tab.id}
+                    className={`pb-2 text-sm md:text-base whitespace-nowrap ${
+                      activeTabId === tab.id
+                        ? "text-zinc-800 font-semibold"
+                        : "text-zinc-500"
+                    }`}
+                    onClick={() => handleTabClick(tab.id)}
+                    aria-selected={activeTabId === tab.id}
+                    role="tab"
                   >
+                    {tab.label}
+                  </button>
+                ))}
+                {/* Only show border and indicator on larger screens */}
+                <div className="hidden md:block absolute bottom-0 w-full h-px bg-zinc-200" />
+                <div
+                  className="hidden md:block absolute bottom-0 h-0.5 bg-zinc-800 transition-all duration-300"
+                  style={{
+                    left: `${
+                      tabs.findIndex((tab) => tab.id === activeTabId) *
+                      (100 / tabs.length)
+                    }%`,
+                    width: `${100 / tabs.length}%`,
+                  }}
+                  aria-hidden="true"
+                />
+              </div>
+            </div>
+
+            {/* Cards - Single column on mobile */}
+            <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-4">
+              {cards.map((card, index) => (
+                <a
+                  key={index}
+                  href={card.linkUrl || "#"}
+                  className="flex flex-col p-4 md:p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                >
+                  <img
+                    src={card.iconSrc}
+                    alt=""
+                    className="w-6 h-6 mb-3 md:mb-4"
+                    aria-hidden="true"
+                  />
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm md:text-base text-slate-600 pr-4">
+                      {card.text}
+                    </span>
                     <img
-                      src={card.iconSrc}
+                      src="https://cdn.builder.io/api/v1/image/assets/7bf199de15724d268c1417f75ca31ce1/4f014f5428c01a5b9a62c78dd82eabc8525f9c78?placeholderIfAbsent=true"
                       alt=""
-                      className="object-contain w-6 aspect-square"
+                      className="w-3 h-3 flex-shrink-0"
                       aria-hidden="true"
                     />
-                    <div className="flex gap-8 justify-between items-center mt-4 w-full">
-                      <div className="self-stretch my-auto">{card.text}</div>
-                      <img
-                        src="https://cdn.builder.io/api/v1/image/assets/7bf199de15724d268c1417f75ca31ce1/4f014f5428c01a5b9a62c78dd82eabc8525f9c78?placeholderIfAbsent=true"
-                        alt=""
-                        className="object-contain shrink-0 self-stretch my-auto w-3 aspect-[1.2]"
-                        aria-hidden="true"
-                      />
-                    </div>
-                  </a>
-                ))}
-              </div>
-            ))}
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Image - Full width on mobile */}
+          <div className="flex-1 min-w-0 mt-6 md:mt-0">
+            <img
+              src={imageSrc}
+              alt={imageAlt}
+              className="w-full h-auto rounded-lg object-cover"
+            />
           </div>
         </div>
       </div>
-      <img
-        src={imageSrc}
-        alt={imageAlt}
-        className="object-contain grow shrink rounded-lg aspect-[0.88] min-w-60 w-[437px] max-md:max-w-full"
-      />
     </section>
   );
 };

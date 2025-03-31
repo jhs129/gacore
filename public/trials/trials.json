@@ -1,0 +1,1092 @@
+[
+  {
+    "objectID": "NCT04996800",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 1",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996800",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This research focuses on assessing the outcomes of a targeted therapy drug for individuals diagnosed with early-stage tumors to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT05186701",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 2",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186701",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The study aims to investigate how a new immunotherapy approach in patients with advanced cancer to improve survival outcomes."
+  },
+  {
+    "objectID": "NCT03800602",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 3",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800602",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The study aims to investigate how an advanced biologic therapy among adults suffering from relapsed disease to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT04239003",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 4",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239003",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "The study aims to investigate how a novel combination of chemotherapy agents in patients with advanced cancer to improve survival outcomes."
+  },
+  {
+    "objectID": "NCT05086604",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 5",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086604",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This clinical trial evaluates the effectiveness of an advanced biologic therapy among adults suffering from relapsed disease to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT04996805",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 6",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996805",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This research focuses on assessing the outcomes of a targeted therapy drug among adults suffering from relapsed disease to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT05186706",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 7",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186706",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This research focuses on assessing the outcomes of a targeted therapy drug in pediatric patients with rare malignancies to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT03800607",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 8",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800607",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of an investigational treatment regimen in patients with advanced cancer to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT04239008",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 9",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239008",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "This clinical trial evaluates the effectiveness of a novel combination of chemotherapy agents for individuals diagnosed with early-stage tumors to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT05086609",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 10",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086609",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of an advanced biologic therapy among adults suffering from relapsed disease to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT04996810",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 11",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996810",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of a novel combination of chemotherapy agents for individuals diagnosed with early-stage tumors to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT05186711",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 12",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186711",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of a new immunotherapy approach in pediatric patients with rare malignancies to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT03800612",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 13",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800612",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of an investigational treatment regimen for those with treatment-resistant cancers to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT04239013",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 14",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239013",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "The trial is designed to test the safety and efficacy of a novel combination of chemotherapy agents in pediatric patients with rare malignancies to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT05086614",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 15",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086614",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The study aims to investigate how a new immunotherapy approach for individuals diagnosed with early-stage tumors to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT04996815",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 16",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996815",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of an advanced biologic therapy in patients with advanced cancer to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT05186716",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 17",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186716",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This clinical trial evaluates the effectiveness of a targeted therapy drug in patients with advanced cancer to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT03800617",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 18",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800617",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This clinical trial evaluates the effectiveness of an investigational treatment regimen in pediatric patients with rare malignancies to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT04239018",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 19",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239018",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "This clinical trial evaluates the effectiveness of a targeted therapy drug in patients with advanced cancer to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT05086619",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 20",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086619",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of a new immunotherapy approach for those with treatment-resistant cancers to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT04996820",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 21",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996820",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of a novel combination of chemotherapy agents in pediatric patients with rare malignancies to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT05186721",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 22",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186721",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of a novel combination of chemotherapy agents in pediatric patients with rare malignancies to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT03800622",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 23",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800622",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of a targeted therapy drug in patients with advanced cancer to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT04239023",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 24",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239023",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "The trial is designed to test the safety and efficacy of a targeted therapy drug for those with treatment-resistant cancers to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT05086624",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 25",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086624",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This clinical trial evaluates the effectiveness of an investigational treatment regimen for individuals diagnosed with early-stage tumors to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT04996825",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 26",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996825",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of an investigational treatment regimen for those with treatment-resistant cancers to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT05186726",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 27",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186726",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This clinical trial evaluates the effectiveness of a targeted therapy drug among adults suffering from relapsed disease to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT03800627",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 28",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800627",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of an investigational treatment regimen for individuals diagnosed with early-stage tumors to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT04239028",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 29",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239028",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "This research focuses on assessing the outcomes of an advanced biologic therapy in patients with advanced cancer to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT05086629",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 30",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086629",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of an investigational treatment regimen for those with treatment-resistant cancers to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT04996830",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 31",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996830",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of an investigational treatment regimen for those with treatment-resistant cancers to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT05186731",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 32",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186731",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of an investigational treatment regimen in patients with advanced cancer to improve survival outcomes."
+  },
+  {
+    "objectID": "NCT03800632",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 33",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800632",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of an investigational treatment regimen among adults suffering from relapsed disease to improve survival outcomes."
+  },
+  {
+    "objectID": "NCT04239033",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 34",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239033",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "This clinical trial evaluates the effectiveness of a new immunotherapy approach in pediatric patients with rare malignancies to assess long-term remission rates."
+  },
+  {
+    "objectID": "NCT05086634",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 35",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086634",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of a novel combination of chemotherapy agents for those with treatment-resistant cancers to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT04996835",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 36",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996835",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of an investigational treatment regimen among adults suffering from relapsed disease to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT05186736",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 37",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186736",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This clinical trial evaluates the effectiveness of a novel combination of chemotherapy agents for individuals diagnosed with early-stage tumors to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT03800637",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 38",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800637",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of a new immunotherapy approach for those with treatment-resistant cancers to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT04239038",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 39",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239038",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "The study aims to investigate how an advanced biologic therapy for individuals diagnosed with early-stage tumors to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT05086639",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 40",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086639",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of a novel combination of chemotherapy agents among adults suffering from relapsed disease to improve survival outcomes."
+  },
+  {
+    "objectID": "NCT04996840",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 41",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996840",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of a new immunotherapy approach in pediatric patients with rare malignancies to improve survival outcomes."
+  },
+  {
+    "objectID": "NCT05186741",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 42",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186741",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This clinical trial evaluates the effectiveness of an advanced biologic therapy for individuals diagnosed with early-stage tumors to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT03800642",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 43",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800642",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The trial is designed to test the safety and efficacy of a novel combination of chemotherapy agents in patients with advanced cancer to improve survival outcomes."
+  },
+  {
+    "objectID": "NCT04239043",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 44",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239043",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "The study aims to investigate how an investigational treatment regimen for individuals diagnosed with early-stage tumors to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT05086644",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 45",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086644",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This research focuses on assessing the outcomes of a targeted therapy drug for individuals diagnosed with early-stage tumors to achieve better tumor shrinkage."
+  },
+  {
+    "objectID": "NCT04996845",
+    "trial_name": "(Apex) Bezuclastinib in Patients With Advanced Systemic Mastocytosis - Part 46",
+    "cancer_type": [
+      "Cancer-Related Syndrome",
+      "Leukemia",
+      "Myelodysplastic Syndromes (MDS)"
+    ],
+    "nct_id": "NCT04996845",
+    "protocol_ids": [
+      "CGT9486-20-201",
+      "2021-001010-10",
+      "NCI-2021-09477"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of a novel combination of chemotherapy agents in pediatric patients with rare malignancies to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT05186746",
+    "trial_name": "(Summit) A Study to Evaluate CGT9486 in Indolent or Smoldering Systemic Mastocytosis - Part 47",
+    "cancer_type": [
+      "Hematopoietic Malignancies",
+      "Leukemia",
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT05186746",
+    "protocol_ids": [
+      "CGT9486-21-202",
+      "NCI-2022-01167"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "Researchers are exploring the impact of a novel combination of chemotherapy agents in pediatric patients with rare malignancies to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT03800647",
+    "trial_name": "6-Hour Oxaliplatin for Nerve Damage in GI Cancer - Part 48",
+    "cancer_type": [
+      "Unknown Primary"
+    ],
+    "nct_id": "NCT03800647",
+    "protocol_ids": [
+      "Winship4468-18",
+      "NCI-2018-02241",
+      "IRB00106610"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Emory Saint Joseph's Hospital",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Emory University Hospital - Midtown",
+        "location": "Atlanta"
+      },
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "This clinical trial evaluates the effectiveness of a new immunotherapy approach in pediatric patients with rare malignancies to offer new hope where standard treatments have failed."
+  },
+  {
+    "objectID": "NCT04239048",
+    "trial_name": "9-ING-41 in Pediatric Patients With Refractory Malignancies - Part 49",
+    "cancer_type": [
+      "Brain & Spinal Cord Tumor",
+      "Hematopoietic Malignancies",
+      "Lymphoma",
+      "Neuroblastoma"
+    ],
+    "nct_id": "NCT04239048",
+    "protocol_ids": [
+      "1902",
+      "NCI-2020-04584"
+    ],
+    "treatment_sites": [],
+    "description": "The trial is designed to test the safety and efficacy of an advanced biologic therapy for those with treatment-resistant cancers to reduce treatment-related side effects."
+  },
+  {
+    "objectID": "NCT05086649",
+    "trial_name": "A Beta-only IL-2 ImmunoTherapY Study - Part 50",
+    "cancer_type": [
+      "Bladder Cancer",
+      "Melanoma",
+      "Stomach/ Gastric Cancer"
+    ],
+    "nct_id": "NCT05086649",
+    "protocol_ids": [
+      "MDNA11-01",
+      "NCI-2022-02678"
+    ],
+    "treatment_sites": [
+      {
+        "site_name": "Winship Cancer Institute of Emory University",
+        "location": "Atlanta"
+      }
+    ],
+    "description": "The study aims to investigate how an investigational treatment regimen for individuals diagnosed with early-stage tumors to assess long-term remission rates."
+  }
+]
