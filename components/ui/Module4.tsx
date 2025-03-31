@@ -78,27 +78,29 @@ const Module4: React.FC<Module4Props> = ({
         <img
           src={backgroundImage}
           alt=""
-          className="w-full h-[400px] object-cover"
+          className="w-full h-[500px] md:h-[400px] object-cover object-[center_25%]"
         />
 
         {/* Heading Container */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] px-6">
-          <div className="bg-white rounded-t-2xl py-5">
-            <div className="max-w-[1000px] mx-auto flex justify-between items-center gap-8">
-              <h2
-                id="module4-heading"
-                className="text-[32px] leading-[1.2] text-gray-900 max-w-[700px]"
-              >
-                Cancer impacts more than your health. We're here to connect you
-                to resources that support your{" "}
-                <span className="italic font-serif">whole journey</span>.
-              </h2>
-              <a
-                href={buttonUrl}
-                className="inline-flex items-center px-4 py-1.5 text-sm text-gray-700 rounded-full border border-gray-300 hover:border-gray-400 whitespace-nowrap"
-              >
-                {buttonText}
-              </a>
+        <div className="absolute bottom-0 left-0 right-0 md:left-1/2 md:-translate-x-1/2 w-full max-w-[1200px] md:px-6">
+          <div className="bg-white md:rounded-t-2xl py-6 md:py-5 w-full md:w-auto">
+            <div className="max-w-[1000px] mx-auto px-4 md:px-0">
+              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+                <h2
+                  id="module4-heading"
+                  className="text-xl md:text-[32px] leading-[1.3] text-gray-900 max-w-[700px]"
+                >
+                  Cancer impacts more than your health. We're here to connect
+                  you to resources that support your{" "}
+                  <span className="italic font-serif">whole journey</span>.
+                </h2>
+                <a
+                  href={buttonUrl}
+                  className="inline-flex items-center px-4 py-1.5 text-sm text-gray-700 rounded-full border border-gray-300 hover:border-gray-400 whitespace-nowrap self-start md:self-auto"
+                >
+                  {buttonText}
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -106,18 +108,18 @@ const Module4: React.FC<Module4Props> = ({
 
       {/* Cards Section */}
       <div className="bg-white">
-        <div className="max-w-[1000px] mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
+        <div className="max-w-[1000px] mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 py-8 md:py-12">
             {supportCards.map((card, index) => (
               <div
                 key={`card-${index}`}
-                className="flex flex-col p-6 border border-gray-200 rounded-lg"
+                className="flex flex-col p-4 md:p-6 border border-gray-200 rounded-lg"
               >
-                <div className="mb-4">{renderIcon(card.iconType)}</div>
+                <div className="mb-3 md:mb-4">{renderIcon(card.iconType)}</div>
                 <h3 className="text-lg font-medium text-gray-900 mb-2">
                   {card.title}
                 </h3>
-                <p className="text-gray-600 mb-4 flex-grow text-sm">
+                <p className="text-gray-600 mb-3 md:mb-4 flex-grow text-sm">
                   {card.description}
                 </p>
                 <a

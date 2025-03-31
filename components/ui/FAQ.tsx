@@ -71,12 +71,12 @@ const FAQ: React.FC<FAQProps> = ({
 
   return (
     <section
-      className={`flex gap-12 items-start px-12 py-20 ${backgroundColor} max-md:flex-col max-md:px-8 max-md:py-16 max-sm:px-4 max-sm:py-10`}
+      className={`flex gap-16 items-start px-16 py-20 ${backgroundColor} max-md:flex-col max-md:px-8 max-md:py-16 max-sm:px-4 max-sm:py-10`}
       aria-labelledby="faq-heading"
     >
       <h2
         id="faq-heading"
-        className="text-3xl text-zinc-800 w-[383px] max-md:mb-6 max-md:w-full max-sm:text-3xl"
+        className="text-3xl text-zinc-800 w-[240px] shrink-0 max-md:mb-6 max-md:w-full max-sm:text-3xl"
       >
         {title}
       </h2>
@@ -84,7 +84,7 @@ const FAQ: React.FC<FAQProps> = ({
         {items.map((item, index) => (
           <div
             key={`faq-item-${index}`}
-            className="flex flex-col justify-center items-center p-6 w-full border-t border-solid border-t-zinc-800 border-t-opacity-20 max-sm:p-4"
+            className="flex flex-col justify-center items-center p-2 w-full border-t border-solid border-t-zinc-800 border-t-opacity-20 max-sm:p-4"
           >
             <button
               className="flex gap-6 justify-between items-center w-full text-left"
