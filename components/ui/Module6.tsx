@@ -166,8 +166,8 @@ const Module6: React.FC<Module6Props> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
         {/* Advocate Section */}
         <div className="lg:col-span-7">
-          <div className="p-6 md:p-8 rounded-lg bg-[#F4F9F6] relative min-h-[380px] md:min-h-[460px]">
-            <div className="max-w-full md:max-w-[55%]">
+          <div className="p-6 md:p-8 rounded-lg bg-[#F4F9F6] relative min-h-[480px] md:min-h-[420px]">
+            <div className="max-w-full md:max-w-[60%] relative z-10">
               <div className="text-xs font-bold tracking-wider uppercase text-gray-700">
                 {advocateSection.title}
               </div>
@@ -192,7 +192,7 @@ const Module6: React.FC<Module6Props> = ({
             <img
               src={images.advocateImage}
               alt=""
-              className="absolute right-0 bottom-0 w-[45%] md:w-[50%] h-auto"
+              className="absolute right-0 -bottom-12 md:bottom-0 w-[55%] md:w-[45%] h-auto"
             />
           </div>
         </div>
