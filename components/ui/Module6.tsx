@@ -144,7 +144,14 @@ const Module6: React.FC<Module6Props> = ({
     return (
       <h2 className="text-3xl text-gray-800 mb-8 md:mb-12">
         {parts[0]}
-        <span className="italic">transforms</span>
+        <span className="italic relative">
+          transforms
+          <img
+            src={images.decorativeImage}
+            alt=""
+            className="absolute left-0 -bottom-2 w-full"
+          />
+        </span>
         {parts[1]}
       </h2>
     );
@@ -153,8 +160,16 @@ const Module6: React.FC<Module6Props> = ({
   const renderCareHeading = (text: string) => {
     return (
       <h3 className="text-3xl text-gray-800 mb-6 md:mb-8">
-        Resources for <span className="italic">those who care</span>, at home &
-        in the clinic.
+        Resources for{" "}
+        <span className="italic relative">
+          those who care
+          <img
+            src={images.decorativeImage}
+            alt=""
+            className="absolute left-0 -bottom-2 w-full"
+          />
+        </span>
+        , at home & in the clinic.
       </h3>
     );
   };
@@ -166,7 +181,7 @@ const Module6: React.FC<Module6Props> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
         {/* Advocate Section */}
         <div className="lg:col-span-7">
-          <div className="p-6 md:p-8 rounded-lg bg-[#F4F9F6] relative min-h-[480px] md:min-h-[420px]">
+          <div className="p-6 md:p-8 rounded-lg bg-[#F4F9F6] relative min-h-[600px] md:min-h-[420px]">
             <div className="max-w-full md:max-w-[60%] relative z-10">
               <div className="text-xs font-bold tracking-wider uppercase text-gray-700">
                 {advocateSection.title}
@@ -192,7 +207,7 @@ const Module6: React.FC<Module6Props> = ({
             <img
               src={images.advocateImage}
               alt=""
-              className="absolute right-0 -bottom-12 md:bottom-0 w-[55%] md:w-[45%] h-auto"
+              className="absolute right-0 bottom-0 md:bottom-0 w-[55%] md:w-[45%] h-auto"
             />
           </div>
         </div>
@@ -214,15 +229,6 @@ const Module6: React.FC<Module6Props> = ({
           <ResourceCard {...careSection.caregiverCard} />
           <ResourceCard {...careSection.providerCard} />
         </div>
-      </div>
-
-      {/* Decorative Image */}
-      <div className="relative h-4 mt-8">
-        <img
-          src={images.decorativeImage}
-          alt=""
-          className="absolute left-1/2 transform -translate-x-1/2 w-36 md:w-48"
-        />
       </div>
     </section>
   );
