@@ -2,9 +2,9 @@ import { Builder } from "@builder.io/react";
 import dynamic from "next/dynamic";
 
 import ClinicalTrialSearch from "./components/search/ClinicalTrialSearch";
+import Module4 from "./components/ui/Module4";
 // Import your components
 const CancerCareHero = dynamic(() => import("./components/ui/CancerCareHero"));
-const Module4 = dynamic(() => import("./components/ui/Module4"));
 const Mod2 = dynamic(() => import("./components/ui/Mod2"));
 const FAQ = dynamic(() => import("./components/ui/FAQ"));
 

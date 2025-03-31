@@ -29,7 +29,6 @@ const Module4: React.FC<Module4Props> = ({
   buttonUrl = "#",
   cards,
 }) => {
-  // Default cards if none provided
   const defaultCards: SupportCardItem[] = [
     {
       iconType: "financial",
@@ -59,7 +58,6 @@ const Module4: React.FC<Module4Props> = ({
 
   const supportCards = cards || defaultCards;
 
-  // Helper function to render the appropriate icon
   const renderIcon = (iconType: string) => {
     switch (iconType) {
       case "financial":
@@ -74,78 +72,69 @@ const Module4: React.FC<Module4Props> = ({
   };
 
   return (
-    <section
-      className="flex flex-col justify-center py-10 md:py-20"
-      aria-labelledby="module4-heading"
-    >
-      <div className="flex flex-col w-full max-w-full">
+    <section className="w-full relative" aria-labelledby="module4-heading">
+      {/* Hero Image */}
+      <div className="relative w-full">
         <img
           src={backgroundImage}
           alt=""
-          className="object-contain w-full aspect-[1.98] max-w-full"
+          className="w-full h-[400px] object-cover"
         />
-        <div className="z-10 self-center px-5 py-10 md:px-10 lg:px-20 md:py-16 lg:py-20 mt-0 -mb-4 md:-mb-8 lg:-mb-16 w-full bg-white rounded-3xl max-w-[1264px]">
-          <div className="flex flex-col md:flex-row md:flex-wrap gap-5 md:gap-8 lg:gap-10 justify-between items-start md:items-end w-full min-h-[82px]">
-            <h2
-              id="module4-heading"
-              className="text-2xl md:text-3xl text-zinc-800 w-full md:w-[70%] lg:w-[825px]"
-            >
-              {heading.includes("whole journey") ? (
-                <>
-                  {heading.split("whole journey")[0]}
-                  <span className="italic">whole journey.</span>
-                </>
-              ) : (
-                heading
-              )}
-            </h2>
-            <a
-              href={buttonUrl}
-              className="flex justify-center items-center px-5 py-2 text-sm md:text-base font-semibold leading-relaxed border border-solid border-slate-600 rounded-[100px] text-slate-600 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-slate-600 focus:ring-offset-2 transition-colors"
-              aria-label={buttonText}
-            >
-              <span>{buttonText}</span>
-            </a>
-          </div>
-          <div className="flex flex-col md:flex-row flex-wrap gap-6 md:gap-8 mt-8 md:mt-10 lg:mt-12 w-full shadow-[0px_0px_8px_rgba(0,0,0,0.1)]">
-            {supportCards.map((card, index) => (
-              <article
-                key={`support-card-${index}`}
-                className="flex-1 shrink-0 md:shrink p-5 md:p-6 bg-white rounded-lg md:basis-[calc(50%-1rem)] lg:basis-0 min-w-full md:min-w-[280px] lg:min-w-60"
+
+        {/* Heading Container */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] px-6">
+          <div className="bg-white rounded-t-2xl py-8">
+            <div className="max-w-[1000px] mx-auto flex justify-between items-center gap-8">
+              <h2
+                id="module4-heading"
+                className="text-[32px] leading-[1.2] text-gray-900 max-w-[700px]"
               >
-                <div
-                  className="flex items-center p-3 bg-orange-300 rounded-[45.176px]"
-                  aria-hidden="true"
-                >
-                  {renderIcon(card.iconType)}
-                </div>
-                <div className="mt-6 md:mt-8 w-full text-zinc-800">
-                  <h3 className="text-lg leading-none">{card.title}</h3>
-                  <p className="mt-2 text-base leading-6">{card.description}</p>
-                </div>
+                Cancer impacts more than your health. We're here to connect you
+                to resources that support your{" "}
+                <span className="italic font-serif">whole journey</span>.
+              </h2>
+              <a
+                href={buttonUrl}
+                className="inline-flex items-center px-4 py-2 text-sm text-gray-700 rounded-full border border-gray-300 hover:border-gray-400 whitespace-nowrap"
+              >
+                {buttonText}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Cards Section */}
+      <div className="bg-white">
+        <div className="max-w-[1200px] mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-12">
+            {supportCards.map((card, index) => (
+              <div key={`card-${index}`} className="flex flex-col">
+                <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  {card.title}
+                </h3>
+                <p className="text-gray-600 mb-4 flex-grow">
+                  {card.description}
+                </p>
                 <a
                   href={card.linkUrl || "#"}
-                  className="flex gap-4 md:gap-10 justify-between items-center mt-6 md:mt-8 w-full text-base font-semibold leading-relaxed text-slate-600 hover:underline focus:outline-none focus:underline"
-                  aria-label={card.linkText}
+                  className="inline-flex items-center text-gray-700 font-medium group"
                 >
-                  <span className="self-stretch my-auto">{card.linkText}</span>
+                  {card.linkText}
                   <svg
-                    className="object-contain shrink-0 self-stretch my-auto w-3 aspect-[1.2]"
-                    width="13"
-                    height="12"
+                    className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1"
                     viewBox="0 0 13 12"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
                   >
                     <path
                       d="M6.667 0.75C6.667 1.30614 7.216 2.1372 7.773 2.83547C8.488 3.73448 9.343 4.5201 10.324 5.1196C11.058 5.5686 11.95 6 12.667 6M12.667 6C11.95 6 11.058 6.4314 10.324 6.8804C9.343 7.4799 8.488 8.2655 7.773 9.1646C7.216 9.8628 6.667 10.6939 6.667 11.25M12.667 6H0.667"
-                      stroke="#475569"
+                      stroke="currentColor"
                       strokeWidth="0.75"
-                    ></path>
+                    />
                   </svg>
                 </a>
-              </article>
+              </div>
             ))}
           </div>
         </div>
