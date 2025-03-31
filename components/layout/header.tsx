@@ -223,86 +223,91 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+        className={`lg:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out transform ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         {/* Mobile Menu Header */}
-        <div className="px-4 pt-4 flex justify-between items-center border-b border-gray-100">
-          <a href="/">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
+          <a href="/" className="block">
             <img
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
-              className="h-12 w-[87.6px]"
+              className="h-8"
               alt="GA Core Logo"
             />
           </a>
-          <div className="pr-4">
-            <button
-              className="p-2"
-              aria-label="Close mobile menu"
-              onClick={() => setIsMobileMenuOpen(false)}
+          <button
+            className="w-8 h-8 flex items-center justify-center"
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <div className="space-y-2">
-                <div className="w-8 h-0.5 bg-zinc-600 rotate-45 translate-y-1.5"></div>
-                <div className="w-8 h-0.5 bg-zinc-600 -rotate-45 -translate-y-1"></div>
-              </div>
-            </button>
-          </div>
+              <path
+                d="M6 18L18 6M6 6L18 18"
+                stroke="#18181B"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
 
         {/* Mobile Menu Content */}
-        <div className="px-4 py-6">
-          <nav className="space-y-4">
+        <div className="overflow-y-auto">
+          <nav className="px-6">
             {menuItems.map((item) => (
-              <div key={item.name} className="space-y-2">
-                <div
-                  className="flex items-center justify-between w-full px-4 py-2 text-left text-zinc-800"
+              <div
+                key={item.name}
+                className="border-b border-gray-100 last:border-b-0"
+              >
+                <button
+                  className="flex items-center justify-between w-full py-4"
                   onClick={() => toggleDropdown(item.name)}
                 >
-                  {item.href ? (
-                    <a
-                      href={item.href}
-                      className="font-semibold hover:text-primary"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {item.label}
-                    </a>
-                  ) : (
-                    <span className="font-semibold">{item.label}</span>
-                  )}
+                  <span className="text-lg text-gray-900">{item.label}</span>
                   {item.items && (
-                    <button
-                      className="p-1"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleDropdown(item.name);
-                      }}
+                    <svg
+                      className={`w-5 h-5 transition-transform ${
+                        openDropdown === item.name ? "rotate-180" : ""
+                      }`}
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <svg
-                        width="13"
-                        height="12"
-                        viewBox="0 0 13 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                        className={`transition-transform duration-300 ${openDropdown === item.name ? "rotate-180" : ""}`}
-                      >
-                        <path
-                          d="M6.66458 8.9292C6.83532 8.9283 6.98982 8.86273 7.11677 8.72931L10.9408 4.81171C11.0506 4.70192 11.1098 4.56612 11.1098 4.40711C11.1098 4.07906 10.8552 3.82031 10.5299 3.82031C10.3709 3.82031 10.2228 3.88409 10.1094 3.99609L6.41867 7.78123H6.90998L3.21563 3.99609C3.10545 3.8859 2.95829 3.82031 2.79427 3.82031C2.46802 3.82031 2.21429 4.07906 2.21429 4.40711C2.21429 4.56522 2.27446 4.70102 2.38244 4.81583L6.20825 8.72931C6.34345 8.86453 6.4906 8.9292 6.66458 8.9292Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </button>
+                      <path
+                        d="M5.83333 7.5L10 11.6667L14.1667 7.5"
+                        stroke="#18181B"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   )}
-                </div>
-                {openDropdown === item.name && item.items && (
-                  <div className="pl-4 space-y-2">
-                    {item.items.map((subItem) => (
-                      <a
-                        key={subItem.label}
-                        href={subItem.href}
-                        className="block px-4 py-2 text-zinc-600 hover:text-zinc-800"
-                      >
-                        {subItem.label}
-                      </a>
-                    ))}
+                </button>
+                {item.items && (
+                  <div
+                    className={`${
+                      openDropdown === item.name ? "max-h-48" : "max-h-0"
+                    } overflow-hidden transition-all duration-300 ease-in-out`}
+                  >
+                    <div className="pb-3">
+                      {item.items.map((subItem) => (
+                        <a
+                          key={subItem.label}
+                          href={subItem.href}
+                          className="block py-2 text-gray-600 hover:text-gray-900"
+                        >
+                          {subItem.label}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
