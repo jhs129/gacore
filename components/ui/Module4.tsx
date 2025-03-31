@@ -83,7 +83,7 @@ const Module4: React.FC<Module4Props> = ({
 
         {/* Heading Container */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1200px] px-6">
-          <div className="bg-white rounded-t-2xl py-8">
+          <div className="bg-white rounded-t-2xl py-5">
             <div className="max-w-[1000px] mx-auto flex justify-between items-center gap-8">
               <h2
                 id="module4-heading"
@@ -95,7 +95,7 @@ const Module4: React.FC<Module4Props> = ({
               </h2>
               <a
                 href={buttonUrl}
-                className="inline-flex items-center px-4 py-2 text-sm text-gray-700 rounded-full border border-gray-300 hover:border-gray-400 whitespace-nowrap"
+                className="inline-flex items-center px-4 py-1.5 text-sm text-gray-700 rounded-full border border-gray-300 hover:border-gray-400 whitespace-nowrap"
               >
                 {buttonText}
               </a>
