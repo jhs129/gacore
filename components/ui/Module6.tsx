@@ -3,7 +3,7 @@ import * as React from "react";
 
 interface CardProps {
   label: string;
-  title: string;
+  title?: string;
   description: string;
   linkText: string;
   linkUrl?: string;
@@ -36,25 +36,24 @@ export interface Module6Props {
 
 const Card: React.FC<CardProps> = ({
   label,
-  title,
   description,
   linkText,
   linkUrl = "#",
   className = "",
 }) => (
-  <div
-    className={`p-8 w-full bg-white rounded-lg min-h-[219px] shadow-[0px_0px_8px_rgba(0,0,0,0.1)] max-md:px-5 max-md:max-w-full ${className}`}
-  >
-    <div className="text-xs font-bold tracking-wider uppercase">{label}</div>
-    <div className="mt-6 w-full text-lg leading-6">{description}</div>
+  <div className={`p-6 w-full bg-white rounded-lg ${className}`}>
+    <div className="text-xs font-bold tracking-wider uppercase text-gray-700">
+      {label}
+    </div>
+    <div className="mt-4 text-base leading-6 text-gray-800">{description}</div>
     <a
       href={linkUrl}
-      className="flex gap-10 justify-between items-center mt-6 w-full text-base font-semibold leading-relaxed min-h-6 text-slate-600"
+      className="flex gap-2 items-center mt-4 text-sm font-semibold text-gray-600 hover:text-gray-800"
     >
-      <span className="self-stretch my-auto">{linkText}</span>
+      {linkText}
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/6494ea8479abb879854a9760290e548e50836f9b?placeholderIfAbsent=true"
-        className="object-contain shrink-0 self-stretch my-auto w-3 aspect-[1.2]"
+        src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/6494ea8479abb879854a9760290e548e50836f9b"
+        className="w-3 h-3"
         alt=""
       />
     </a>
@@ -67,21 +66,19 @@ const ResourceCard: React.FC<CardProps> = ({
   linkText,
   linkUrl = "#",
 }) => (
-  <div className="flex-1 shrink p-8 rounded-lg basis-0 bg-slate-100 min-w-60 max-md:px-5 max-md:max-w-full">
-    <div className="text-xs font-bold tracking-wider uppercase max-md:max-w-full">
+  <div className="flex-1 p-8 rounded-lg bg-[#F4F9F6]">
+    <div className="text-xs font-bold tracking-wider uppercase text-gray-700">
       {label}
     </div>
-    <div className="mt-8 w-full text-2xl leading-8 max-md:max-w-full">
-      {description}
-    </div>
+    <div className="mt-4 text-xl leading-7 text-gray-800">{description}</div>
     <a
       href={linkUrl}
-      className="flex flex-wrap gap-10 justify-between items-center mt-8 w-full text-base font-semibold leading-relaxed min-h-6 text-slate-600 max-md:max-w-full"
+      className="flex gap-2 items-center mt-6 text-sm font-semibold text-gray-600 hover:text-gray-800"
     >
-      <span className="self-stretch my-auto">{linkText}</span>
+      {linkText}
       <img
-        src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/6494ea8479abb879854a9760290e548e50836f9b?placeholderIfAbsent=true"
-        className="object-contain shrink-0 self-stretch my-auto w-3 aspect-[1.2]"
+        src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/6494ea8479abb879854a9760290e548e50836f9b"
+        className="w-3 h-3"
         alt=""
       />
     </a>
@@ -135,109 +132,98 @@ const Module6: React.FC<Module6Props> = ({
   },
   images = {
     advocateImage:
-      "https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/4c6e3051df595301792f15c75d2f46876e9f5d8a?placeholderIfAbsent=true",
+      "https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/4c6e3051df595301792f15c75d2f46876e9f5d8a",
     arrowIcon:
-      "https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/6494ea8479abb879854a9760290e548e50836f9b?placeholderIfAbsent=true",
+      "https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/6494ea8479abb879854a9760290e548e50836f9b",
     decorativeImage:
-      "https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/f93ba7ace2cb8d192b54725c0a0fbd4e24cca342?placeholderIfAbsent=true",
+      "https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/f93ba7ace2cb8d192b54725c0a0fbd4e24cca342",
   },
 }) => {
   const renderMainHeading = (text: string) => {
     const parts = text.split("transforms");
     return (
-      <div className="text-3xl text-zinc-800 max-md:max-w-full">
+      <h2 className="text-3xl text-gray-800 mb-8 md:mb-12">
         {parts[0]}
-        <span style={{ fontStyle: "italic" }}>transforms</span>
+        <span className="italic">transforms</span>
         {parts[1]}
-      </div>
+      </h2>
     );
   };
 
   const renderCareHeading = (text: string) => {
     return (
-      <div className="text-3xl max-md:max-w-full">
-        Resources for{" "}
-        <span style={{ fontStyle: "italic" }}>those who care,</span> at home &
+      <h3 className="text-3xl text-gray-800 mb-6 md:mb-8">
+        Resources for <span className="italic">those who care</span>, at home &
         in the clinic.
-      </div>
+      </h3>
     );
   };
 
   return (
-    <section
-      className="relative px-40 py-20 max-md:px-5"
-      aria-labelledby="module6-heading"
-    >
-      <div className="z-0 w-full max-md:max-w-full">
-        <h2 id="module6-heading" className="sr-only">
-          Knowledge and Action Section
-        </h2>
-        {renderMainHeading(mainHeading)}
+    <section className="px-4 md:px-16 lg:px-24 py-8 md:py-16 max-w-7xl mx-auto">
+      {renderMainHeading(mainHeading)}
 
-        <div className="flex flex-wrap gap-6 items-center mt-12 w-full max-md:mt-10 max-md:max-w-full">
-          {/* Advocate Section */}
-          <div className="flex overflow-hidden flex-col grow shrink self-stretch my-auto rounded-lg min-w-60 w-[574px] max-md:max-w-full">
-            <div className="flex flex-col px-8 py-10 rounded-lg bg-slate-100 min-h-[462px] max-md:px-5 max-md:max-w-full">
-              <div className="w-full text-zinc-800 max-md:max-w-full">
-                <div className="text-xs font-bold tracking-wider uppercase max-md:max-w-full">
-                  {advocateSection.title}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
+        {/* Advocate Section */}
+        <div className="lg:col-span-7">
+          <div className="p-6 md:p-8 rounded-lg bg-[#F4F9F6] relative min-h-[380px] md:min-h-[460px]">
+            <div className="max-w-full md:max-w-[55%]">
+              <div className="text-xs font-bold tracking-wider uppercase text-gray-700">
+                {advocateSection.title}
+              </div>
+              <div className="mt-4 md:mt-6 text-lg md:text-xl leading-7 text-gray-800">
+                {advocateSection.description}
+              </div>
+              <div className="mt-6 md:mt-8">
+                <div className="text-2xl font-bold text-gray-800">
+                  {advocateSection.statNumber}
                 </div>
-                <div className="mt-12 text-2xl max-md:mt-10 max-md:max-w-full">
-                  {advocateSection.description}
-                </div>
-                <div className="mt-12 max-w-full w-[292px] max-md:mt-10">
-                  <div className="w-full">
-                    <div className="text-2xl font-bold">
-                      {advocateSection.statNumber}
-                    </div>
-                    <div className="mt-2 text-base">
-                      {advocateSection.statDescription}
-                    </div>
-                  </div>
+                <div className="mt-2 text-base text-gray-700">
+                  {advocateSection.statDescription}
                 </div>
               </div>
               <a
                 href={advocateSection.buttonUrl}
-                className="flex flex-col justify-center items-center self-start px-6 py-2 mt-8 text-base font-semibold leading-relaxed text-white bg-slate-600 min-h-10 rounded-[100px] max-md:px-5"
+                className="inline-block mt-6 md:mt-8 px-6 py-2 text-sm font-semibold text-white bg-secondaryAccent rounded-full hover:bg-gray-700"
               >
-                <span className="gap-4 self-stretch">
-                  {advocateSection.buttonText}
-                </span>
+                {advocateSection.buttonText}
               </a>
             </div>
             <img
               src={images.advocateImage}
               alt=""
-              className="object-contain z-10 self-end mt-0 max-w-full aspect-[0.71] w-[277px] max-md:mt-0"
+              className="absolute right-0 bottom-0 w-[45%] md:w-[50%] h-auto"
             />
           </div>
+        </div>
 
-          {/* Learn and Engage Cards */}
-          <div className="grow shrink self-stretch my-auto min-w-60 text-zinc-800 w-[346px] max-md:max-w-full">
-            <Card {...learnCard} />
-            <Card {...engageCard} className="mt-6" />
-          </div>
+        {/* Learn and Engage Cards */}
+        <div className="lg:col-span-5 space-y-4">
+          <Card {...learnCard} />
+          <Card {...engageCard} />
         </div>
       </div>
 
       {/* Divider */}
-      <div className="z-0 mt-20 w-full min-h-0 border border-solid border-zinc-800 border-opacity-20 max-md:mt-10 max-md:max-w-full" />
+      <div className="my-12 md:my-20 border-t border-gray-200" />
 
       {/* Care Resources Section */}
-      <div className="z-0 mt-20 w-full text-zinc-800 max-md:mt-10 max-md:max-w-full">
+      <div>
         {renderCareHeading(careSection.heading)}
-        <div className="flex flex-wrap gap-6 items-start mt-12 w-full max-md:mt-10 max-md:max-w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
           <ResourceCard {...careSection.caregiverCard} />
           <ResourceCard {...careSection.providerCard} />
         </div>
       </div>
 
       {/* Decorative Image */}
-      <img
-        src={images.decorativeImage}
-        alt=""
-        className="object-contain absolute z-0 max-w-full aspect-[27.78] bottom-[346px] h-[7px] left-[363px] w-[195px]"
-      />
+      <div className="relative h-4 mt-8">
+        <img
+          src={images.decorativeImage}
+          alt=""
+          className="absolute left-1/2 transform -translate-x-1/2 w-36 md:w-48"
+        />
+      </div>
     </section>
   );
 };
