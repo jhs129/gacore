@@ -38,41 +38,61 @@ const Header: React.FC = () => {
     {
       name: "care",
       label: "Care & Treatment",
-      items: ["Find Treatment", "Treatment Options", "Side Effects"],
+      items: [
+        { label: "Find Treatment", href: "/clinical-trial-search" },
+        { label: "Treatment Options", href: "/treatment-options" },
+        { label: "Side Effects", href: "/side-effects" },
+      ],
     },
     {
       name: "support",
       label: "Support Resources",
-      items: ["Support Groups", "Financial Resources", "Patient Services"],
+      href: "/support-resources",
+      items: [
+        { label: "Support Groups", href: "/support-groups" },
+        { label: "Financial Resources", href: "/financial-resources" },
+        { label: "Patient Services", href: "/patient-services" },
+      ],
     },
     {
       name: "learn",
       label: "Learn About Cancer",
-      items: ["Types of Cancer", "Prevention", "Research"],
+      href: "/learn-about-cancer",
+      items: [
+        { label: "Types of Cancer", href: "/cancer-types" },
+        { label: "Prevention", href: "/prevention" },
+        { label: "Research", href: "/research" },
+      ],
     },
     {
       name: "involved",
       label: "Get Involved",
-      items: ["Volunteer", "Donate", "Events"],
+      items: [
+        { label: "Volunteer", href: "/volunteer" },
+        { label: "Donate", href: "/donate" },
+        { label: "Events", href: "/events" },
+      ],
     },
   ];
 
   return (
-    <header className="w-full relative">
+    <header className="w-full relative z-50">
       <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
         rel="stylesheet"
       />
 
       {/* Mobile Header */}
-      <div className="lg:hidden w-full bg-secondaryLight">
+      <div className="lg:hidden w-full bg-secondaryLight pt-4">
         <div className="px-4 py-3 flex justify-between items-center max-w-[1440px] mx-auto">
           <div>
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
-              className="h-12 w-[87.6px]"
-              alt="GA Core Logo"
-            />
+            <a href="/">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
+                className="h-12 w-[87.6px]"
+                alt="GA Core Logo"
+              />
+            </a>
           </div>
           <div className="pr-4">
             <button
@@ -97,15 +117,17 @@ const Header: React.FC = () => {
       </div>
 
       {/* Desktop Header */}
-      <div className="hidden lg:block w-full bg-secondaryLight">
+      <div className="hidden lg:block w-full bg-secondaryLight pt-4">
         <div className="max-w-[1440px] mx-auto px-12 py-3 h-[72px] relative">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
-                className="h-12 w-[87.6px]"
-                alt="GA Core Logo"
-              />
+              <a href="/">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
+                  className="h-12 w-[87.6px]"
+                  alt="GA Core Logo"
+                />
+              </a>
             </div>
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <nav
@@ -117,43 +139,54 @@ const Header: React.FC = () => {
                     {menuItems.map((item) => (
                       <div
                         key={item.name}
-                        className="flex relative gap-1 items-center cursor-pointer whitespace-nowrap"
-                        role="button"
-                        aria-haspopup={item.items ? "true" : undefined}
-                        tabIndex={0}
-                        aria-expanded={openDropdown === item.name}
+                        className="relative"
                         onClick={() => toggleDropdown(item.name)}
-                        onKeyDown={(event) => handleKeyDown(event, item.name)}
+                        onKeyDown={(e) => handleKeyDown(e, item.name)}
+                        tabIndex={0}
                       >
-                        <span className="text-sm font-semibold leading-6 text-zinc-800 whitespace-nowrap">
-                          {item.label}
-                        </span>
-                        {item.items && (
-                          <div>
+                        <div className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:text-primary">
+                          {item.href ? (
+                            <a
+                              href={item.href}
+                              className="text-zinc-800 hover:text-primary"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              {item.label}
+                            </a>
+                          ) : (
+                            <span className="text-zinc-800">{item.label}</span>
+                          )}
+                          {item.items && (
                             <svg
                               width="13"
                               height="12"
                               viewBox="0 0 13 12"
                               fill="none"
                               xmlns="http://www.w3.org/2000/svg"
-                              className={`transition-transform duration-300 ${openDropdown === item.name ? "rotate-180" : ""}`}
+                              className={`transition-transform duration-300 ${
+                                openDropdown === item.name ? "rotate-180" : ""
+                              }`}
                             >
                               <path
                                 d="M6.66458 8.9292C6.83532 8.9283 6.98982 8.86273 7.11677 8.72931L10.9408 4.81171C11.0506 4.70192 11.1098 4.56612 11.1098 4.40711C11.1098 4.07906 10.8552 3.82031 10.5299 3.82031C10.3709 3.82031 10.2228 3.88409 10.1094 3.99609L6.41867 7.78123H6.90998L3.21563 3.99609C3.10545 3.8859 2.95829 3.82031 2.79427 3.82031C2.46802 3.82031 2.21429 4.07906 2.21429 4.40711C2.21429 4.56522 2.27446 4.70102 2.38244 4.81583L6.20825 8.72931C6.34345 8.86453 6.4906 8.9292 6.66458 8.9292Z"
                                 fill="currentColor"
                               />
                             </svg>
-                          </div>
-                        )}
+                          )}
+                        </div>
                         {openDropdown === item.name && item.items && (
-                          <div className="absolute left-0 top-full px-0 py-2 mt-2 bg-white rounded-lg min-w-[200px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[100]">
+                          <div className="absolute left-0 top-full px-0 py-2 mt-2 bg-white rounded-lg min-w-[200px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[999]">
                             {item.items.map((subItem) => (
                               <a
-                                key={subItem}
-                                className="block px-4 py-2 text-zinc-800 hover:bg-gray-100"
-                                href="#"
+                                key={subItem.label}
+                                href={subItem.href}
+                                className="block px-4 py-2 text-zinc-800 hover:bg-gray-100 whitespace-nowrap"
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setOpenDropdown(null);
+                                }}
                               >
-                                {subItem}
+                                {subItem.label}
                               </a>
                             ))}
                           </div>
@@ -193,12 +226,14 @@ const Header: React.FC = () => {
         className={`lg:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out transform ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         {/* Mobile Menu Header */}
-        <div className="px-4 flex justify-between items-center border-b border-gray-100">
-          <img
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
-            className="h-12 w-[87.6px]"
-            alt="GA Core Logo"
-          />
+        <div className="px-4 pt-4 flex justify-between items-center border-b border-gray-100">
+          <a href="/">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
+              className="h-12 w-[87.6px]"
+              alt="GA Core Logo"
+            />
+          </a>
           <div className="pr-4">
             <button
               className="p-2"
@@ -218,36 +253,54 @@ const Header: React.FC = () => {
           <nav className="space-y-4">
             {menuItems.map((item) => (
               <div key={item.name} className="space-y-2">
-                <button
-                  className="flex items-center justify-between w-full px-4 py-2 text-left text-zinc-800 font-semibold"
+                <div
+                  className="flex items-center justify-between w-full px-4 py-2 text-left text-zinc-800"
                   onClick={() => toggleDropdown(item.name)}
                 >
-                  {item.label}
-                  {item.items && (
-                    <svg
-                      width="13"
-                      height="12"
-                      viewBox="0 0 13 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      className={`transition-transform duration-300 ${openDropdown === item.name ? "rotate-180" : ""}`}
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      className="font-semibold hover:text-primary"
+                      onClick={(e) => e.stopPropagation()}
                     >
-                      <path
-                        d="M6.66458 8.9292C6.83532 8.9283 6.98982 8.86273 7.11677 8.72931L10.9408 4.81171C11.0506 4.70192 11.1098 4.56612 11.1098 4.40711C11.1098 4.07906 10.8552 3.82031 10.5299 3.82031C10.3709 3.82031 10.2228 3.88409 10.1094 3.99609L6.41867 7.78123H6.90998L3.21563 3.99609C3.10545 3.8859 2.95829 3.82031 2.79427 3.82031C2.46802 3.82031 2.21429 4.07906 2.21429 4.40711C2.21429 4.56522 2.27446 4.70102 2.38244 4.81583L6.20825 8.72931C6.34345 8.86453 6.4906 8.9292 6.66458 8.9292Z"
-                        fill="currentColor"
-                      />
-                    </svg>
+                      {item.label}
+                    </a>
+                  ) : (
+                    <span className="font-semibold">{item.label}</span>
                   )}
-                </button>
+                  {item.items && (
+                    <button
+                      className="p-1"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        toggleDropdown(item.name);
+                      }}
+                    >
+                      <svg
+                        width="13"
+                        height="12"
+                        viewBox="0 0 13 12"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        className={`transition-transform duration-300 ${openDropdown === item.name ? "rotate-180" : ""}`}
+                      >
+                        <path
+                          d="M6.66458 8.9292C6.83532 8.9283 6.98982 8.86273 7.11677 8.72931L10.9408 4.81171C11.0506 4.70192 11.1098 4.56612 11.1098 4.40711C11.1098 4.07906 10.8552 3.82031 10.5299 3.82031C10.3709 3.82031 10.2228 3.88409 10.1094 3.99609L6.41867 7.78123H6.90998L3.21563 3.99609C3.10545 3.8859 2.95829 3.82031 2.79427 3.82031C2.46802 3.82031 2.21429 4.07906 2.21429 4.40711C2.21429 4.56522 2.27446 4.70102 2.38244 4.81583L6.20825 8.72931C6.34345 8.86453 6.4906 8.9292 6.66458 8.9292Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  )}
+                </div>
                 {openDropdown === item.name && item.items && (
                   <div className="pl-4 space-y-2">
                     {item.items.map((subItem) => (
                       <a
-                        key={subItem}
-                        href="#"
+                        key={subItem.label}
+                        href={subItem.href}
                         className="block px-4 py-2 text-zinc-600 hover:text-zinc-800"
                       >
-                        {subItem}
+                        {subItem.label}
                       </a>
                     ))}
                   </div>

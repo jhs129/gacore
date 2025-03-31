@@ -14,8 +14,10 @@ import {
   RefinementList,
   Configure,
   useInstantSearch,
+  useConnector,
 } from "react-instantsearch";
 import { liteClient as algoliasearch } from "algoliasearch/lite";
+import connectAutocomplete from "instantsearch.js/es/connectors/autocomplete/connectAutocomplete";
 
 const searchClient = algoliasearch(
   "YZ7LZ0IN9O",
@@ -64,7 +66,7 @@ const RefinementSection = ({ title, attribute }: RefinementSectionProps) => {
     <div className="mb-4 sm:mb-8">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-4 hover:text-gray-600"
+        className="!bg-transparent !p-0 w-full flex items-center justify-between text-base sm:text-lg font-medium !text-gray-900 mb-2 sm:mb-4 !hover:bg-transparent !hover:text-gray-900"
       >
         <div className="flex items-center">
           {isOpen ? (
@@ -78,7 +80,7 @@ const RefinementSection = ({ title, attribute }: RefinementSectionProps) => {
       <div className={isOpen ? "block" : "hidden"}>
         <div className="[&_.ais-RefinementList-list]:list-none [&_.ais-RefinementList-list]:p-0 [&_.ais-RefinementList-list]:m-0">
           <div className="[&_.ais-RefinementList-item]:py-0.5 sm:[&_.ais-RefinementList-item]:py-1 [&_.ais-RefinementList-item:nth-child(even)]:bg-gray-50">
-            <div className="[&_.ais-RefinementList-label]:flex [&_.ais-RefinementList-label]:items-center [&_.ais-RefinementList-label]:px-2 sm:[&_.ais-RefinementList-label]:px-4 [&_.ais-RefinementList-label]:py-1.5 sm:[&_.ais-RefinementList-label]:py-2 [&_.ais-RefinementList-label]:text-gray-600 [&_.ais-RefinementList-label]:text-sm">
+            <div className="[&_.ais-RefinementList-label]:flex [&_.ais-RefinementList-label]:items-center [&_.ais-RefinementList-label]:px-2 sm:[&_.ais-RefinementList-label]:px-4 [&_.ais-RefinementList-label]:py-1.5 sm:[&_.ais-RefinementList-label]:py-2 [&_.ais-RefinementList-label]:text-gray-600 [&_.ais-RefinementList-label]:text-sm [&_.ais-RefinementList-label:hover]:text-gray-600 [&_.ais-RefinementList-label:hover]:bg-transparent [&_.ais-RefinementList-item:hover]:text-gray-600">
               <div className="[&_.ais-RefinementList-checkbox]:mr-2 sm:[&_.ais-RefinementList-checkbox]:mr-3 [&_.ais-RefinementList-checkbox]:rounded [&_.ais-RefinementList-checkbox]:w-3.5 sm:[&_.ais-RefinementList-checkbox]:w-4 [&_.ais-RefinementList-checkbox]:h-3.5 sm:[&_.ais-RefinementList-checkbox]:h-4">
                 <div className="[&_.ais-RefinementList-count]:ml-auto [&_.ais-RefinementList-count]:bg-gray-100 [&_.ais-RefinementList-count]:px-1.5 sm:[&_.ais-RefinementList-count]:px-2 [&_.ais-RefinementList-count]:py-0.5 [&_.ais-RefinementList-count]:rounded-full [&_.ais-RefinementList-count]:text-xs [&_.ais-RefinementList-count]:text-gray-500 [&_.ais-RefinementList-count]:min-w-[1.25rem] sm:[&_.ais-RefinementList-count]:min-w-[1.5rem] [&_.ais-RefinementList-count]:text-center">
                   <RefinementList
@@ -108,6 +110,9 @@ const Hit = ({ hit }: HitProps) => {
       className="block p-6 mb-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer no-underline"
     >
       <h2 className="text-xl mb-3 text-gray-800 font-medium hover:text-blue-600">
+        <span className="text-secondaryAccent">
+          {hit.protocolSection.identificationModule.nctId}
+        </span>{" "}
         {hit.protocolSection.identificationModule.briefTitle}
       </h2>
       <p className="text-gray-600 leading-relaxed">
@@ -116,6 +121,110 @@ const Hit = ({ hit }: HitProps) => {
     </a>
   );
 };
+
+// Create custom useAutocomplete hook
+function useAutocomplete(props: any) {
+  return useConnector(connectAutocomplete, props);
+}
+
+// Create Autocomplete component
+function Autocomplete() {
+  const { indices, currentRefinement, refine } = useAutocomplete({});
+  const [selectedIndex, setSelectedIndex] = React.useState(-1);
+  const [showSuggestions, setShowSuggestions] = React.useState(false);
+
+  const handleSelect = (hit: any) => {
+    refine(hit.protocolSection.identificationModule.briefTitle);
+    setShowSuggestions(false);
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!indices.length || !currentRefinement) return;
+
+    const totalHits = indices[0].hits.length;
+
+    switch (e.key) {
+      case "ArrowDown":
+        e.preventDefault();
+        setSelectedIndex((prev) => (prev < totalHits - 1 ? prev + 1 : prev));
+        setShowSuggestions(true);
+        break;
+      case "ArrowUp":
+        e.preventDefault();
+        setSelectedIndex((prev) => (prev > 0 ? prev - 1 : -1));
+        setShowSuggestions(true);
+        break;
+      case "Enter":
+        e.preventDefault();
+        if (selectedIndex >= 0 && indices[0].hits[selectedIndex]) {
+          handleSelect(indices[0].hits[selectedIndex]);
+        }
+        setShowSuggestions(false);
+        break;
+      case "Escape":
+        e.preventDefault();
+        refine("");
+        setShowSuggestions(false);
+        break;
+    }
+  };
+
+  const handleBlur = (e: React.FocusEvent) => {
+    setTimeout(() => {
+      setShowSuggestions(false);
+    }, 200);
+  };
+
+  return (
+    <div className="w-full">
+      <div className="relative">
+        <div className="relative flex items-center">
+          <MagnifyingGlassIcon className="absolute left-4 h-5 w-5 text-gray-400" />
+          <input
+            type="search"
+            value={currentRefinement}
+            onChange={(event) => {
+              refine(event.currentTarget.value);
+              setSelectedIndex(-1);
+              setShowSuggestions(true);
+            }}
+            onKeyDown={handleKeyDown}
+            onFocus={() => currentRefinement && setShowSuggestions(true)}
+            onBlur={handleBlur}
+            placeholder="Search clinical trials..."
+            className="w-full outline-none pl-12 pr-4 py-3 border border-neutral-60 rounded-lg shadow-sm focus:shadow-md focus:border-primary transition-all text-base"
+          />
+        </div>
+        {showSuggestions && indices.length > 0 && currentRefinement && (
+          <div className="absolute w-full bg-white mt-1 border border-neutral-60 rounded-lg shadow-lg z-10">
+            {indices.map(({ hits }) => (
+              <ul className="py-2 list-none">
+                {hits.map((hit: any, index: number) => (
+                  <li
+                    key={hit.objectID}
+                    onClick={() => handleSelect(hit)}
+                    className={`px-4 py-2 cursor-pointer ${
+                      index === selectedIndex
+                        ? "bg-neutral-90"
+                        : "hover:bg-neutral-90"
+                    }`}
+                  >
+                    <div className="font-semibold">
+                      {hit.protocolSection.identificationModule.briefTitle}
+                    </div>
+                    <div className="text-sm text-neutral-40">
+                      {hit.protocolSection.identificationModule.nctId}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 
 const ClinicalTrialSearch = ({
   mainTitle = "Your trusted path to clinical trials.",
@@ -142,7 +251,7 @@ const ClinicalTrialSearch = ({
   const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   return (
-    <div className="mx-auto">
+    <div className="mx-auto [&_.ais-RefinementList-label:hover]:!text-gray-600">
       <InstantSearch searchClient={searchClient} indexName="nih-trials">
         <div
           className={`px-4 sm:px-8 py-8 sm:py-12 bg-secondaryLight relative ${
@@ -179,22 +288,8 @@ const ClinicalTrialSearch = ({
               {subtitle}
             </p>
 
-            <div className="relative [&_.ais-SearchBox-form]:flex [&_.ais-SearchBox-form]:items-center [&_.ais-SearchBox-form]:bg-white [&_.ais-SearchBox-form]:px-4 sm:[&_.ais-SearchBox-form]:px-6 [&_.ais-SearchBox-form]:py-2 sm:[&_.ais-SearchBox-form]:py-3 [&_.ais-SearchBox-form]:rounded-full [&_.ais-SearchBox-form]:shadow-sm [&_.ais-SearchBox-form]:border [&_.ais-SearchBox-form]:border-gray-200">
-              <div className="[&_.ais-SearchBox-input]:w-full [&_.ais-SearchBox-input]:text-base sm:[&_.ais-SearchBox-input]:text-lg [&_.ais-SearchBox-input]:text-gray-700 [&_.ais-SearchBox-input]:border-0 [&_.ais-SearchBox-input]:outline-none [&_.ais-SearchBox-input]:bg-transparent [&_.ais-SearchBox-input]:placeholder-gray-400">
-                <div className="[&_.ais-SearchBox-submit]:p-1.5 sm:[&_.ais-SearchBox-submit]:p-2 [&_.ais-SearchBox-submit]:bg-emerald-500 [&_.ais-SearchBox-submit]:hover:bg-emerald-600 [&_.ais-SearchBox-submit]:text-white [&_.ais-SearchBox-submit]:rounded-full [&_.ais-SearchBox-submit]:w-8 sm:[&_.ais-SearchBox-submit]:w-10 [&_.ais-SearchBox-submit]:h-8 sm:[&_.ais-SearchBox-submit]:h-10 [&_.ais-SearchBox-submit]:flex [&_.ais-SearchBox-submit]:items-center [&_.ais-SearchBox-submit]:justify-center [&_.ais-SearchBox-submit]:transition-colors">
-                  <div className="[&_.ais-SearchBox-submitIcon]:w-4 sm:[&_.ais-SearchBox-submitIcon]:w-5 [&_.ais-SearchBox-submitIcon]:h-4 sm:[&_.ais-SearchBox-submitIcon]:h-5">
-                    <div className="[&_.ais-SearchBox-reset]:hidden">
-                      <SearchBox
-                        placeholder={searchPlaceholder}
-                        translations={{
-                          submitButtonTitle: searchButtonTitle,
-                          resetButtonTitle: clearSearchButtonTitle,
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div className="relative">
+              <Autocomplete />
             </div>
           </div>
         </div>
@@ -258,7 +353,7 @@ const ClinicalTrialSearch = ({
                         <div className="border-t border-gray-200 px-4 py-6">
                           <button
                             type="button"
-                            className="w-full rounded-md bg-emerald-500 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-emerald-600"
+                            className="w-full rounded-md bg-secondaryAccent px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-secondaryDark"
                             onClick={() => setShowMobileFilters(false)}
                           >
                             Apply Filters

@@ -19,7 +19,7 @@ module.exports = {
         primaryDark: 'var(--color-primary-dark)',
         secondaryDark: 'var(--color-secondary-dark)',
         primaryAccent: 'var(--color-primary-accent)',
-        secondaryAccent: 'var(--color-secondary-accent)',
+        secondaryAccent: 'var(--color-accent-green)',
         tertiaryAccent: 'var(--color-tertiary-accent)',
         accentTeal: 'var(--color-accent-teal)',
         accentRed: 'var(--color-accent-red)',
