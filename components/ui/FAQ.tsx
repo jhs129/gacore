@@ -86,8 +86,8 @@ const FAQ: React.FC<FAQProps> = ({
             key={`faq-item-${index}`}
             className="flex flex-col justify-center items-center p-2 w-full border-t border-solid border-t-zinc-800 border-t-opacity-20 max-sm:p-4"
           >
-            <button
-              className="flex gap-6 justify-between items-center w-full text-left"
+            <div
+              className="flex gap-6 justify-between items-center w-full text-left py-4 px-6  !text-zinc-800 hover:!text-zinc-800"
               onClick={() => toggleQuestion(index)}
               aria-expanded={expandedIndex === index}
               aria-controls={`faq-answer-${index}`}
@@ -98,11 +98,11 @@ const FAQ: React.FC<FAQProps> = ({
               <div>
                 <ChevronIcon isExpanded={expandedIndex === index} />
               </div>
-            </button>
+            </div>
             {expandedIndex === index && (
               <div
                 id={`faq-answer-${index}`}
-                className="mt-4 text-base text-zinc-700 w-full"
+                className="mt-4 text-base text-zinc-700 w-full px-6"
               >
                 {item.answer}
               </div>
