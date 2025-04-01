@@ -5,6 +5,7 @@ import {
   EmotionalSupportIcon,
   PracticalHelpIcon,
 } from "./SupportIcons";
+import StyledItalicSpan from "./shared/StyledItalicSpan";
 
 export interface Module4Props {
   backgroundImage?: string;
@@ -92,7 +93,10 @@ const Module4: React.FC<Module4Props> = ({
                 >
                   Cancer impacts more than your health. We're here to connect
                   you to resources that support your{" "}
-                  <span className="italic font-serif">whole journey</span>.
+                  <StyledItalicSpan className="font-serif">
+                    whole journey
+                  </StyledItalicSpan>
+                  .
                 </h2>
                 <a
                   href={buttonUrl}

@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import StyledItalicSpan from "./shared/StyledItalicSpan";
 
 interface CardProps {
   label: string;
@@ -144,14 +145,7 @@ const Module6: React.FC<Module6Props> = ({
     return (
       <h2 className="text-3xl text-gray-800 mb-8 md:mb-12">
         {parts[0]}
-        <span className="italic relative">
-          transforms
-          <img
-            src={images.decorativeImage}
-            alt=""
-            className="absolute left-0 -bottom-2 w-full"
-          />
-        </span>
+        <StyledItalicSpan>transforms</StyledItalicSpan>
         {parts[1]}
       </h2>
     );
@@ -160,16 +154,8 @@ const Module6: React.FC<Module6Props> = ({
   const renderCareHeading = (text: string) => {
     return (
       <h3 className="text-3xl text-gray-800 mb-6 md:mb-8">
-        Resources for{" "}
-        <span className="italic relative">
-          those who care
-          <img
-            src={images.decorativeImage}
-            alt=""
-            className="absolute left-0 -bottom-2 w-full"
-          />
-        </span>
-        , at home & in the clinic.
+        Resources for <StyledItalicSpan>those who care</StyledItalicSpan>, at
+        home & in the clinic.
       </h3>
     );
   };

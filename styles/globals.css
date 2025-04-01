@@ -1,20 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-primary-light: #FFFFFF;
-  --color-secondary-light: #FAF2ED;
-  --color-primary-dark: #343A40;
-  --color-secondary-dark: #343A40;
-  --color-accent-red: #F1696D;
-  --color-accent-green: #35755F;
-  --color-accent-teal: #037E88;
-  --text-color-body-text-primary: #037E88;
-  --color-tertiary: #D4EBF0;
-  --color-quaternary: #8F3536;
-  --font-primary: 'Lora', sans-serif;
-  --font-secondary: 'Liberation Sans', sans-serif;
+  --color-primary-light: #ffffff;
+  --color-secondary-light: #faf2ed;
+  --color-primary-dark: #343a40;
+  --color-secondary-dark: #343a40;
+  --color-accent-red: #f1696d;
+  --color-accent-green: #35755f;
+  --color-accent-teal: #037e88;
+  --text-color-body-text-primary: #037e88;
+  --color-tertiary: #d4ebf0;
+  --color-quaternary: #8f3536;
+  --font-primary: "PT Serif", serif;
+  --font-secondary: "Open Sans", sans-serif;
   --spacing-xl: 32px;
   --spacing-lg: 16px;
   --spacing-md: 8px;
@@ -25,15 +28,24 @@
 
 @layer base {
   body {
-    @apply bg-white font-primary;
+    @apply bg-white font-secondary;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-primary;
   }
 
   h1 {
-    @apply text-xl leading-loose md:text-[2.5rem] md:leading-none;
+    @apply text-5xl leading-none  md:text-[2.5rem] md:leading-none;
   }
 
   h2 {
-    @apply text-[2rem] my-4 font-medium font-sans text-inherit;
+    @apply text-3xl my-4 font-normal text-inherit;
   }
   h3 {
     @apply text-xl my-4 leading-5;
@@ -75,9 +87,24 @@
   li {
     @apply mb-2 pr-4;
   }
+
+  h1 em,
+  h2 em,
+  h3 em {
+    @apply italic relative inline-block font-normal;
+    font-family: "PT Serif", serif;
+    font-style: italic;
+  }
+
+  h1 em::after,
+  h2 em::after,
+  h3 em::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 w-full;
+    height: 2px;
+    background: #35755F;
+  }
 }
-
-
 
 .btn-carousel {
   @apply bg-tertiaryAccent hover:bg-secondaryDark text-white border border-tertiaryAccent rounded-lg px-2 py-4 capitalize;
@@ -86,5 +113,3 @@
 .site-container {
   @apply container mx-auto px-4;
 }
-
-

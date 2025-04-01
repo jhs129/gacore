@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import StyledItalicSpan from "./shared/StyledItalicSpan";
 
 interface TabItem {
   id: string;
@@ -70,17 +71,13 @@ const Mod2: React.FC<Mod2Props> = ({
       <div className="w-full max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:gap-8">
           <div className="flex-1 min-w-0">
-            <h2 className="text-[32px] leading-[40px] text-zinc-800 font-normal mb-6 md:mb-8">
-              {heading.includes("yours") ? (
-                <>
-                  {heading.split("yours")[0]}
-                  <span style={{ fontStyle: "italic" }}>yours</span>
-                  <span>.</span>
-                </>
-              ) : (
-                heading
-              )}
-            </h2>
+            <h2
+              className="text-[40px] leading-[1.2] text-[#343A40] font-normal mb-6 md:mb-8 max-w-[600px] font-['PT_Serif']"
+              dangerouslySetInnerHTML={{
+                __html:
+                  "Every cancer journey is unique. We're here to guide you through <em>yours</em>.",
+              }}
+            />
 
             {/* Tabs - No bottom border on mobile */}
             <div className="mb-6 md:mb-8">

@@ -4,10 +4,10 @@ import dynamic from "next/dynamic";
 import ClinicalTrialSearch from "./components/search/ClinicalTrialSearch";
 import Module4 from "./components/ui/Module4";
 import Module6 from "./components/ui/Module6";
+import Mod2 from "./components/ui/Mod2";
+import FAQ from "./components/ui/FAQ";
+import CancerCareHero from "./components/ui/CancerCareHero";
 // Import your components
-const CancerCareHero = dynamic(() => import("./components/ui/CancerCareHero"));
-const Mod2 = dynamic(() => import("./components/ui/Mod2"));
-const FAQ = dynamic(() => import("./components/ui/FAQ"));
 
 Builder.registerComponent(ClinicalTrialSearch, {
   name: "ClinicalTrialSearch",
@@ -273,7 +273,7 @@ Builder.registerComponent(Mod2, {
   inputs: [
     {
       name: "heading",
-      type: "string",
+      type: "html",
       defaultValue:
         "Every cancer journey is unique. We're here to guide you through yours.",
     },
