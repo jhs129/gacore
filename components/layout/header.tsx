@@ -102,13 +102,13 @@ const Header: React.FC = () => {
             >
               <div className="space-y-2">
                 <div
-                  className={`w-8 h-0.5 bg-zinc-600 transition-transform duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-2.5" : ""}`}
+                  className={`w-8 h-0.5 bg-primaryDark transition-transform duration-300 ${isMobileMenuOpen ? "rotate-45 translate-y-2.5" : ""}`}
                 ></div>
                 <div
-                  className={`w-8 h-0.5 bg-zinc-600 transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`}
+                  className={`w-8 h-0.5 bg-primaryDark transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-0" : ""}`}
                 ></div>
                 <div
-                  className={`w-8 h-0.5 bg-zinc-600 transition-transform duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-2.5" : ""}`}
+                  className={`w-8 h-0.5 bg-primaryDark transition-transform duration-300 ${isMobileMenuOpen ? "-rotate-45 -translate-y-2.5" : ""}`}
                 ></div>
               </div>
             </button>
@@ -131,7 +131,7 @@ const Header: React.FC = () => {
             </div>
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <nav
-                className="bg-white rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] w-[800px]"
+                className="bg-primaryLight rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] w-[800px]"
                 aria-label="Main Navigation"
               >
                 <div className="flex items-center w-full px-8 py-2">
@@ -148,13 +148,13 @@ const Header: React.FC = () => {
                           {item.href ? (
                             <a
                               href={item.href}
-                              className="text-zinc-800 hover:text-primary"
+                              className="text-primaryDark hover:text-primary"
                               onClick={(e) => e.stopPropagation()}
                             >
                               {item.label}
                             </a>
                           ) : (
-                            <span className="text-zinc-800">{item.label}</span>
+                            <span className="text-primaryDark">{item.label}</span>
                           )}
                           {item.items && (
                             <svg
@@ -175,12 +175,12 @@ const Header: React.FC = () => {
                           )}
                         </div>
                         {openDropdown === item.name && item.items && (
-                          <div className="absolute left-0 top-full px-0 py-2 mt-2 bg-white rounded-lg min-w-[200px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[999]">
+                          <div className="absolute left-0 top-full px-0 py-2 mt-2 bg-primaryLight rounded-lg min-w-[200px] shadow-[0_4px_16px_rgba(0,0,0,0.1)] z-[999]">
                             {item.items.map((subItem) => (
                               <a
                                 key={subItem.label}
                                 href={subItem.href}
-                                className="block px-4 py-2 text-zinc-800 hover:bg-gray-100 whitespace-nowrap"
+                                className="block px-4 py-2 text-primaryDark hover:bg-secondaryLight whitespace-nowrap"
                                 onClick={(e) => {
                                   e.stopPropagation();
                                   setOpenDropdown(null);
@@ -223,7 +223,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`lg:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out transform ${
+        className={`lg:hidden fixed inset-0 bg-primaryLight z-50 transition-transform duration-300 ease-in-out transform ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -302,7 +302,7 @@ const Header: React.FC = () => {
                         <a
                           key={subItem.label}
                           href={subItem.href}
-                          className="block py-2 text-gray-600 hover:text-gray-900"
+                          className="block py-2 text-primaryDark hover:text-gray-900"
                         >
                           {subItem.label}
                         </a>

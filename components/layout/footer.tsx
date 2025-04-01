@@ -7,7 +7,7 @@ import * as React from "react";
 const Footer: React.FC = () => {
   return (
     <footer
-      className="flex items-center justify-between px-12 py-6 bg-zinc-800 max-md:px-5"
+      className="flex items-center justify-between px-12 py-6 bg-primaryDark max-md:px-5"
       role="contentinfo"
     >
       <div className="flex items-center justify-between w-full max-w-[1332px] mx-auto">
