@@ -69,26 +69,26 @@ const Mod2: React.FC<Mod2Props> = ({
   return (
     <section className="flex flex-col px-4 md:px-6 lg:px-16 py-6 md:py-12">
       <div className="w-full max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row lg:gap-8">
-          <div className="flex-1 min-w-0">
+        <div className="flex flex-col lg:flex-row lg:gap-16">
+          <div className="flex-1 min-w-0 lg:max-w-[600px]">
             <h2
-              className="text-[40px] leading-[1.2] text-[#343A40] font-normal mb-6 md:mb-8 max-w-[600px] font-['PT_Serif']"
+              className="text-[40px] leading-[1.2] text-[#343A40] font-normal mb-6 md:mb-8 font-['PT_Serif']"
               dangerouslySetInnerHTML={{
                 __html:
                   "Every cancer journey is unique. We're here to guide you through <em>yours</em>.",
               }}
             />
 
-            {/* Tabs - No bottom border on mobile */}
+            {/* Tabs */}
             <div className="mb-6 md:mb-8">
               <div className="flex gap-6 md:gap-8 relative overflow-x-auto">
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
-                    className={`pb-2 text-sm md:text-base whitespace-nowrap ${
+                    className={`pb-2 text-sm md:text-base whitespace-nowrap border-b-2 !bg-transparent !p-0 !m-0 hover:!bg-transparent ${
                       activeTabId === tab.id
-                        ? "text-zinc-800 font-semibold"
-                        : "text-zinc-500"
+                        ? "text-zinc-800 font-semibold border-zinc-800 hover:!text-zinc-800"
+                        : "text-zinc-500 border-transparent hover:!text-zinc-800"
                     }`}
                     onClick={() => handleTabClick(tab.id)}
                     aria-selected={activeTabId === tab.id}
@@ -97,38 +97,25 @@ const Mod2: React.FC<Mod2Props> = ({
                     {tab.label}
                   </button>
                 ))}
-                {/* Only show border and indicator on larger screens */}
-                <div className="hidden md:block absolute bottom-0 w-full h-px bg-zinc-200" />
-                <div
-                  className="hidden md:block absolute bottom-0 h-0.5 bg-zinc-800 transition-all duration-300"
-                  style={{
-                    left: `${
-                      tabs.findIndex((tab) => tab.id === activeTabId) *
-                      (100 / tabs.length)
-                    }%`,
-                    width: `${100 / tabs.length}%`,
-                  }}
-                  aria-hidden="true"
-                />
               </div>
             </div>
 
-            {/* Cards - Single column on mobile */}
-            <div className="flex flex-col gap-3 md:grid md:grid-cols-2 md:gap-4">
+            {/* Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {cards.map((card, index) => (
                 <a
                   key={index}
                   href={card.linkUrl || "#"}
-                  className="flex flex-col p-4 md:p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
+                  className="flex flex-col p-6 bg-white rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-lg transition-shadow"
                 >
                   <img
                     src={card.iconSrc}
                     alt=""
-                    className="w-6 h-6 mb-3 md:mb-4"
+                    className="w-6 h-6 mb-4"
                     aria-hidden="true"
                   />
                   <div className="flex justify-between items-center">
-                    <span className="text-sm md:text-base text-slate-600 pr-4">
+                    <span className="text-base text-[#343A40] pr-4">
                       {card.text}
                     </span>
                     <img
@@ -143,12 +130,12 @@ const Mod2: React.FC<Mod2Props> = ({
             </div>
           </div>
 
-          {/* Image - Full width on mobile */}
-          <div className="flex-1 min-w-0 mt-6 md:mt-0">
+          {/* Image */}
+          <div className="flex-1 min-w-0 mt-8 lg:mt-0">
             <img
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-auto rounded-lg object-cover"
+              className="w-full h-full rounded-lg object-cover"
             />
           </div>
         </div>
