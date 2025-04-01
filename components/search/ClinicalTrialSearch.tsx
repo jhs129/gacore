@@ -110,9 +110,9 @@ const Hit = ({ hit }: HitProps) => {
       className="block p-6 mb-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer no-underline"
     >
       <h2 className="text-xl mb-3 text-gray-800 font-medium hover:text-blue-600">
-        <span className="text-secondaryAccent">
+        <span className="text-primaryAccent font-semibold bg-blue-50 px-2 py-1 rounded-md text-sm mr-2">
           {hit.protocolSection.identificationModule.nctId}
-        </span>{" "}
+        </span>
         {hit.protocolSection.identificationModule.briefTitle}
       </h2>
       <p className="text-gray-600 leading-relaxed">
@@ -209,10 +209,10 @@ function Autocomplete() {
                         : "hover:bg-neutral-90"
                     }`}
                   >
-                    <div className="font-semibold">
+                    <div className="font-semibold text-primaryDark">
                       {hit.protocolSection.identificationModule.briefTitle}
                     </div>
-                    <div className="text-sm text-neutral-40">
+                    <div className="text-sm text-secondaryAccent">
                       {hit.protocolSection.identificationModule.nctId}
                     </div>
                   </li>
