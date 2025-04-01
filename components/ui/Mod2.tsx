@@ -85,16 +85,19 @@ const Mod2: React.FC<Mod2Props> = ({
                 {tabs.map((tab) => (
                   <button
                     key={tab.id}
-                    className={`pb-2 text-sm md:text-base whitespace-nowrap border-b-2 !bg-transparent !p-0 !m-0 hover:!bg-transparent ${
+                    className={`relative pb-2 text-sm md:text-base whitespace-nowrap !bg-transparent !p-0 !m-0 hover:!bg-transparent ${
                       activeTabId === tab.id
-                        ? "text-zinc-800 font-semibold border-zinc-800 hover:!text-zinc-800"
-                        : "text-zinc-500 border-transparent hover:!text-zinc-800"
+                        ? "text-zinc-800 font-semibold hover:!text-zinc-800"
+                        : "text-zinc-500 hover:!text-zinc-800"
                     }`}
                     onClick={() => handleTabClick(tab.id)}
                     aria-selected={activeTabId === tab.id}
                     role="tab"
                   >
                     {tab.label}
+                    {activeTabId === tab.id && (
+                      <div className="absolute -bottom-0.5 left-0 right-0 h-[3px] bg-zinc-800 rounded-full" />
+                    )}
                   </button>
                 ))}
               </div>
