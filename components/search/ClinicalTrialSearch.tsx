@@ -50,6 +50,16 @@ interface HitProps {
       descriptionModule: {
         briefSummary: string;
       };
+      statusModule?: {
+        overallStatus: string;
+      };
+      designModule?: {
+        studyType: string;
+        enrollmentInfo?: {
+          count: number;
+          type: string;
+        };
+      };
     };
   };
 }
@@ -109,13 +119,40 @@ const Hit = ({ hit }: HitProps) => {
       rel="noopener noreferrer"
       className="block p-6 mb-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all cursor-pointer no-underline"
     >
-      <h2 className="text-xl mb-3 text-gray-800 font-medium hover:text-blue-600">
-        <span className="text-primaryAccent font-semibold bg-blue-50 px-2 py-1 rounded-md text-sm mr-2">
-          {hit.protocolSection.identificationModule.nctId}
-        </span>
+      <h2 className="text-xl mb-2 text-gray-800 font-medium hover:text-blue-600">
         {hit.protocolSection.identificationModule.briefTitle}
       </h2>
-      <p className="text-gray-600 leading-relaxed">
+      <div className="flex flex-wrap gap-2 mb-3">
+        <span className="text-blue-600 font-semibold bg-blue-50 px-2 py-1 rounded-md text-sm">
+          ID: {hit.protocolSection.identificationModule.nctId}
+        </span>
+        {hit.protocolSection.statusModule?.overallStatus && (
+          <span
+            className={`font-medium text-sm px-2 py-1 rounded-md ${
+              hit.protocolSection.statusModule.overallStatus === "RECRUITING"
+                ? "bg-green-50 text-green-600"
+                : hit.protocolSection.statusModule.overallStatus === "COMPLETED"
+                  ? "bg-gray-50 text-gray-600"
+                  : "bg-yellow-50 text-yellow-600"
+            }`}
+          >
+            Status:{" "}
+            {hit.protocolSection.statusModule.overallStatus.replace(/_/g, " ")}
+          </span>
+        )}
+        {hit.protocolSection.designModule?.studyType && (
+          <span className="bg-purple-50 text-purple-600 font-medium text-sm px-2 py-1 rounded-md">
+            Type: {hit.protocolSection.designModule.studyType}
+          </span>
+        )}
+        {hit.protocolSection.designModule?.enrollmentInfo && (
+          <span className="bg-orange-50 text-orange-600 font-medium text-sm px-2 py-1 rounded-md">
+            Target Size: {hit.protocolSection.designModule.enrollmentInfo.count}{" "}
+            Participants
+          </span>
+        )}
+      </div>
+      <p className="text-gray-600 leading-relaxed line-clamp-3 text-ellipsis overflow-hidden">
         {hit.protocolSection.descriptionModule.briefSummary}
       </p>
     </a>
