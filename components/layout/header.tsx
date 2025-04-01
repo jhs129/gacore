@@ -131,11 +131,11 @@ const Header: React.FC = () => {
             </div>
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <nav
-                className="bg-primaryLight rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] w-[800px]"
+                className="bg-primaryLight rounded-lg shadow-[0_4px_16px_rgba(0,0,0,0.05)] w-[1000px]"
                 aria-label="Main Navigation"
               >
                 <div className="flex items-center w-full px-8 py-2">
-                  <div className="flex items-center justify-between flex-1 gap-8">
+                  <div className="flex items-center justify-between flex-1 gap-16">
                     {menuItems.map((item) => (
                       <div
                         key={item.name}
@@ -144,17 +144,19 @@ const Header: React.FC = () => {
                         onKeyDown={(e) => handleKeyDown(e, item.name)}
                         tabIndex={0}
                       >
-                        <div className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:text-primary">
+                        <div className="flex items-center gap-2 px-4 py-2 cursor-pointer hover:text-primary whitespace-nowrap">
                           {item.href ? (
                             <a
                               href={item.href}
-                              className="text-primaryDark hover:text-primary"
+                              className="text-primaryDark hover:text-primary whitespace-nowrap"
                               onClick={(e) => e.stopPropagation()}
                             >
                               {item.label}
                             </a>
                           ) : (
-                            <span className="text-primaryDark">{item.label}</span>
+                            <span className="text-primaryDark whitespace-nowrap">
+                              {item.label}
+                            </span>
                           )}
                           {item.items && (
                             <svg
@@ -195,7 +197,7 @@ const Header: React.FC = () => {
                     ))}
                   </div>
                   <button
-                    className="ml-4 p-1.5 hover:bg-gray-50 rounded-lg transition-colors"
+                    className="ml-4 p-1.5 hover:bg-gray-50 rounded-lg transition-colors !bg-transparent !px-0 !py-0 !m-0"
                     aria-label="Search"
                   >
                     <svg
