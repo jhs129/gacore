@@ -15,6 +15,7 @@ import {
   Configure,
   useInstantSearch,
   useConnector,
+  Pagination,
 } from "react-instantsearch";
 import { liteClient as algoliasearch } from "algoliasearch/lite";
 import connectAutocomplete from "instantsearch.js/es/connectors/autocomplete/connectAutocomplete";
@@ -288,7 +289,7 @@ const ClinicalTrialSearch = ({
   const [showMobileFilters, setShowMobileFilters] = useState(false);
 
   return (
-    <div className="mx-auto [&_.ais-RefinementList-label:hover]:!text-gray-600">
+    <div className="mx-auto [&_.ais-RefinementList-label:hover]:!text-gray-600 h-screen flex flex-col">
       <InstantSearch searchClient={searchClient} indexName="nih-trials">
         <div
           className={`px-4 sm:px-8 py-8 sm:py-12 bg-secondaryLight relative ${
@@ -331,93 +332,98 @@ const ClinicalTrialSearch = ({
           </div>
         </div>
 
-        <div className="px-4 sm:px-8 py-6 sm:py-8">
-          <Configure hitsPerPage={10} />
+        <div className="flex-1 overflow-hidden">
+          <div className="px-4 sm:px-8 py-6 sm:py-8 h-full flex flex-col">
+            <Configure hitsPerPage={25} />
 
-          <div className="lg:hidden mb-4">
-            <button
-              onClick={() => setShowMobileFilters(!showMobileFilters)}
-              className="w-full flex items-center justify-between px-4 py-3 bg-white rounded-lg border border-gray-200 shadow-sm hover:bg-gray-50"
-            >
-              <div className="flex items-center">
-                <FunnelIcon className="h-5 w-5 text-gray-400 mr-2" />
-                <span className="text-sm font-medium text-gray-700">
-                  Filter Results
-                </span>
-              </div>
-              <ChevronRightIcon className="h-5 w-5 text-gray-400" />
-            </button>
-          </div>
+            <div className="lg:hidden mb-4">
+              <button
+                onClick={() => setShowMobileFilters(!showMobileFilters)}
+                className="w-full flex items-center justify-between px-4 py-3 bg-white rounded-lg border border-gray-200 shadow-sm hover:bg-gray-50"
+              >
+                <div className="flex items-center">
+                  <FunnelIcon className="h-5 w-5 text-gray-400 mr-2" />
+                  <span className="text-sm font-medium text-gray-700">
+                    Filter Results
+                  </span>
+                </div>
+                <ChevronRightIcon className="h-5 w-5 text-gray-400" />
+              </button>
+            </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
-            <div
-              className={`
-              fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-50 lg:hidden
-              ${showMobileFilters ? "opacity-100" : "opacity-0 pointer-events-none"}
-            `}
-            >
-              <div className="fixed inset-0 z-50 overflow-hidden">
-                <div className="absolute inset-0 overflow-hidden">
-                  <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-                    <div
-                      className={`
-                      pointer-events-auto w-screen max-w-md transform transition ease-in-out duration-500
-                      ${showMobileFilters ? "translate-x-0" : "translate-x-full"}
-                    `}
-                    >
-                      <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                        <div className="flex-1 overflow-y-auto px-4 py-6">
-                          <div className="flex items-center justify-between mb-4">
-                            <h2 className="text-lg font-medium text-gray-900">
-                              Filters
-                            </h2>
+            <div className="flex-1 min-h-0 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
+              <div
+                className={`
+                fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity z-50 lg:hidden
+                ${showMobileFilters ? "opacity-100" : "opacity-0 pointer-events-none"}
+              `}
+              >
+                <div className="fixed inset-0 z-50 overflow-hidden">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                      <div
+                        className={`
+                        pointer-events-auto w-screen max-w-md transform transition ease-in-out duration-500
+                        ${showMobileFilters ? "translate-x-0" : "translate-x-full"}
+                      `}
+                      >
+                        <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
+                          <div className="flex-1 overflow-y-auto px-4 py-6">
+                            <div className="flex items-center justify-between mb-4">
+                              <h2 className="text-lg font-medium text-gray-900">
+                                Filters
+                              </h2>
+                              <button
+                                type="button"
+                                className="text-gray-400 hover:text-gray-500"
+                                onClick={() => setShowMobileFilters(false)}
+                              >
+                                <XMarkIcon className="h-6 w-6" />
+                              </button>
+                            </div>
+                            {refinementSections?.map((section, index) => (
+                              <RefinementSection
+                                key={index}
+                                title={section.title}
+                                attribute={section.attribute}
+                              />
+                            ))}
+                          </div>
+                          <div className="border-t border-gray-200 px-4 py-6">
                             <button
                               type="button"
-                              className="text-gray-400 hover:text-gray-500"
+                              className="w-full rounded-md bg-secondaryAccent px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-secondaryDark"
                               onClick={() => setShowMobileFilters(false)}
                             >
-                              <XMarkIcon className="h-6 w-6" />
+                              Apply Filters
                             </button>
                           </div>
-                          {refinementSections?.map((section, index) => (
-                            <RefinementSection
-                              key={index}
-                              title={section.title}
-                              attribute={section.attribute}
-                            />
-                          ))}
-                        </div>
-                        <div className="border-t border-gray-200 px-4 py-6">
-                          <button
-                            type="button"
-                            className="w-full rounded-md bg-secondaryAccent px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-secondaryDark"
-                            onClick={() => setShowMobileFilters(false)}
-                          >
-                            Apply Filters
-                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="hidden lg:block lg:col-span-3">
-              <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm sticky top-4">
-                {refinementSections?.map((section, index) => (
-                  <RefinementSection
-                    key={index}
-                    title={section.title}
-                    attribute={section.attribute}
-                  />
-                ))}
+              <div className="hidden lg:block lg:col-span-3">
+                <div className="bg-white p-4 sm:p-6 rounded-xl shadow-sm overflow-y-auto max-h-full">
+                  {refinementSections?.map((section, index) => (
+                    <RefinementSection
+                      key={index}
+                      title={section.title}
+                      attribute={section.attribute}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <div className="lg:col-span-9">
-              <div className="bg-gray-50 p-4 sm:p-6 rounded-xl">
-                <Hits hitComponent={Hit} />
+              <div className="lg:col-span-9 flex flex-col min-h-0">
+                <div className="flex-1 overflow-y-auto bg-gray-50 p-4 sm:p-6 rounded-xl">
+                  <Hits hitComponent={Hit} />
+                </div>
+                <div className="mt-4 flex justify-center [&_.ais-Pagination-list]:flex [&_.ais-Pagination-list]:gap-1 [&_.ais-Pagination-list]:list-none [&_.ais-Pagination-list]:p-0 [&_.ais-Pagination-item]:px-3 [&_.ais-Pagination-item]:py-2 [&_.ais-Pagination-item]:rounded-md [&_.ais-Pagination-item]:text-sm [&_.ais-Pagination-item]:font-medium [&_.ais-Pagination-item]:text-gray-700 [&_.ais-Pagination-item]:bg-white [&_.ais-Pagination-item]:shadow-sm [&_.ais-Pagination-item]:border [&_.ais-Pagination-item]:border-gray-200 [&_.ais-Pagination-item--selected]:bg-blue-50 [&_.ais-Pagination-item--selected]:text-blue-600 [&_.ais-Pagination-item--selected]:border-blue-200 [&_.ais-Pagination-item:hover]:bg-gray-50">
+                  <Pagination />
+                </div>
               </div>
             </div>
           </div>
