@@ -5,7 +5,7 @@ import Image from "next/image";
 const QuickActionButton = ({ children }: { children: React.ReactNode }) => {
   return (
     <button
-      className="text-green-900 bg-green-100 text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-green-900 px-4 py-2 rounded-full m-1"
+      className="text-primaryAccent bg-secondaryAccent text-sm hover:underline focus:outline-none focus:ring-2 focus:ring-primaryAccent px-4 py-2 rounded-full m-1"
       aria-label={children?.toString()}
     >
       {children}
@@ -17,7 +17,7 @@ const LinkWithArrow = ({ children }: { children: React.ReactNode }) => {
   return (
     <a
       href="#"
-      className="flex gap-2 items-center text-green-900 hover:underline focus:outline-none focus:ring-2 focus:ring-green-900 rounded-sm"
+      className="flex gap-2 items-center text-primaryAccent hover:underline focus:outline-none focus:ring-2 focus:ring-primaryAccent rounded-sm"
       aria-label={children?.toString()}
     >
       <span>{children}</span>
@@ -62,13 +62,8 @@ function CancerCareHero({
         <div className="flex flex-col lg:flex-row relative h-full">
           <div className="w-full lg:w-[45%] z-20">
             <div className="pr-4 lg:pr-8">
-              <p className="text-xl text-[#302F2E]">{tagline}</p>
-              <h1
-                id="hero-title"
-                className="mt-4 text-[32px] lg:text-[44px] leading-[1.2] text-[#302F2E] font-serif"
-              >
-                {title}
-              </h1>
+              <p className="text-xl text-primaryDark">{tagline}</p>
+              <h1 id="hero-title">{title}</h1>
             </div>
 
             {/* Mobile Image */}
@@ -84,49 +79,50 @@ function CancerCareHero({
               />
             </div>
 
-            <div className="mt-8 lg:mt-12 bg-white rounded-3xl p-6 lg:p-8 shadow-lg w-full lg:w-[140%] relative">
-              <h2 className="text-xl text-[#302F2E]">{searchTitle}</h2>
+            <div className="mt-8 lg:mt-12 bg-primaryLight rounded-3xl p-6 lg:p-8 shadow-lg w-full lg:w-[140%] relative">
+              <h2>{searchTitle}</h2>
 
               <form onSubmit={handleSearch} className="mt-4">
-                <div className="flex flex-col gap-4">
-                  <select
-                    aria-label="How can we help you today?"
-                    className="w-full p-4 border border-zinc-300 rounded text-[#302F2E] focus:outline-none focus:ring-2 focus:ring-green-900"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                  >
-                    <option value="">How can we help you today?</option>
-                    <option value="find-doctor">Find a doctor</option>
-                    <option value="clinical-trials">
-                      Search clinical trials
-                    </option>
-                    <option value="financial-assistance">
-                      Get financial assistance
-                    </option>
-                    <option value="support-group">Find a support group</option>
-                  </select>
-
-                  <div className="relative w-full">
-                    <label
-                      id="location-label"
-                      className="absolute -top-2.5 left-4 px-1 text-xs bg-white text-zinc-600"
-                    >
-                      Your location
-                    </label>
-                    <input
-                      type="text"
-                      id="location"
+                <div className="flex flex-col lg:flex-row gap-4">
+                  <div className="flex-1 flex flex-col gap-4">
+                    <select
+                      aria-label="How can we help you today?"
                       className="w-full p-4 border border-zinc-300 rounded text-[#302F2E] focus:outline-none focus:ring-2 focus:ring-green-900"
-                      value={location}
-                      onChange={(e) => setLocation(e.target.value)}
-                      aria-labelledby="location-label"
-                    />
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                    >
+                      <option value="">How can we help you today?</option>
+                      <option value="find-doctor">Find a doctor</option>
+                      <option value="clinical-trials">
+                        Search clinical trials
+                      </option>
+                      <option value="financial-assistance">
+                        Get financial assistance
+                      </option>
+                      <option value="support-group">
+                        Find a support group
+                      </option>
+                    </select>
+
+                    <div className="relative w-full">
+                      <label
+                        id="location-label"
+                        className="absolute -top-2.5 left-4 px-1 text-xs bg-white text-zinc-600"
+                      >
+                        Your location
+                      </label>
+                      <input
+                        type="text"
+                        id="location"
+                        className="w-full p-4 border border-zinc-300 rounded text-[#302F2E] focus:outline-none focus:ring-2 focus:ring-green-900"
+                        value={location}
+                        onChange={(e) => setLocation(e.target.value)}
+                        aria-labelledby="location-label"
+                      />
+                    </div>
                   </div>
 
-                  <button
-                    type="submit"
-                    className="w-full px-12 py-3 text-white bg-[#1B4332] rounded-full hover:bg-[#143728] focus:outline-none focus:ring-2 focus:ring-green-700"
-                  >
+                  <button type="submit" className="lg:self-end lg:mb-0">
                     Search
                   </button>
                 </div>
