@@ -96,7 +96,7 @@ const Header: React.FC = () => {
           </div>
           <div className="pr-4">
             <button
-              className="p-2"
+              className="p-2 bg-transparent"
               aria-label="Toggle mobile menu"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -239,25 +239,11 @@ const Header: React.FC = () => {
             />
           </a>
           <button
-            className="w-8 h-8 flex items-center justify-center"
+            className="w-8 h-8 flex items-center justify-center mr-4 bg-transparent text-primaryDark text-2xl font-medium rounded-full border border-primaryDark"
             onClick={() => setIsMobileMenuOpen(false)}
             aria-label="Close menu"
           >
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M6 18L18 6M6 6L18 18"
-                stroke="#18181B"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            ×
           </button>
         </div>
 
@@ -269,8 +255,8 @@ const Header: React.FC = () => {
                 key={item.name}
                 className="border-b border-gray-100 last:border-b-0"
               >
-                <button
-                  className="flex items-center justify-between w-full py-4"
+                <div
+                  className="flex items-center justify-between w-full py-4 bg-transparent"
                   onClick={() => toggleDropdown(item.name)}
                 >
                   <span className="text-lg text-gray-900">{item.label}</span>
@@ -292,7 +278,7 @@ const Header: React.FC = () => {
                       />
                     </svg>
                   )}
-                </button>
+                </div>
                 {item.items && (
                   <div
                     className={`${
