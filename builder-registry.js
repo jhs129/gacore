@@ -1,12 +1,13 @@
 import { Builder } from "@builder.io/react";
 
-
 import ClinicalTrialSearch from "./components/search/ClinicalTrialSearch";
 import Module4 from "./components/ui/Module4";
 import Module6 from "./components/ui/Module6";
 import Mod2 from "./components/ui/Mod2";
 import FAQ from "./components/ui/FAQ";
 import CancerCareHero from "./components/ui/CancerCareHero";
+import ResourceCard from "./components/ui/ResourceCard";
+import CTA from "./components/ui/CTA";
 // Import your components
 
 Builder.registerComponent(ClinicalTrialSearch, {
@@ -180,7 +181,7 @@ Builder.registerComponent(Module4, {
         },
         {
           name: "description",
-          type: "string",
+          type: "richText",
           defaultValue: "Description of the support resource",
         },
         {
@@ -198,6 +199,52 @@ Builder.registerComponent(Module4, {
   ],
 });
 
+Builder.registerComponent(ResourceCard, {
+  name: "ResourceCard",
+  friendlyName: "Card",
+  inputs: [
+    {
+      name: "theme",
+      type: "string",
+      defaultValue: "primaryLight",
+      enum: [
+        { label: "Primary Light", value: "primaryLight" },
+        { label: "Secondary Light", value: "secondaryLight" },
+        { label: "Secondary Accent", value: "secondaryAccent" },
+      ],
+    },
+    {
+      name: "label",
+      type: "string",
+      defaultValue: "Label",
+      required: true,
+    },
+    {
+      name: "title",
+      type: "string",
+      defaultValue: "Title",
+    },
+    {
+      name: "description",
+      type: "string",
+      defaultValue:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      required: true,
+    },
+    {
+      name: "linkText",
+      type: "string",
+      defaultValue: "Learn more",
+      required: true,
+    },
+    {
+      name: "linkUrl",
+      type: "string",
+      defaultValue: "#",
+    },
+  ],
+});
+
 Builder.registerComponent(FAQ, {
   name: "FAQ Section",
   inputs: [
@@ -205,6 +252,16 @@ Builder.registerComponent(FAQ, {
       name: "title",
       type: "string",
       defaultValue: "Frequently asked questions",
+    },
+    {
+      name: "theme",
+      type: "string",
+      defaultValue: "primaryLight",
+      enum: [
+        { label: "Primary Light", value: "primaryLight" },
+        { label: "Secondary Light", value: "secondaryLight" },
+        { label: "Secondary Accent", value: "secondaryAccent" },
+      ],
     },
     {
       name: "backgroundColor",
@@ -578,19 +635,77 @@ Builder.registerComponent(Module6, {
   ],
 });
 
+Builder.registerComponent(CTA, {
+  name: "CTA",
+  inputs: [
+    {
+      name: "theme",
+      type: "string",
+      defaultValue: "primaryLight",
+      enum: [
+        { label: "Primary Light", value: "primaryLight" },
+        { label: "Secondary Light", value: "secondaryLight" },
+        { label: "Secondary Accent", value: "secondaryAccent" },
+      ],
+    },
+    {
+      name: "title",
+      type: "string",
+      defaultValue: "Advocate",
+    },
+    {
+      name: "description",
+      type: "string",
+      defaultValue:
+        "Your voice matters. Help shape the future of cancer care by advocating for funding, policy changes, and better patient support.",
+    },
+    {
+      name: "statNumber",
+      type: "string",
+      defaultValue: "10k+",
+    },
+    {
+      name: "statDescription",
+      type: "string",
+      defaultValue:
+        "patients in Georgia have benefited from advocacy-led initiatives.",
+    },
+    {
+      name: "buttonText",
+      type: "string",
+      defaultValue: "Take action now",
+    },
+    {
+      name: "buttonUrl",
+      type: "string",
+      defaultValue: "#",
+    },
+    {
+      name: "image",
+      type: "file",
+      allowedFileTypes: ["jpeg", "jpg", "png", "svg"],
+      defaultValue:
+        "https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/4c6e3051df595301792f15c75d2f46876e9f5d8a",
+    },
+  ],
+});
 
 Builder.register("editor.settings", {
   designTokens: {
     colors: [
-      { name: "PrimaryLight", value: "var(color-primary-light, #cf4b08)" },
-      { name: "SecondaryLight", value: "var(--color-secondary-light, #cf4b08)" },
-      { name: "PrimaryDark", value: "var(--color-primary-dark, #cf4b08)" },
-      { name: "SecondaryDark", value: "var(--color-secondary-dark, #cf4b08)" },
-      { name: "Peach", value: "var(--color-peach, #cf4b08)" },
-      { name: "AccentGreen", value: "var(--color-accent-green, #cf4b08)" },
-      { name: "LightGreen", value: "var(--color-light-green, #cf4b08)" },
+      { name: "PrimaryLight", value: "var(--color-primary-light, #ffffff)" },
+      {
+        name: "SecondaryLight",
+        value: "var(--color-secondary-light, #faf2ed)",
+      },
+      { name: "PrimaryDark", value: "var(--color-primary-dark, #302f2e)" },
+      { name: "SecondaryDark", value: "var(--color-secondary-dark, #302f2e)" },
+      { name: "AccentGreen", value: "var(--color-accent-green, #35755f)" },
+      { name: "LightGreen", value: "var(--color-light-green, #eff7f5)" },
     ],
     spacing: [
+      { name: "3xl", value: "var(--spacing-xl, 96px)" },
+      { name: "2xl", value: "var(--spacing-xl, 64px)" },
       { name: "xl", value: "var(--spacing-xl, 32px)" },
       { name: "lg", value: "var(--spacing-lg, 16px)" },
       { name: "md", value: "var(--spacing-md, 8px)" },

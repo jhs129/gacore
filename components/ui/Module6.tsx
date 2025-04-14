@@ -1,6 +1,8 @@
 "use client";
 import * as React from "react";
 import StyledItalicSpan from "./shared/StyledItalicSpan";
+import ResourceCard from "./ResourceCard";
+import CTA from "./CTA";
 
 interface CardProps {
   label: string;
@@ -50,31 +52,6 @@ const Card: React.FC<CardProps> = ({
     <a
       href={linkUrl}
       className="flex gap-2 items-center mt-4 text-sm font-semibold text-gray-600 hover:text-gray-800"
-    >
-      {linkText}
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/6494ea8479abb879854a9760290e548e50836f9b"
-        className="w-3 h-3"
-        alt=""
-      />
-    </a>
-  </div>
-);
-
-const ResourceCard: React.FC<CardProps> = ({
-  label,
-  description,
-  linkText,
-  linkUrl = "#",
-}) => (
-  <div className="flex-1 p-8 rounded-lg bg-[#F4F9F6]">
-    <div className="text-xs font-bold tracking-wider uppercase text-gray-700">
-      {label}
-    </div>
-    <div className="mt-4 text-xl leading-7 text-gray-800">{description}</div>
-    <a
-      href={linkUrl}
-      className="flex gap-2 items-center mt-6 text-sm font-semibold text-gray-600 hover:text-gray-800"
     >
       {linkText}
       <img
@@ -167,35 +144,7 @@ const Module6: React.FC<Module6Props> = ({
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6">
         {/* Advocate Section */}
         <div className="lg:col-span-7">
-          <div className="p-6 md:p-8 rounded-lg bg-[#F4F9F6] relative min-h-[600px] md:min-h-[420px]">
-            <div className="max-w-full md:max-w-[60%] relative z-10">
-              <div className="text-xs font-bold tracking-wider uppercase text-gray-700">
-                {advocateSection.title}
-              </div>
-              <div className="mt-4 md:mt-6 text-lg md:text-xl leading-7 text-gray-800">
-                {advocateSection.description}
-              </div>
-              <div className="mt-6 md:mt-8">
-                <div className="text-2xl font-bold text-gray-800">
-                  {advocateSection.statNumber}
-                </div>
-                <div className="mt-2 text-base text-gray-700">
-                  {advocateSection.statDescription}
-                </div>
-              </div>
-              <a
-                href={advocateSection.buttonUrl}
-                className="inline-block mt-6 md:mt-8 px-6 py-2 text-sm font-semibold text-white bg-secondaryAccent rounded-full hover:bg-gray-700"
-              >
-                {advocateSection.buttonText}
-              </a>
-            </div>
-            <img
-              src={images.advocateImage}
-              alt=""
-              className="absolute right-0 bottom-0 md:bottom-0 w-[55%] md:w-[45%] h-auto"
-            />
-          </div>
+          <CTA {...advocateSection} image={images.advocateImage} />
         </div>
 
         {/* Learn and Engage Cards */}

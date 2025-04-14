@@ -10,6 +10,7 @@ export interface FAQProps {
   title?: string;
   items?: FAQItem[];
   backgroundColor?: string;
+  theme?: "primaryLight" | "secondaryLight" | "accent";
 }
 
 const FAQ: React.FC<FAQProps> = ({
@@ -44,8 +45,23 @@ const FAQ: React.FC<FAQProps> = ({
     },
   ],
   backgroundColor = "bg-red-50",
+  theme = "primaryLight",
 }) => {
   const [expandedIndex, setExpandedIndex] = React.useState<number | null>(null);
+
+  const getBackgroundColor = () => {
+    if (backgroundColor) return backgroundColor;
+    switch (theme) {
+      case "primaryLight":
+        return "bg-primaryLight";
+      case "secondaryLight":
+        return "bg-secondaryLight";
+      case "accent":
+        return "bg-secondaryAccent";
+      default:
+        return "bg-primaryLight";
+    }
+  };
 
   const toggleQuestion = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -71,7 +87,7 @@ const FAQ: React.FC<FAQProps> = ({
 
   return (
     <section
-      className={`flex gap-16 items-start px-16 py-20 ${backgroundColor} max-md:flex-col max-md:px-8 max-md:py-16 max-sm:px-4 max-sm:py-10`}
+      className={`flex gap-16 items-start px-16 py-20 bg-${theme} max-md:flex-col max-md:px-8 max-md:py-16 max-sm:px-4 max-sm:py-10`}
       aria-labelledby="faq-heading"
     >
       <h2

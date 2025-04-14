@@ -21,6 +21,8 @@
   --color-quaternary: #8f3536;
   --font-primary: "PT Serif", serif;
   --font-secondary: "Open Sans", sans-serif;
+  --spacing-3xl: 96px;
+  --spacing-2xl: 64px;
   --spacing-xl: 32px;
   --spacing-lg: 16px;
   --spacing-md: 8px;
@@ -112,6 +114,20 @@
     height: 2px;
     background: #35755f;
   }
+
+  u {
+    @apply relative inline-block italic;
+    text-decoration: none;
+  }
+
+  u::after {
+    content: "";
+    @apply absolute left-0 -bottom-2 w-full;
+    background: url("https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/f93ba7ace2cb8d192b54725c0a0fbd4e24cca342")
+      no-repeat;
+    background-size: 100% auto;
+    height: 6px;
+  }
 }
 
 .btn-carousel {
@@ -120,4 +136,12 @@
 
 .site-container {
   @apply container mx-auto px-4;
+}
+
+.theme-accent {
+  @apply bg-secondaryAccent;
+}
+
+.theme-light {
+  @apply bg-transparent;
 }
