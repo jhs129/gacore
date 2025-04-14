@@ -7,12 +7,12 @@
 
 :root {
   --color-primary-light: #ffffff;
-  --color-secondary-light: #FAF2ED;
-  --color-primary-dark: #302F2E;
-  --color-secondary-dark: #302F2E;
-  --color-peach: #FAF2ED;
-  --color-accent-green: #35755F;
-  --color-light-green: #EFF7F5;
+  --color-secondary-light: #faf2ed;
+  --color-primary-dark: #302f2e;
+  --color-secondary-dark: #302f2e;
+  --color-peach: #faf2ed;
+  --color-accent-green: #35755f;
+  --color-light-green: #eff7f5;
 
   --color-accent-red: #f1696d;
   --color-accent-teal: #037e88;
@@ -50,6 +50,11 @@
   h2 {
     @apply text-3xl my-4 font-normal text-inherit;
   }
+
+  h2 p {
+    @apply m-0 leading-[1.2] text-inherit;
+  }
+
   h3 {
     @apply text-xl my-4 leading-5;
   }
@@ -105,7 +110,7 @@
     content: "";
     @apply absolute left-0 -bottom-1 w-full;
     height: 2px;
-    background: #35755F;
+    background: #35755f;
   }
 }
 

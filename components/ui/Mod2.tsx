@@ -74,8 +74,7 @@ const Mod2: React.FC<Mod2Props> = ({
             <h2
               className="text-[40px] leading-[1.2] text-[#343A40] font-normal mb-6 md:mb-8 font-['PT_Serif']"
               dangerouslySetInnerHTML={{
-                __html:
-                  "Every cancer journey is unique. We're here to guide you through <em>yours</em>.",
+                __html: heading,
               }}
             />
 
