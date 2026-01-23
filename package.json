@@ -26,7 +26,7 @@
     "@vercel/toolbar": "^0.1.15",
     "algoliasearch": "^5.23.0",
     "cloudinary": "^2.4.0",
-    "next": "^14.2.18",
+    "next": "14.2.35",
     "next-cloudinary": "^6.12.0",
     "react": "^18",
     "react-dom": "^18",
