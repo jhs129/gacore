@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MembershipFormData } from "../../types/membership";
+import { MembershipFormData } from "../../../types/membership";
 
 export const MemberApp: React.FC = () => {
   const [formData, setFormData] = useState<MembershipFormData>({
