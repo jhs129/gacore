@@ -4,8 +4,8 @@ import {
   FinancialIcon,
   EmotionalSupportIcon,
   PracticalHelpIcon,
-} from "./SupportIcons";
-import StyledItalicSpan from "./shared/StyledItalicSpan";
+} from "../SupportIcons";
+import StyledItalicSpan from "../shared/StyledItalicSpan";
 
 export interface Module4Props {
   backgroundImage?: string;

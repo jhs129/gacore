@@ -1,0 +1,8 @@
+import "../../components/ui/CancerCareHero/registration";
+import "../../components/ui/CTA/registration";
+import "../../components/ui/EventCardVertical/registration";
+import "../../components/ui/FAQ/registration";
+import "../../components/ui/Mod2/registration";
+import "../../components/ui/Module4/registration";
+import "../../components/ui/Module6/registration";
+import "../../components/ui/ResourceCard/registration";
