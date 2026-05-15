@@ -8,7 +8,14 @@ import FAQ from "./components/ui/FAQ";
 import CancerCareHero from "./components/ui/CancerCareHero";
 import ResourceCard from "./components/ui/ResourceCard";
 import CTA from "./components/ui/CTA";
+import MemberApp from "./components/forms/MemberApp";
 // Import your components
+
+Builder.registerComponent(MemberApp, {
+  name: "MemberApp",
+  friendlyName: "Member Application",
+  inputs: [],
+});
 
 Builder.registerComponent(ClinicalTrialSearch, {
   name: "ClinicalTrialSearch",
