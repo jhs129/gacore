@@ -57,7 +57,6 @@ Builder.registerComponent(EventCardVertical, {
     {
       name: "href",
       type: "string",
-      defaultValue: "#",
       required: true,
       helperText: "URL of the event detail page",
     },

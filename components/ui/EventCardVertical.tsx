@@ -1,4 +1,3 @@
-"use client";
 import * as React from "react";
 
 interface EventCardVerticalProps {
@@ -22,9 +21,10 @@ const EventCardVertical: React.FC<EventCardVerticalProps> = ({
 }) => (
   <a
     href={href}
+    aria-label={`View details for ${title}`}
     className="block bg-white p-6 shadow-card hover:shadow-card-hover transition-shadow duration-200 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
   >
-    <p className="font-secondary font-bold text-xs uppercase text-ink leading-[1.4] mb-6">
+    <p className="font-secondary font-bold text-xs uppercase text-ink leading-label mb-6">
       {eventType}
     </p>
 
@@ -33,29 +33,29 @@ const EventCardVertical: React.FC<EventCardVerticalProps> = ({
         <img
           src={imageUrl}
           alt={imageAlt}
-          className="w-[72px] h-[72px] rounded-full object-cover"
+          className="w-18 h-18 rounded-full object-cover"
         />
       ) : (
         <div
-          className="w-[72px] h-[72px] rounded-full bg-gray-300"
+          className="w-18 h-18 rounded-full bg-gray-300"
           aria-hidden="true"
         />
       )}
     </div>
 
-    <h3 className="font-secondary font-semibold text-base leading-[1.5] text-ink line-clamp-2 mb-[4px]">
+    <h3 className="font-secondary font-semibold text-base leading-normal text-ink line-clamp-2 mb-1">
       {title}
     </h3>
 
-    <p className="font-secondary font-normal text-sm leading-[1.45] text-ink">
+    <p className="font-secondary font-normal text-sm leading-body text-ink">
       {dateTime}
     </p>
 
-    <p className="font-secondary font-normal text-sm leading-[1.45] text-ink mb-4">
+    <p className="font-secondary font-normal text-sm leading-body text-ink mb-4">
       {location}
     </p>
 
-    <span className="font-secondary font-semibold text-base leading-[1.5] text-brand-green border-b border-brand-green">
+    <span aria-hidden="true" className="font-secondary font-semibold text-base leading-normal text-brand-green border-b border-brand-green">
       View Details
     </span>
   </a>

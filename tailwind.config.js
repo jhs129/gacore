@@ -37,6 +37,13 @@ module.exports = {
         card: '0 0 4px rgba(48,47,46,0.1)',
         'card-hover': '0 4px 12px rgba(48,47,46,0.15)',
       },
+      spacing: {
+        18: '4.5rem',
+      },
+      lineHeight: {
+        label: '1.4',
+        body: '1.45',
+      },
     },
   },
   plugins: [],
