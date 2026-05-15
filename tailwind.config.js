@@ -24,12 +24,25 @@ module.exports = {
         accentTeal: 'var(--color-accent-teal)',
         accentRed: 'var(--color-accent-red)',
         accentGreen: 'var(--color-accent-green)',
+        'brand-green': '#58784d',
+        ink: '#302f2e',
       },
       fontFamily: {
         primary: ['var(--font-primary)'],
         secondary: ['var(--font-secondary)'],
         sans: ['Lufga', 'sans-serif'],
         serif: ['PT Serif', 'serif'],
+      },
+      boxShadow: {
+        card: '0 0 4px rgba(48,47,46,0.1)',
+        'card-hover': '0 4px 12px rgba(48,47,46,0.15)',
+      },
+      spacing: {
+        18: '4.5rem',
+      },
+      lineHeight: {
+        label: '1.4',
+        body: '1.45',
       },
     },
   },
