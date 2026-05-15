@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import StyledItalicSpan from "./shared/StyledItalicSpan";
+import StyledItalicSpan from "../shared/StyledItalicSpan";
 
 interface TabItem {
   id: string;

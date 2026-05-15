@@ -1,8 +1,8 @@
 "use client";
 import * as React from "react";
-import StyledItalicSpan from "./shared/StyledItalicSpan";
-import ResourceCard from "./ResourceCard";
-import CTA from "./CTA";
+import StyledItalicSpan from "../shared/StyledItalicSpan";
+import ResourceCard from "../ResourceCard";
+import CTA from "../CTA";
 
 interface CardProps {
   label: string;
