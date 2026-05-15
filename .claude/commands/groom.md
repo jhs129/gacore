@@ -4,8 +4,7 @@ Refine requirements for GCWEBRD tickets in *Grooming* status (or the *To Do* fal
 
 The ticket(s) to groom: $ARGUMENTS
 
-If $ARGUMENTS is empty, query all eligible tickets. If a ticket key is provided (e.g. `GCWEBRD-58`), process only that ticket.
-
+If $ARGUMENTS is empty, query all eligible tickets. If a ticket key is provided (e.g. `GCWEBRD-58`), process only that ticket. If the argument is just a number (e.g. `59`) then always append the prefix GCWEBRD- to determne the ticket key, (e.g. `GCWEBRD-59`).
 ---
 
 ## Project constants

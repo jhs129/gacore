@@ -4,8 +4,7 @@ Pick up GCWEBRD tickets in *Dev Ready* status (or eligible *To Do* tickets in th
 
 The ticket(s) to develop: $ARGUMENTS
 
-If $ARGUMENTS is empty, query the eligible queue. If a ticket key is provided (e.g. `GCWEBRD-58`), process only that ticket.  If the argument is just a number (e.g. `59`) then always append the prefix GCWEBRD- to determne the ticket key.
-
+If $ARGUMENTS is empty, query the eligible queue. If a ticket key is provided (e.g. `GCWEBRD-58`), process only that ticket. If the argument is just a number (e.g. `59`) then always append the prefix GCWEBRD- to determne the ticket key, (e.g. `GCWEBRD-59`).
 ---
 
 ## Project constants

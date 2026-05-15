@@ -7,7 +7,7 @@ Review a GCWEBRD Jira issue and fix it. Behavior depends on the issue type and s
 
 The issue to fix: $ARGUMENTS
 
-If $ARGUMENTS is empty, ask for the issue key before proceeding.
+If $ARGUMENTS is empty, ask for the issue key before proceeding. If the argument is just a number (e.g. `59`) then always append the prefix GCWEBRD- to determne the ticket key, (e.g. `GCWEBRD-59`).
 
 ---
 
