@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import EventCardVertical from "../components/ui/EventCardVertical";
+import EventCardVertical from ".";
 
 const meta: Meta<typeof EventCardVertical> = {
   title: "UI/EventCardVertical",

@@ -43,6 +43,8 @@
     "vitest.config.ts",
     "vitest.shims.d.ts",
     ".storybook",
-    "stories"
+    "stories",
+    "**/*.stories.ts",
+    "**/*.stories.tsx"
   ]
 }

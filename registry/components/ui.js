@@ -1,3 +1,4 @@
+import "../../components/ui/BlockQuote/registration";
 import "../../components/ui/CancerCareHero/registration";
 import "../../components/ui/CTA/registration";
 import "../../components/ui/EventCardVertical/registration";
