@@ -11,16 +11,6 @@ Builder.register("editor.settings", {
       { name: "LightGreen", value: "var(--color-light-green, #eff7f5)" },
       { name: "Orange", value: "var(--color-orange, #F9A77E)" },
     ],
-    spacing: [
-      { name: "3xl", value: "var(--spacing-xl, 96px)" },
-      { name: "2xl", value: "var(--spacing-xl, 64px)" },
-      { name: "xl", value: "var(--spacing-xl, 32px)" },
-      { name: "lg", value: "var(--spacing-lg, 16px)" },
-      { name: "md", value: "var(--spacing-md, 8px)" },
-      { name: "sm", value: "var(--spacing-sm, 4px)" },
-      { name: "xs", value: "var(--spacing-xs, 4px)" },
-      { name: "none", value: "var(--spacing-none, 0px)" },
-    ],
     fontFamily: [
       { name: "Primary", value: "var(--font-primary, 'PT Sans', sans-serif)" },
       { name: "Secondary", value: "var(--font-secondary, 'Open Sans', sans-serif)" },
@@ -47,3 +37,15 @@ Builder.register("editor.settings", {
     ],
   },
 });
+
+
+const spacing = [
+  { name: "3xl", value: "var(--spacing-xl, 96px)" },
+  { name: "2xl", value: "var(--spacing-xl, 64px)" },
+  { name: "xl", value: "var(--spacing-xl, 32px)" },
+  { name: "lg", value: "var(--spacing-lg, 16px)" },
+  { name: "md", value: "var(--spacing-md, 8px)" },
+  { name: "sm", value: "var(--spacing-sm, 4px)" },
+  { name: "xs", value: "var(--spacing-xs, 4px)" },
+  { name: "none", value: "var(--spacing-none, 0px)" },
+];
