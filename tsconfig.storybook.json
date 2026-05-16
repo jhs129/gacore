@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "plugins": []
+  },
+  "include": [
+    ".storybook/**/*",
+    "components/**/*.stories.ts",
+    "components/**/*.stories.tsx",
+    "components/**/*.tsx",
+    "components/**/*.ts",
+    "stories/**/*"
+  ],
+  "exclude": ["node_modules"]
+}

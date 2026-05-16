@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 
 export interface CTAProps {
   title: string;
@@ -44,10 +45,13 @@ const CTA: React.FC<CTAProps> = ({
           {buttonText}
         </a>
       </div>
-      <img
+      <Image
         src={image}
         alt=""
-        className="absolute right-0 bottom-0 md:bottom-0 w-[55%] md:w-[45%] h-auto"
+        width={0}
+        height={0}
+        sizes="(min-width: 768px) 45vw, 55vw"
+        className="absolute right-0 bottom-0 w-[55%] md:w-[45%] h-auto"
       />
     </div>
   );

@@ -49,6 +49,10 @@ components/ui/MyComponent/
 
 Stories are **colocated with their components** (e.g., `components/ui/EventCardVertical/EventCardVertical.stories.tsx`). The `.storybook/main.js` globs both `../components/**` and `../stories/**` for story discovery. The `stories/` directory at root contains only Storybook template boilerplate.
 
+### TypeScript / Storybook
+
+- `tsconfig.json` excludes `**/*.stories.ts` and `**/*.stories.tsx` — colocated story files depend on `@storybook/react` which is not in the Next.js build.
+
 ### Styling
 
 - **Tailwind CSS** with custom breakpoints: `sm=480px`, `md=640px`, `lg=992px`
@@ -70,3 +74,8 @@ Stories are **colocated with their components** (e.g., `components/ui/EventCardV
 - Configured remote image domains: `cdn.builder.io`, `orlandohealth.com`.
 - Placeholder images must use `.png` extension (e.g., `https://placehold.co/300x200.png`).
 - Do not use `Math.random()` in component render paths — it causes hydration mismatches.
+- `next/image` patterns by use case:
+  - Full-cover backgrounds: `<Image fill sizes="100vw" />` (parent must have `relative` + defined height)
+  - Fixed icons/logos: `<Image width={N} height={N} />` with explicit px dimensions
+  - Fluid/percentage-width: `<Image width={0} height={0} sizes="..." />` + `w-full h-auto` class
+  - Dynamic third-party URLs (e.g. Algolia): add `unoptimized` prop

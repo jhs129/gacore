@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 import StyledItalicSpan from "../shared/StyledItalicSpan";
 
 interface TabItem {
@@ -110,20 +111,24 @@ const Mod2: React.FC<Mod2Props> = ({
                   href={card.linkUrl || "#"}
                   className="flex flex-col p-6 bg-white rounded-lg shadow-[0_4px_12px_rgba(0,0,0,0.08)] hover:shadow-lg transition-shadow"
                 >
-                  <img
+                  <Image
                     src={card.iconSrc}
                     alt=""
-                    className="w-6 h-6 mb-4"
+                    width={24}
+                    height={24}
+                    className="mb-4"
                     aria-hidden="true"
                   />
                   <div className="flex justify-between items-center">
                     <span className="text-base text-[#343A40] pr-4">
                       {card.text}
                     </span>
-                    <img
+                    <Image
                       src="https://cdn.builder.io/api/v1/image/assets/7bf199de15724d268c1417f75ca31ce1/4f014f5428c01a5b9a62c78dd82eabc8525f9c78?placeholderIfAbsent=true"
                       alt=""
-                      className="w-3 h-3 flex-shrink-0"
+                      width={12}
+                      height={12}
+                      className="flex-shrink-0"
                       aria-hidden="true"
                     />
                   </div>
@@ -134,10 +139,13 @@ const Mod2: React.FC<Mod2Props> = ({
 
           {/* Image */}
           <div className="flex-1 min-w-0 mt-8 lg:mt-0">
-            <img
+            <Image
               src={imageSrc}
               alt={imageAlt}
-              className="w-full h-full rounded-lg object-cover"
+              width={0}
+              height={0}
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="w-full h-auto rounded-lg object-cover"
             />
           </div>
         </div>

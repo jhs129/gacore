@@ -21,9 +21,10 @@ const LinkWithArrow = ({ children }: { children: React.ReactNode }) => {
       aria-label={children?.toString()}
     >
       <span>{children}</span>
-      <img
+      <Image
         src="https://cdn.builder.io/api/v1/image/assets/7bf199de15724d268c1417f75ca31ce1/c8d9f2d6dd17427f0ef5b632aab33452129f51e9?placeholderIfAbsent=true"
-        className="w-4 h-4"
+        width={16}
+        height={16}
         alt="Arrow right"
       />
     </a>

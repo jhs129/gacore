@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 
 interface ArticleWithImageProps {
   heading: string;
@@ -30,11 +31,12 @@ const Banner50: React.FC<ArticleWithImageProps> = ({
         </header>
         <div className="flex-1 shrink mt-6 w-full font-sans text-neutral-10 text-base max-md:max-w-full" dangerouslySetInnerHTML={{ __html: bodyText }} />    
       </div>
-      <img
-        loading="lazy"
+      <Image
         src={imageSrc}
         alt={imageAlt}
-        className="object-contain self-stretch my-auto aspect-[1.38] min-h-[350px] min-w-[240px] w-[484px] max-md:max-w-full"
+        width={484}
+        height={350}
+        className="object-contain self-stretch my-auto min-h-[350px] min-w-[240px] max-md:max-w-full"
       />
     </article>
   );

@@ -2,6 +2,8 @@
 
 import * as React from "react";
 import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 /**
  * NavigationHeader component with dropdown menus and responsive design
@@ -86,13 +88,15 @@ const Header: React.FC = () => {
       <div className="lg:hidden w-full bg-secondaryLight pt-4">
         <div className="px-4 py-3 flex justify-between items-center max-w-[1440px] mx-auto">
           <div>
-            <a href="/">
-              <img
+            <Link href="/">
+              <Image
                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
+                width={88}
+                height={48}
                 className="h-12 w-[87.6px]"
                 alt="GA Core Logo"
               />
-            </a>
+            </Link>
           </div>
           <div className="pr-4">
             <button
@@ -121,13 +125,15 @@ const Header: React.FC = () => {
         <div className="max-w-[1440px] mx-auto px-12 py-3 h-[72px] relative">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <a href="/">
-                <img
+              <Link href="/">
+                <Image
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
+                  width={88}
+                  height={48}
                   className="h-12 w-[87.6px]"
                   alt="GA Core Logo"
                 />
-              </a>
+              </Link>
             </div>
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <nav
@@ -231,13 +237,15 @@ const Header: React.FC = () => {
       >
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100">
-          <a href="/" className="block">
-            <img
+          <Link href="/" className="block">
+            <Image
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/ce3fe73af90324710198629b7dbf8f28d7cb4f6f"
-              className="h-8"
+              width={59}
+              height={32}
+              className="h-8 w-auto"
               alt="GA Core Logo"
             />
-          </a>
+          </Link>
           <button
             className="w-8 h-8 flex items-center justify-center mr-4 bg-transparent text-primaryDark text-2xl font-medium rounded-full border border-primaryDark"
             onClick={() => setIsMobileMenuOpen(false)}
