@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 
 // Types
 interface HeroButtonProps {
@@ -40,12 +41,13 @@ export function HeroSection({
       role="banner"
       aria-labelledby="hero-title"
     >
-      <img
-        loading="lazy"
+      <Image
         src={heroImage}
-        className="object-cover absolute inset-0 size-full"
+        className="object-cover"
         alt=""
-        role="presentation"
+        fill
+        sizes="100vw"
+        priority
       />
       <div className="flex relative flex-col max-w-full leading-tight text-center text-var(--color-primary-light) w-[151px]">
         <h1

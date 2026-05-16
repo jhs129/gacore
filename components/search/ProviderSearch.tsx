@@ -2,6 +2,7 @@ import { InstantSearch, SearchBox, Hits, RefinementList, Configure, useInstantSe
 import { liteClient as algoliasearch } from "algoliasearch/lite";
 import connectAutocomplete from 'instantsearch.js/es/connectors/autocomplete/connectAutocomplete';
 import React, { useEffect } from 'react';
+import Image from "next/image";
 
 const searchClient = algoliasearch('YZ7LZ0IN9O', '46802a970198ba91e1f688bba6c5e117');
 
@@ -63,10 +64,13 @@ const DoctorHit = ({ hit }: any) => {
     <div className="p-6 border border-neutral-80 rounded-lg hover:shadow-md transition-shadow bg-neutral-100">
       <div className="flex gap-6 items-start">
         <div className="flex-shrink-0">
-          <img 
-            src={hit.imageUrl} 
+          <Image
+            src={hit.imageUrl}
             alt={`Dr. ${hit.name}`}
-            className="w-24 h-24 rounded-full object-cover border-2 border-neutral-80"
+            width={96}
+            height={96}
+            className="rounded-full object-cover border-2 border-neutral-80"
+            unoptimized
           />
         </div>
         <div className="flex-grow">

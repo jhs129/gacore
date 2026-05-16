@@ -1,4 +1,5 @@
 import * as React from "react";
+import Image from "next/image";
 
 interface EventCardVerticalProps {
   eventType: string;
@@ -30,10 +31,12 @@ const EventCardVertical: React.FC<EventCardVerticalProps> = ({
 
     <div className="mb-4">
       {imageUrl ? (
-        <img
+        <Image
           src={imageUrl}
           alt={imageAlt}
-          className="w-18 h-18 rounded-full object-cover"
+          width={72}
+          height={72}
+          className="rounded-full object-cover"
         />
       ) : (
         <div

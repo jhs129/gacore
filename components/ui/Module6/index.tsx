@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 import StyledItalicSpan from "../shared/StyledItalicSpan";
 import ResourceCard from "../ResourceCard";
 import CTA from "../CTA";
@@ -54,9 +55,10 @@ const Card: React.FC<CardProps> = ({
       className="flex gap-2 items-center mt-4 text-sm font-semibold text-gray-600 hover:text-gray-800"
     >
       {linkText}
-      <img
+      <Image
         src="https://cdn.builder.io/api/v1/image/assets/a5186b5cd9b64253b08921edb4a9fded/6494ea8479abb879854a9760290e548e50836f9b"
-        className="w-3 h-3"
+        width={12}
+        height={12}
         alt=""
       />
     </a>

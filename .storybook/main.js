@@ -3,6 +3,8 @@
 /** @type { import('@storybook/nextjs-vite').StorybookConfig } */
 const config = {
   "stories": [
+    "../components/**/*.mdx",
+    "../components/**/*.stories.@(js|jsx|mjs|ts|tsx)",
     "../stories/**/*.mdx",
     "../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],

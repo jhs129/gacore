@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 import {
   FinancialIcon,
   EmotionalSupportIcon,
@@ -76,9 +77,12 @@ const Module4: React.FC<Module4Props> = ({
     <section className="w-full relative" aria-labelledby="module4-heading">
       {/* Hero Image */}
       <div className="relative w-full">
-        <img
+        <Image
           src={backgroundImage}
           alt="Hero image"
+          width={0}
+          height={0}
+          sizes="100vw"
           className="w-full h-[280px] md:h-[480px] object-cover"
         />
 
