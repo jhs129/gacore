@@ -32,7 +32,7 @@ Every Builder.io-integrated component follows a two-file pattern inside `compone
 - `index.tsx` — the React component
 - `registration.ts` — registers the component with Builder.io, defining its editable inputs (prop names, types, default values, helper text)
 
-`builder-registry.js` at the root imports all `registration.ts` files and is imported by `_app.jsx` to register everything at startup. When adding a new component, create both files and import the registration in `builder-registry.js`.
+`builder-registry.js` at the root is imported by `_app.jsx` and is the **only** file that actually registers components with Builder.io at startup. Most components are registered inline here; a few use `import "./components/ui/X/registration"` (the CTAButton/BlockQuote pattern). The `registry/components/ui.js` file exists but is **not** imported by `builder-registry.js` — do not add new components there. When adding a new component, add `import "./components/ui/MyComponent/registration"` directly to `builder-registry.js`.
 
 ### Component File Split Rule
 
