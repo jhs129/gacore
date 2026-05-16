@@ -10,6 +10,7 @@ Builder.register("editor.settings", {
       { name: "AccentGreen", value: "var(--color-accent-green, #35755f)" },
       { name: "LightGreen", value: "var(--color-light-green, #eff7f5)" },
       { name: "Orange", value: "var(--color-orange, #F9A77E)" },
+      { name: "Peach", value: "var(--color-peach, #FEF2EC)" },
     ],
     fontFamily: [
       { name: "Primary", value: "var(--font-primary, 'PT Sans', sans-serif)" },

@@ -7,3 +7,4 @@ import "../../components/ui/Mod2/registration";
 import "../../components/ui/Module4/registration";
 import "../../components/ui/Module6/registration";
 import "../../components/ui/ResourceCard/registration";
+import "../../components/ui/CTAButton/registration";
