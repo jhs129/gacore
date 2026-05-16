@@ -13,6 +13,7 @@ import MemberApp from "./components/forms/MemberApp";
 // Import your components
 
 import "./components/ui/CTAButton/registration";
+import "./components/ui/BlockQuote/registration";
 
 Builder.registerComponent(EventCardVertical, {
   name: "EventCardVertical",
